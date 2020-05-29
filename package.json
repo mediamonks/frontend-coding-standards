@@ -1,0 +1,28 @@
+{
+  "name": "mediamonks-standards",
+  "version": "1.0.0",
+  "description": "MediaMonks Frontend Coding Standards",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mediamonks/frontend-coding-standards.git"
+  },
+  "keywords": [
+    "MediaMonks",
+    "Coding",
+    "Standards",
+    "Eslint",
+    "Frontend",
+    "JavaScript",
+    "TypeScript"
+  ],
+  "author": "MediaMonks",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mediamonks/frontend-coding-standards/issues"
+  },
+  "homepage": "https://github.com/mediamonks/frontend-coding-standards#readme"
+}
