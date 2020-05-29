@@ -1,1 +1,1 @@
-# frontend-coding-standards
+# MediaMonks - Frontend Coding Standards
