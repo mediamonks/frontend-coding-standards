@@ -65,7 +65,7 @@ All non-functions should have a noun as a name, not a verb.
 Should start with `is`, `has`, `will` or `should`. Like `isValid` or `hasValues`.
 
 #### Always Affirmative
-Avoid negations. _“Don’t ever not avoid negative logic”_. Prefer isShown over isHidden or `isEnabled` over `isDisabled`. Do not use names like `notEditable`.
+Avoid negations. _“Don’t ever not avoid negative logic”_. Prefer `isShown` over `isHidden` or `isEnabled` over `isDisabled`. Do not use names like `notEditable`.
 
 #### Casing
 
