@@ -10,13 +10,14 @@ All code, names, comments, etc. must be in English.
 > Tip: install a spell checker in your IDE to avoid typos.
 
 #### Use one name for one thing
-Do not reuse names. Do not use names that can mean multiple things. Always use the same name for the same thing, so use the same name for the JavaScript class, property, CSS class or a variable, use t
- and make sure it’s aligned with the whole team: Backend, Frontend, UX, Design, PM, client, etc.
+Do not reuse names. Do not use names that can mean multiple things. Always use the same name for the same thing. So use the same name within the JavaScript, CSS and HTML for the same thing. Align naming with the whole team: Backend, Frontend, UX, Design, PM, client, etc.
+
+For big projects with their own jargon it could help to create a dictionary.
 
 #### Descriptive
 Names must be descriptive for the working or usage of the class, method or variable.
 
-###### The name should always ends with what the object is.
+###### The name should always end with what the object is.
 For example: a button must always end with `Button`.
  * `MenuButton` a button used in the menu
  * `ButtonMenu` a menu with buttons
