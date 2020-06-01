@@ -88,10 +88,11 @@ Avoid negations. _“Don’t ever not avoid negative logic”_. Prefer `isShown`
 ##### Classes, Interfaces & Types
 Are written in Pascal Case naming (start with a capital, the rest camelcase), no underscores, no dashes.
 
-
 ##### Functions, properties, arguments and variables
 Are all written in lower camelCase. 
 
+##### Globally used constants
+Are written in CAPS, words divided using and underscore. Like `CAMPAIGN_ID`.
 
 ## Coding
 Every function or class should do **one thing** (and do it good). If it needs to do more than one thing, split it up. Keep your files, classes and functions small. It’s okay to have a file with just a single line.
@@ -99,13 +100,10 @@ Every function or class should do **one thing** (and do it good). If it needs to
 #### Pure functions
 Prefer writing pure functions, which means they do not manipulate the input arguments or reference/manipulate global state. This makes your code better scalable and testable.
 
-
 #### Separate Logic From Configuration
 Write code that is reusable, scalable and testable.
 
-
 #### Do not repeat yourself (DRY)
-
 * Do not copy code to another place.
 * Avoid using the same string twice in a project.
 * Move shared logic to a shared place.
