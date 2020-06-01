@@ -26,16 +26,26 @@ For example: a button must always end with `Button`.
 There is no limit for the length of a name, so prefer a long name which is clear and descriptive than a short name which is not clear.
 
 #### Abbreviations
-Avoid them as a general rule. For example, `calculateOptimalValue()` is a better method name than `calcOptVal()`. Being clear is more important than minimizing keystrokes. And if you don't abbreviate, developers won't have to remember whether you shortened a word like _qualified_ to `qual` or `qlfd`.
+Avoid them as a general rule. For example, `calculateOptimalValue()` is a better method name than `calcOptVal()`. Being clear is more important than minimizing keystrokes. If you don't abbreviate, developers won't have to remember whether you shortened a word like _qualified_ to `qual` or `qlfd`.
 
-However, we have standardized on a few abbreviations:
+Abbreviations that are part of the HTML, CSS and/or JavaScript API are allowed, like:
+ * `URL` for Uniform Resource Locator
+ * `URI` for Uniform Resource Identifier
+ * `src` for source
+ * `DOM` for Document Object Model
+ * `img` for image
+ 
+You should only use these abbreviations within the same context. So only use `img` if you refer to an HTML Image Tag. (`<img>`)
+
+We have standardized on a few abbreviations that are allowed to use:
  * `auto` for automatic, as in `autoLayout`
+ * `bin` for binary
  * `info` for information, as in `GridRowInfo`
- * `num` for number of, as in `numChildren`
  * `min` for minimum, as in `minWidth`
  * `max` for maximum, as in `maxHeight`
  * `regExp` for regular expression, as in `RegExpValidator`
- * `utils` for utilities, as in `StringUtils`
+ * `util` or `utils` for utility or utilities, as in `StringUtils`
+ * `id` for identifier. Please note that 'd' should be written in lowercase when used in combination with an other word, like `userId`.
  * `init` for initialize
  * `ui` for user interface
  * `temp` for temporary
@@ -43,11 +53,9 @@ However, we have standardized on a few abbreviations:
  * `lib` for library
  * `fps` for frames per second
  * `args` for arguments
- * `elm` or `el` for element
- * `elms` or `els` for elements
  * `param` for parameter
  * `params` for parameters
- * `opts` for options
+ * `ref` for reference
 
 #### Plural or singular?
 
