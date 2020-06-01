@@ -89,10 +89,11 @@ Write code that is reusable, scalable and testable.
 
 
 #### Do not repeat yourself (DRY)
-Do not copy code to another place.
-Avoid using the same string twice in a project.
-Move shared logic to a shared place.
-Make sure you do not have to adapt changes on multiple places.
+
+* Do not copy code to another place.
+* Avoid using the same string twice in a project.
+* Move shared logic to a shared place.
+* Make sure you do not have to adapt changes on multiple places.
 
 #### Do not use Magic Numbers
 See https://en.wikipedia.org/wiki/Magic_number_(programming)
