@@ -81,7 +81,7 @@ Are all written in lower camelCase.
 Every function or class should do **one thing** (and do it good). If it needs to do more than one thing, split it up. Keep your files, classes and functions small. It’s okay to have a file with just a single line.
 
 #### Pure functions
-Prefer writing pure functions, which means they do not manipulate the input arguments. This makes your code better scalable and testable.
+Prefer writing pure functions, which means they do not manipulate the input arguments or reference/manipulate global state. This makes your code better scalable and testable.
 
 
 #### Separate Logic From Configuration
