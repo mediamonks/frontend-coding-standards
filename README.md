@@ -38,24 +38,24 @@ Abbreviations that are part of the HTML, CSS and/or JavaScript API are allowed, 
 You should only use these abbreviations within the same context. So only use `img` if you refer to an HTML Image Tag. (`<img>`)
 
 We have standardized on a few abbreviations that are allowed to use:
+ * `app` for application
+ * `args` for arguments
  * `auto` for automatic, as in `autoLayout`
  * `bin` for binary
- * `info` for information, as in `GridRowInfo`
- * `min` for minimum, as in `minWidth`
- * `max` for maximum, as in `maxHeight`
- * `regExp` for regular expression, as in `RegExpValidator`
- * `util` or `utils` for utility or utilities, as in `StringUtils`
- * `id` for identifier. Please note that 'd' should be written in lowercase when used in combination with an other word, like `userId`.
- * `init` for initialize
- * `ui` for user interface
- * `temp` for temporary
- * `app` for application
- * `lib` for library
  * `fps` for frames per second
- * `args` for arguments
+ * `id` for identifier. Please note that 'd' should be written in lowercase when used in combination with an other word, like `userId`.
+ * `info` for information, as in `GridRowInfo`
+ * `init` for initialize
+ * `lib` for library
+ * `max` for maximum, as in `maxHeight`
+ * `min` for minimum, as in `minWidth`
  * `param` for parameter
  * `params` for parameters
  * `ref` for reference
+ * `regExp` for regular expression, as in `RegExpValidator`
+ * `temp` for temporary
+ * `ui` for user interface
+ * `util` or `utils` for utility or utilities, as in `StringUtils`
 
 #### Plural or singular?
 
