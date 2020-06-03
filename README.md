@@ -53,7 +53,6 @@ We have standardized on a few abbreviations that are allowed to use:
  * `params` for parameters
  * `prop` or `props` for property or properties
  * `ref` for reference
- * `regExp` for regular expression, as in `RegExpValidator`
  * `temp` for temporary
  * `ui` for user interface
  * `util` or `utils` for utility or utilities, as in `StringUtils`
