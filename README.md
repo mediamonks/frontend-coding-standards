@@ -34,6 +34,7 @@
 - [x] Add `aria` labels. 
 - [x] Check if the fonts are being loaded properly.
 - [x] Check if images are being lazy loaded and for proper usage of picture with responsive images
+- [X] Check the `hover`, `disabled`, `invalid` and `error` states on buttons, links, form elements, etc.
 
 #### Before  every release
 - [x] Check for proper html `doctype`.
