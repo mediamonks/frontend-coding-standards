@@ -64,7 +64,7 @@ When you would instantiate or type the class it must have singular name, also fo
 When you should not instantiate the class, it should have a plural name.
 
 ##### Arrays
-or other kind of lists should have a plural name or end with `List`, like `userList`.
+or other kind of lists should have a plural name or end with `List` or `Collection`, like `userList`.
 
 ##### Folders
 If a folder holds multiple files, but all related to one main type, it should have a singular name. If it holds multiple main files of a type, it should have a plural name.
