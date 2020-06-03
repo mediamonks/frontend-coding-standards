@@ -51,6 +51,7 @@ We have standardized on a few abbreviations that are allowed to use:
  * `min` for minimum, as in `minWidth`
  * `param` for parameter
  * `params` for parameters
+ * `prop` or `props` for property or properties
  * `ref` for reference
  * `regExp` for regular expression, as in `RegExpValidator`
  * `temp` for temporary
