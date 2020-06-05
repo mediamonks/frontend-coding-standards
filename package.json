@@ -1,7 +1,7 @@
 {
-  "name": "mediamonks-standards",
+  "name": "eslint-config-mediamonks",
   "version": "1.0.0",
-  "description": "MediaMonks Frontend Coding Standards",
+  "description": "MediaMonks Frontend Coding Standards Eslint Config",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -14,7 +14,8 @@
     "MediaMonks",
     "Coding",
     "Standards",
-    "Eslint",
+    "eslint",
+    "eslintconfig",
     "Frontend",
     "JavaScript",
     "TypeScript"
@@ -24,5 +25,8 @@
   "bugs": {
     "url": "https://github.com/mediamonks/frontend-coding-standards/issues"
   },
-  "homepage": "https://github.com/mediamonks/frontend-coding-standards#readme"
+  "homepage": "https://github.com/mediamonks/frontend-coding-standards#readme",
+  "peerDependencies": {
+    "eslint": ">= 6"
+  }
 }
