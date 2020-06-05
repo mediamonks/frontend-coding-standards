@@ -32,6 +32,7 @@ module.exports = {
     ],
     'import/no-unresolved': 'error',
     'import/order': ['error', { groups: ['external', 'builtin', ['sibling', 'parent']] }],    
+    'import/prefer-default-export': 'off',
     'max-lines': 'error',
     'no-console': 'error',
     'no-debugger': 'error',
