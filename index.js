@@ -64,7 +64,6 @@ const reactSettings = {
     'react/no-this-in-sfc': 'error',
     'react/no-unused-prop-types': 'error',
     'react/no-unused-state': 'error',
-    'react/prop-types': 'off',
     'react/void-dom-elements-no-children': 'error',
   },
 };
@@ -168,6 +167,7 @@ module.exports = {
       rules: {
         ...typeScriptSettings.rules,
         ...reactSettings.rules,
+        'react/prop-types': 'off',
         '@typescript-eslint/naming-convention': [
           'error',
           {
