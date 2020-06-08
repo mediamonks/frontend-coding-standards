@@ -1,5 +1,58 @@
+const typeScriptSettings = {
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    ecmaVersion: 2018,
+    ecmaFeatures: {
+      jsx: true,
+    },
+    sourceType: 'module',
+    project: './tsconfig.json',
+  },
+  extends: [
+    'plugin:@typescript-eslint/recommended',
+    'prettier/@typescript-eslint',
+    'plugin:prettier/recommended',
+  ],
+  rules: {
+    '@typescript-eslint/array-type': ['error', { default: 'generic', readonly: 'generic' }],
+    '@typescript-eslint/ban-ts-comment': 'error',
+    '@typescript-eslint/consistent-type-assertions': 'error',
+    '@typescript-eslint/explicit-member-accessibility': 'error',
+    '@typescript-eslint/indent': 'off',
+    '@typescript-eslint/no-empty-function': 'error',
+    '@typescript-eslint/no-explicit-any': 'error',
+    '@typescript-eslint/no-inferrable-types': 'off',
+    '@typescript-eslint/no-unused-vars': [
+      'error',
+      { vars: 'all', args: 'after-used', ignoreRestSiblings: true },
+    ],
+    '@typescript-eslint/no-use-before-define': 'error',
+    '@typescript-eslint/prefer-interface': 'off',
+    '@typescript-eslint/prefer-readonly': 'error',
+  },
+}
+
+const reactSettings = {
+  extends: [
+    'plugin:react/recommended',
+  ],
+  rules: {
+    'react/button-has-type': 'error',
+    'react/display-name': 'off',
+    'react/jsx-boolean-value': 'error',
+    'react/jsx-curly-brace-presence': ['error', { props: 'never', children: 'never' }],
+    'react/no-array-index-key': 'error',
+    'react/no-this-in-sfc': 'error',
+    'react/no-unused-prop-types': 'error',
+    'react/no-unused-state': 'error',
+    'react/prop-types': 'off',
+    'react/void-dom-elements-no-children': 'error',
+  },
+}
+
+
 module.exports = {
-  extends: ['plugin:react/recommended', 'plugin:prettier/recommended'],
+  extends: ['plugin:prettier/recommended'],
   plugins: ['import', 'unicorn', 'prettier'],
   settings: {
     react: {
@@ -39,20 +92,6 @@ module.exports = {
       'error',
       { singleQuote: true, trailingComma: 'all', printWidth: 100, tabWidth: 2 },
     ],
-    'react/boolean-prop-naming': [
-      'error',
-      { propTypeNames: ['bool', 'mutuallyExclusiveTrueProps'] },
-    ],
-    'react/button-has-type': 'error',
-    'react/display-name': 'off',
-    'react/jsx-boolean-value': 'error',
-    'react/jsx-curly-brace-presence': ['error', { props: 'never', children: 'never' }],
-    'react/no-array-index-key': 'error',
-    'react/no-this-in-sfc': 'error',
-    'react/no-unused-prop-types': 'error',
-    'react/no-unused-state': 'error',
-    'react/prop-types': 'off',
-    'react/void-dom-elements-no-children': 'error',
     'unicorn/catch-error-name': 'error',
     'unicorn/custom-error-definition': 'off',
     'unicorn/error-message': 'error',
@@ -105,39 +144,18 @@ module.exports = {
       },
     },
     {
-      files: ['*.ts', '*.tsx'],
-      parser: '@typescript-eslint/parser',
-      parserOptions: {
-        ecmaVersion: 2018,
-        ecmaFeatures: {
-          jsx: true,
-        },
-        sourceType: 'module',
-        project: './tsconfig.json',
-      },
-      extends: [
-        'plugin:@typescript-eslint/recommended',
-        'plugin:react/recommended',
-        'prettier/@typescript-eslint',
-        'plugin:prettier/recommended',
-      ],
-      rules: {
-        '@typescript-eslint/array-type': ['error', { default: 'generic', readonly: 'generic' }],
-        '@typescript-eslint/ban-ts-comment': 'error',
-        '@typescript-eslint/consistent-type-assertions': 'error',
-        '@typescript-eslint/explicit-member-accessibility': 'error',
-        '@typescript-eslint/indent': 'off',
-        '@typescript-eslint/no-empty-function': 'error',
-        '@typescript-eslint/no-explicit-any': 'error',
-        '@typescript-eslint/no-inferrable-types': 'off',
-        '@typescript-eslint/no-unused-vars': [
-          'error',
-          { vars: 'all', args: 'after-used', ignoreRestSiblings: true },
-        ],
-        '@typescript-eslint/no-use-before-define': 'error',
-        '@typescript-eslint/prefer-interface': 'off',
-        '@typescript-eslint/prefer-readonly': 'error',
-      },
+      files: ['*.ts'],
+      ...typeScriptSettings,
+    },
+    {
+      files: ['*.tsx'],
+      ...typeScriptSettings,
+      extends: [...typeScriptSettings.extends, ...reactSettings.extends],
+      rules: {...typeScriptSettings.rules, ...reactSettings.rules},
+    },
+    {
+      files: ['*.jsx'],
+      ...reactSettings,
     },
   ],
 };
