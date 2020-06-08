@@ -50,7 +50,7 @@ const typeScriptSettings = {
     '@typescript-eslint/no-use-before-define': 'error',
     '@typescript-eslint/prefer-interface': 'off',
     '@typescript-eslint/prefer-readonly': 'error',
-    'camelcase': 'off',
+    camelcase: 'off',
   },
 };
 
@@ -61,14 +61,13 @@ const reactSettings = {
     'react/display-name': 'off',
     'react/jsx-boolean-value': 'error',
     'react/jsx-curly-brace-presence': ['error', { props: 'never', children: 'never' }],
-    'react/jsx-filename-extension': ['error', { "extensions": [".jsx", ".tsx"] }],
+    'react/jsx-filename-extension': ['error', { extensions: ['.jsx', '.tsx'] }],
     'react/jsx-wrap-multilines': 'off',
     'react/no-array-index-key': 'error',
     'react/no-this-in-sfc': 'error',
     'react/no-unused-prop-types': 'error',
     'react/no-unused-state': 'error',
     'react/void-dom-elements-no-children': 'error',
-
   },
 };
 
