@@ -62,11 +62,13 @@ const reactSettings = {
     'react/jsx-boolean-value': 'error',
     'react/jsx-curly-brace-presence': ['error', { props: 'never', children: 'never' }],
     'react/jsx-filename-extension': ['error', { "extensions": [".jsx", ".tsx"] }],
+    'react/jsx-wrap-multilines': 'off',
     'react/no-array-index-key': 'error',
     'react/no-this-in-sfc': 'error',
     'react/no-unused-prop-types': 'error',
     'react/no-unused-state': 'error',
     'react/void-dom-elements-no-children': 'error',
+
   },
 };
 
@@ -96,6 +98,7 @@ module.exports = {
     'import/no-unresolved': 'error',
     'import/order': ['error', { groups: ['external', 'builtin', ['sibling', 'parent']] }],
     'import/prefer-default-export': 'off',
+    'lines-between-class-members': 'off',
     'max-lines': 'error',
     'no-console': 'error',
     'no-debugger': 'error',
