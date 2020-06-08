@@ -50,6 +50,7 @@ const typeScriptSettings = {
     '@typescript-eslint/no-use-before-define': 'error',
     '@typescript-eslint/prefer-interface': 'off',
     '@typescript-eslint/prefer-readonly': 'error',
+    'camelcase': 'off',
   },
 };
 
@@ -60,6 +61,7 @@ const reactSettings = {
     'react/display-name': 'off',
     'react/jsx-boolean-value': 'error',
     'react/jsx-curly-brace-presence': ['error', { props: 'never', children: 'never' }],
+    'react/jsx-filename-extension': ['error', { "extensions": [".jsx", ".tsx"] }],
     'react/no-array-index-key': 'error',
     'react/no-this-in-sfc': 'error',
     'react/no-unused-prop-types': 'error',
@@ -69,7 +71,7 @@ const reactSettings = {
 };
 
 module.exports = {
-  extends: ['plugin:prettier/recommended'],
+  extends: ['airbnb', 'plugin:prettier/recommended'],
   plugins: ['import', 'unicorn'],
   settings: {
     react: {
@@ -105,6 +107,7 @@ module.exports = {
     ],
     'no-undef': 'error',
     'no-underscore-dangle': 'error',
+    'react/static-property-placement': 'off',
     'unicorn/catch-error-name': 'error',
     'unicorn/custom-error-definition': 'off',
     'unicorn/error-message': 'error',
