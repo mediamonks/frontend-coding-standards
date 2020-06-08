@@ -59,12 +59,11 @@ We have standardized on a few abbreviations that are allowed to use:
 
 #### Plural or singular?
 
-##### Classes
-When you would instantiate or type the class it must have singular name, also for enums.
-When you should not instantiate the class, it should have a plural name.
+##### Classes, Interfaces, Types and Enums
+Should always have a **singular** name, unless the object is only used to hold other values and these other value are more important then the object itself, like `Props`, `Settings` or `Options`. For example: `MyComponentProps`, `ProductionSettings` or `CalendarOptions`.
 
 ##### Arrays
-or other kind of lists should have a plural name or end with `List` or `Collection`, like `userList`.
+Or other kind of lists should have a plural name or end with `List` or `Collection`, like `userList`.
 
 ##### Folders
 If a folder holds multiple files, but all related to one main type, it should have a singular name. If it holds multiple main files of a type, it should have a plural name.
