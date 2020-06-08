@@ -71,7 +71,7 @@ const reactSettings = {
 
 module.exports = {
   extends: ['plugin:prettier/recommended'],
-  plugins: ['import', 'unicorn', 'prettier'],
+  plugins: ['import', 'unicorn'],
   settings: {
     react: {
       version: 'detect',
@@ -106,10 +106,6 @@ module.exports = {
     ],
     'no-undef': 'error',
     'no-underscore-dangle': 'error',
-    'prettier/prettier': [
-      'error',
-      { singleQuote: true, trailingComma: 'all', printWidth: 100, tabWidth: 2 },
-    ],
     'unicorn/catch-error-name': 'error',
     'unicorn/custom-error-definition': 'off',
     'unicorn/error-message': 'error',
