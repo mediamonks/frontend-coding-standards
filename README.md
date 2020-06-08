@@ -86,7 +86,7 @@ Avoid negations. _“Don’t ever not avoid negative logic”_. Prefer `isShown`
 #### Casing
 
 ##### Classes, Interfaces & Types
-Are written in Pascal Case naming (start with a capital, the rest camelcase), no underscores, no dashes.
+Are written in PascalCase naming (start with a capital, the rest camelcase), no underscores, no dashes.
 
 ##### Functions, properties, arguments and variables
 Are all written in lower camelCase. 
