@@ -19,6 +19,27 @@ const typeScriptSettings = {
     '@typescript-eslint/consistent-type-assertions': 'error',
     '@typescript-eslint/explicit-member-accessibility': 'error',
     '@typescript-eslint/indent': 'off',
+    '@typescript-eslint/naming-convention': [
+      'error',
+      {
+        selector: 'default',
+        format: ['camelCase'],
+        leadingUnderscore: 'forbid',
+        trailingUnderscore: 'forbid',
+      },
+      {
+        selector: 'typeLike',
+        format: ['PascalCase'],
+      },
+      {
+        selector: 'variable',
+        format: ['camelCase', 'UPPER_CASE'],
+      },
+      {
+        selector: 'enumMember',
+        format: ['PascalCase'],
+      },
+    ],
     '@typescript-eslint/no-empty-function': 'error',
     '@typescript-eslint/no-explicit-any': 'error',
     '@typescript-eslint/no-inferrable-types': 'off',
@@ -30,12 +51,10 @@ const typeScriptSettings = {
     '@typescript-eslint/prefer-interface': 'off',
     '@typescript-eslint/prefer-readonly': 'error',
   },
-}
+};
 
 const reactSettings = {
-  extends: [
-    'plugin:react/recommended',
-  ],
+  extends: ['plugin:react/recommended'],
   rules: {
     'react/button-has-type': 'error',
     'react/display-name': 'off',
@@ -48,8 +67,7 @@ const reactSettings = {
     'react/prop-types': 'off',
     'react/void-dom-elements-no-children': 'error',
   },
-}
-
+};
 
 module.exports = {
   extends: ['plugin:prettier/recommended'],
@@ -151,7 +169,32 @@ module.exports = {
       files: ['*.tsx'],
       ...typeScriptSettings,
       extends: [...typeScriptSettings.extends, ...reactSettings.extends],
-      rules: {...typeScriptSettings.rules, ...reactSettings.rules},
+      rules: {
+        ...typeScriptSettings.rules,
+        ...reactSettings.rules,
+        '@typescript-eslint/naming-convention': [
+          'error',
+          {
+            selector: 'default',
+            format: ['camelCase'],
+            leadingUnderscore: 'forbid',
+            trailingUnderscore: 'forbid',
+          },
+          {
+            selector: 'typeLike',
+            format: ['PascalCase'],
+          },
+          {
+            selector: 'variable',
+            // Exception for FunctionComponents
+            format: ['camelCase', 'PascalCase', 'UPPER_CASE'],
+          },
+          {
+            selector: 'enumMember',
+            format: ['PascalCase'],
+          },
+        ],
+      },
     },
     {
       files: ['*.jsx'],
