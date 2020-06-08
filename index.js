@@ -1,13 +1,4 @@
 module.exports = {
-  parser: '@typescript-eslint/parser',
-  parserOptions: {
-    ecmaVersion: 2018,
-    ecmaFeatures: {
-      jsx: true,
-    },
-    sourceType: 'module',
-    project: './tsconfig.json',
-  },
   extends: ['plugin:react/recommended', 'plugin:prettier/recommended'],
   plugins: ['import', 'unicorn', 'prettier'],
   settings: {
@@ -31,7 +22,7 @@ module.exports = {
       { js: 'never', jsx: 'never', ts: 'never', tsx: 'never', hbs: 'never', vue: 'never' },
     ],
     'import/no-unresolved': 'error',
-    'import/order': ['error', { groups: ['external', 'builtin', ['sibling', 'parent']] }],    
+    'import/order': ['error', { groups: ['external', 'builtin', ['sibling', 'parent']] }],
     'import/prefer-default-export': 'off',
     'max-lines': 'error',
     'no-console': 'error',
@@ -115,6 +106,15 @@ module.exports = {
     },
     {
       files: ['*.ts', '*.tsx'],
+      parser: '@typescript-eslint/parser',
+      parserOptions: {
+        ecmaVersion: 2018,
+        ecmaFeatures: {
+          jsx: true,
+        },
+        sourceType: 'module',
+        project: './tsconfig.json',
+      },
       extends: [
         'plugin:@typescript-eslint/recommended',
         'plugin:react/recommended',
