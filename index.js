@@ -31,6 +31,8 @@ module.exports = {
       { js: 'never', jsx: 'never', ts: 'never', tsx: 'never', hbs: 'never', vue: 'never' },
     ],
     'import/no-unresolved': 'error',
+    'import/order': ['error', { groups: ['external', 'builtin', ['sibling', 'parent']] }],    
+    'import/prefer-default-export': 'off',
     'max-lines': 'error',
     'no-console': 'error',
     'no-debugger': 'error',
