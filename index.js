@@ -103,6 +103,7 @@ module.exports = {
     'no-console': 'error',
     'no-debugger': 'error',
     'no-extra-boolean-cast': 'off',
+    'no-plusplus': 'off',
     'no-restricted-properties': [
       'error',
       { object: 'document', property: 'querySelector' },
