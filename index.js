@@ -73,7 +73,7 @@ const reactSettings = {
 
 module.exports = {
   extends: ['airbnb', 'plugin:prettier/recommended'],
-  plugins: ['import', 'unicorn'],
+  plugins: ['import', 'unicorn', 'babel'],
   settings: {
     react: {
       version: 'detect',
@@ -88,6 +88,7 @@ module.exports = {
     process: true,
   },
   rules: {
+    'babel/no-unused-expressions': 'error',
     'default-case': 'error',
     'import/extensions': [
       'error',
@@ -109,6 +110,7 @@ module.exports = {
     ],
     'no-undef': 'error',
     'no-underscore-dangle': 'error',
+    'no-unused-expressions': 'off',
     'react/static-property-placement': 'off',
     'unicorn/catch-error-name': 'error',
     'unicorn/custom-error-definition': 'off',
