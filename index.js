@@ -55,8 +55,9 @@ const typeScriptSettings = {
 };
 
 const reactSettings = {
-  extends: ['plugin:react/recommended'],
+  extends: ['plugin:react/recommended', 'plugin:react-hooks/recommended'],
   rules: {
+    'react-hooks/exhaustive-deps': 'error',
     'react/button-has-type': 'error',
     'react/display-name': 'off',
     'react/jsx-boolean-value': 'error',
