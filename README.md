@@ -44,8 +44,9 @@
  * [typesafe-actions](https://www.npmjs.com/package/typesafe-actions) - Typesafe utilities designed to reduce types verbosity and complexity in Redux Architecture.
  
 #### Vue
- * [vuex](https://vuex.vuejs.org/) - State management pattern + library for Vue.js applications
+ * [vue-transition-component](https://www.npmjs.com/package/vue-transition-component) - Provides GreenSock transition functionality to vue.js components.
  * [vuex-persistedstate](https://www.npmjs.com/package/vuex-persistedstate) - Persist Vuex state with localStorage.
+ * [vuex](https://vuex.vuejs.org/) - State management pattern + library for Vue.js applications
  
 #### Muban
  * [controller-controller](https://www.npmjs.com/package/controller-controller) - Manage different controllers based on viewport.
