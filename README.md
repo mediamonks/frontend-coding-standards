@@ -36,6 +36,7 @@
  * [react-i18next](https://react.i18next.com/) - Internationalization library for React
  * [react-intl](https://www.npmjs.com/package/react-intl) - Internationalization library for React
  * [Redux](https://redux.js.org/) - A Predictable State Container for JS Apps
+ * [redux-actions](https://www.npmjs.com/package/redux-actions) - Flux Standard Action utilities for Redux.
  * [redux-thunk](https://github.com/reduxjs/redux-thunk) - Thunk middleware for Redux.
  * [reselect](https://github.com/reduxjs/reselect) - Selector library for Redux
  * [router-path](https://www.npmjs.com/package/router-path) - Dynamic route path creator
