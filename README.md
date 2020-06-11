@@ -39,6 +39,7 @@
  * [redux-thunk](https://github.com/reduxjs/redux-thunk) - Thunk middleware for Redux.
  * [reselect](https://github.com/reduxjs/reselect) - Selector library for Redux
  * [router-path](https://www.npmjs.com/package/router-path) - Dynamic route path creator
+ * [typesafe-actions](https://www.npmjs.com/package/typesafe-actions) - Typesafe utilities designed to reduce types verbosity and complexity in Redux Architecture.
  
 #### Vue
  * [vuex](https://vuex.vuejs.org/) - State management pattern + library for Vue.js applications
