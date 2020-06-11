@@ -82,18 +82,18 @@ Should start with `is`, `has`, `will` or `should`. Like `isValid` or `hasValues`
 #### Always Affirmative
 Avoid negations. _“Don’t ever not avoid negative logic”_. Prefer `isShown` over `isHidden` or `isEnabled` over `isDisabled`. Do not use names like `notEditable`.
 
-#### Casing
+### Casing
 
-##### Classes, Interfaces & Types
+#### Classes, Interfaces & Types
 **PascalCase** Every individual word start with an upper case character, no underscores, no dashes.
 
-##### Functions, properties, arguments and variables
+#### Functions, properties, arguments and variables
 **camelCase** Starts with a lower case character, every following individual word start with a upper case character, no underscores, no dashes. 
 
-##### Globally used constants
+#### Globally used constants
 **UPPER_CASE** Only use upper case characters, individual words must be separated with an underscore.
 
-##### CSS Class names
+#### CSS Class names
 **kabab-case** Only use lower case characters, individual words must be separated with a dash. 
 
 ## Coding
