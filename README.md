@@ -15,6 +15,7 @@
  * [storybook](https://github.com/storybookjs/storybook) - UI component dev & test
 
 #### Coding
+ * [axios](https://github.com/axios/axios) - Promise based HTTP client
  * [bowser](https://www.npmjs.com/package/bowser) - A small, fast and rich-API browser/platform/engine detector
  * [date-fns](https://www.npmjs.com/package/date-fns) - provides the most comprehensive, yet simple and consistent toolset for manipulating JavaScript dates
  * [i18next](https://www.npmjs.com/package/i18next) - Internationalization library
