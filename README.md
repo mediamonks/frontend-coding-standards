@@ -152,6 +152,9 @@ Don't leave commented out code into project. You can always find it back in the 
 #### TODO
 If something needs to be changed or refactored later, add a `// TODO ` comment to indicate what the issue is.
 
+#### Refactoring
+If you refactor code that has comments, please check afterwards if the comments still make sense or need to be updated.
+
 ## TypeScript
 Use TypeScript in strict mode and do not allow native JavaScript. Therefore everything must be typed. It’s not needed to type something when TypeScript can resolve the type.
 
