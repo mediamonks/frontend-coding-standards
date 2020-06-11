@@ -82,9 +82,12 @@ Should start with `is`, `has`, `will` or `should`. Like `isValid` or `hasValues`
 #### Always Affirmative
 Avoid negations. _“Don’t ever not avoid negative logic”_. Prefer `isShown` over `isHidden` or `isEnabled` over `isDisabled`. Do not use names like `notEditable`.
 
+#### TypeScript Generics
+If a Class or Interfaces uses only one generic and the usages of the generic is obvious, then naming that generic `T` is sufficient. If a Class or Interface has more generics or when the usage is not obvious, you should use a more descriptive name. The same naming rules as for classes will apply then. 
+
 ### Casing
 
-#### Classes, Interfaces & Types
+#### Classes, Interfaces, Types and Generics
 **PascalCase** Every individual word start with an upper case character, no underscores, no dashes.
 
 #### Functions, properties, arguments and variables
