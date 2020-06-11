@@ -96,6 +96,25 @@ Avoid negations. _“Don’t ever not avoid negative logic”_. Prefer `isShown`
 #### CSS Class names
 **kabab-case** Only use lower case characters, individual words must be separated with a dash. 
 
+### File names
+If a file contains only one class, type or object, or when there is one main class, type or object with some helper classes, types or objects, the file should have the same name, in the same casing, as that (main) class, type or object. If a file contains a class, but only an instance of that class is exported, the file should have the same name as the class, but written in camelCase.
+
+If a file holds multiple classes, types and/or objects, and they are all more or less equal in importance, the file should have a name that describes all the classes, types and/or objects, written in camelCase.
+
+#### File extensions
+
+#### .js
+JavaScript only
+
+#### .ts
+TypeScript only
+
+####. jsx
+JavaScript with React JSX syntax. If a file has the .jsx extension, it must contain React code.
+
+####. tsx
+TypeScript with React JSX syntax. If a file has the .tsx extension, it must contain React code.
+
 ## Coding
 Every function or class should do **one thing** (and do it good). If it needs to do more than one thing, split it up. Keep your files, classes and functions small. It’s okay to have a file with just a single line.
 
