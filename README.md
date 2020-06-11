@@ -45,6 +45,7 @@
  
 #### Vue
  * [vuex](https://vuex.vuejs.org/) - State management pattern + library for Vue.js applications
+ * [vuex-persistedstate](https://www.npmjs.com/package/vuex-persistedstate) - Persist Vuex state with localStorage.
  
 #### Muban
  * [controller-controller](https://www.npmjs.com/package/controller-controller) - Manage different controllers based on viewport.
