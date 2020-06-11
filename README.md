@@ -85,13 +85,16 @@ Avoid negations. _“Don’t ever not avoid negative logic”_. Prefer `isShown`
 #### Casing
 
 ##### Classes, Interfaces & Types
-Are written in PascalCase naming (start with a capital, the rest camelcase), no underscores, no dashes.
+**PascalCase** Every individual word start with an upper case character, no underscores, no dashes.
 
 ##### Functions, properties, arguments and variables
-Are all written in lower camelCase. 
+**camelCase** Starts with a lower case character, every following individual word start with a upper case character, no underscores, no dashes. 
 
 ##### Globally used constants
-Are written in CAPS, words divided using and underscore. Like `CAMPAIGN_ID`.
+**UPPER_CASE** Only use upper case characters, individual words must be separated with an underscore.
+
+##### CSS Class names
+**kabab-case** Only use lower case characters, individual words must be separated with a dash. 
 
 ## Coding
 Every function or class should do **one thing** (and do it good). If it needs to do more than one thing, split it up. Keep your files, classes and functions small. It’s okay to have a file with just a single line.
