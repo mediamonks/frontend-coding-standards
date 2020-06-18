@@ -1,11 +1,6 @@
 const typeScriptSettings = {
   parser: '@typescript-eslint/parser',
   parserOptions: {
-    ecmaVersion: 2018,
-    ecmaFeatures: {
-      jsx: true,
-    },
-    sourceType: 'module',
     project: './tsconfig.json',
   },
   extends: [
@@ -55,6 +50,11 @@ const typeScriptSettings = {
 };
 
 const reactSettings = {
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true,
+    },
+  },
   extends: ['plugin:react/recommended', 'plugin:react-hooks/recommended'],
   settings: {
     react: {
@@ -176,6 +176,10 @@ module.exports = {
     {
       files: ['*.tsx'],
       ...typeScriptSettings,
+      parserOptions: {
+        ...typeScriptSettings.parserOptions,
+        ...reactSettings.parserOptions,
+      },
       extends: [...typeScriptSettings.extends, ...reactSettings.extends],
       rules: {
         ...typeScriptSettings.rules,
