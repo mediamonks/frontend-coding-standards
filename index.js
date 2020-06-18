@@ -7,6 +7,7 @@ const typeScriptSettings = {
     'plugin:@typescript-eslint/recommended',
     'prettier/@typescript-eslint',
     'plugin:prettier/recommended',
+    'plugin:import/typescript'
   ],
   rules: {
     '@typescript-eslint/array-type': ['error', { default: 'generic', readonly: 'generic' }],
