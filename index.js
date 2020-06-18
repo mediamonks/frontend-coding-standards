@@ -56,6 +56,11 @@ const typeScriptSettings = {
 
 const reactSettings = {
   extends: ['plugin:react/recommended', 'plugin:react-hooks/recommended'],
+  settings: {
+    react: {
+      version: 'detect',
+    },
+  },
   rules: {
     'react-hooks/exhaustive-deps': 'error',
     'react/button-has-type': 'error',
@@ -75,11 +80,6 @@ const reactSettings = {
 module.exports = {
   extends: ['airbnb', 'plugin:prettier/recommended'],
   plugins: ['import', 'unicorn', 'babel'],
-  settings: {
-    react: {
-      version: 'detect',
-    },
-  },
   env: {
     browser: true,
     es6: true,
