@@ -4,14 +4,8 @@
 
 To make sure your project is following the MediaMonks Frontend Coding Standards you should install `@mediamonks/eslint-config` and its peer dependencies as an [eslint extension](https://eslint.org/docs/user-guide/configuring#extending-configuration-files):
 
-##### Yarn
 ```
-yarn add @mediamonks/eslint-config eslint @typescript-eslint/eslint-plugin eslint-friendly-formatter eslint-import-resolver-webpack eslint-plugin-html eslint-plugin-import eslint-plugin-prettier eslint-plugin-unicorn eslint-plugin-jsx-a11y eslint-plugin-babel eslint-plugin-react eslint-plugin-react-hooks eslint-config-airbnb --dev
-```
-
-##### NPM
-```
-npm install @mediamonks/eslint-config eslint @typescript-eslint/eslint-plugin eslint-friendly-formatter eslint-import-resolver-webpack eslint-plugin-html eslint-plugin-import eslint-plugin-prettier eslint-plugin-unicorn eslint-plugin-jsx-a11y eslint-plugin-babel eslint-plugin-react eslint-plugin-react-hooks eslint-config-airbnb --save-dev
+npx install-peerdeps --dev @mediamonks/eslint-config
 ```
 
 And set `@mediamonks` as `extends` in your `.eslintrc.js` file:
