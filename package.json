@@ -42,7 +42,8 @@
     "eslint-plugin-prettier": ">= 3",
     "eslint-plugin-react": ">= 7",
     "eslint-plugin-react-hooks": ">= 4",
-    "eslint-plugin-unicorn": ">= 18"
+    "eslint-plugin-unicorn": ">= 18",
+    "typescript": ">= 3.3"
   },
   "dependencies": {
     "@typescript-eslint/parser": ">= 3.2",
