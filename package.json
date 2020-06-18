@@ -44,6 +44,7 @@
     "eslint-plugin-react": ">= 7",
     "eslint-plugin-react-hooks": ">= 4",
     "eslint-plugin-unicorn": ">= 18",
+    "prettier": "> 2",
     "typescript": ">= 3.3"
   },
   "dependencies": {
