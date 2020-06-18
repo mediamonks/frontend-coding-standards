@@ -78,6 +78,10 @@ const reactSettings = {
 };
 
 module.exports = {
+  parserOptions: {
+    ecmaVersion: 2018,
+    sourceType: 'module',
+  },
   extends: ['airbnb', 'plugin:prettier/recommended'],
   plugins: ['import', 'unicorn', 'babel'],
   env: {
