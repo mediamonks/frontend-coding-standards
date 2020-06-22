@@ -84,7 +84,7 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'module',
   },
-  extends: ['airbnb', 'plugin:prettier/recommended'],
+  extends: ['airbnb', 'plugin:prettier/recommended', 'plugin:vue/recommended'],
   plugins: ['import', 'unicorn', 'babel'],
   env: {
     browser: true,
@@ -167,6 +167,7 @@ module.exports = {
     {
       files: ['*.vue'],
       parser: 'vue-eslint-parser',
+      extends: ['plugin:vue/recommended'],
       rules: {
         'prettier/prettier': ['off'],
       },
