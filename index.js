@@ -57,7 +57,7 @@ const reactSettings = {
       jsx: true,
     },
   },
-  extends: ['plugin:react/recommended', 'plugin:react-hooks/recommended'],
+  extends: ['plugin:react/recommended', 'plugin:react-hooks/recommended', 'prettier/react'],
   settings: {
     react: {
       version: 'detect',
