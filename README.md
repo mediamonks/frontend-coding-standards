@@ -17,3 +17,6 @@ module.exports = {
 ```
 
 This Eslint extension is configured for JavaScript, [TypeScript](http://typescriptlang.org/), [React](https://reactjs.org/), [Vue](https://vuejs.org/) and [Muban](https://mediamonks.github.io/muban/) projects.
+
+#### Prettier
+This eslint-configuration uses [Prettier](https://prettier.io/) for the formatting. Please make sure you use the same [Prettier configuration](.prettierrc) to avoid conflicts.
