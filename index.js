@@ -205,6 +205,11 @@ module.exports = {
             format: ['camelCase', 'PascalCase', 'UPPER_CASE'],
           },
           {
+            selector: 'function',
+            // Exception for FunctionComponents
+            format: ['camelCase', 'PascalCase'],
+          },
+          {
             selector: 'enumMember',
             format: ['PascalCase'],
           },
