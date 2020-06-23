@@ -27,4 +27,14 @@ We use [Sass](https://sass-lang.com/) as css preprocessor.
 Never use a `z-index` value higher then `4`. If you need more, use the [zindex](https://github.com/mediamonks/seng-scss/blob/master/utils/function/_zindex.scss) function of [seng-scss](https://www.npmjs.com/package/seng-scss).
 
 #### Vendor prefixes
-Never add vendor prefixes in the scss, use [autoprefixer](https://github.com/postcss/autoprefixer) to add them automatically. 
+Never add vendor prefixes in the scss, use [autoprefixer](https://github.com/postcss/autoprefixer) to add them automatically.
+
+#### Inline styles
+In general the rule is to use inline styles as little as possible; the more you use it, the more fragmented the styling becomes. This makes it harder for you and especially other devs working on the project to keep track of all the styling. 
+
+Accessibility-wise it also potentially prevents screen readers from overwriting font sizes and colors when needed.
+
+- Never use inline styles if they are static values, always keep it in the respective scss file
+- When dealing with more complex (dynamic) values, first check if it's possible to do it within css. `calc()` can be very powerful. If that doesn't give you the desired result, or you are relying on props, inline styles can be applied by using javascript
+- When applying inline styles via javascript, always keep the methods that do so within the same component. If you find yourself needing a parent component applying styles on child components, consider making a method in the child component which is then called in the parent
+- When working within a mandatory template (usually a header and footer from another party) there might be a need to override some styles to make it work nicely along your website. Try to do most of this "override" in a separate global scss file. Anything more complex (particularly when your website is wrapped in multiple divs) should be consolidated into a `overrideClientStyles()` method on app level  
