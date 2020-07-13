@@ -1,6 +1,6 @@
 {
   "name": "@mediamonks/eslint-config",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "description": "MediaMonks Frontend Coding Standards Eslint Config",
   "main": "index.js",
   "scripts": {
@@ -35,7 +35,6 @@
     "eslint": ">= 6",
     "eslint-friendly-formatter": ">= 4",
     "eslint-import-resolver-webpack": ">= 0.11.0",
-    "eslint-plugin-airbnb": ">= 18",
     "eslint-plugin-babel": ">= 5",
     "eslint-plugin-html": ">= 5",
     "eslint-plugin-import": ">= 2",
@@ -52,6 +51,7 @@
     "babel-eslint": "^10.1.0",
     "eslint": "^7.1.0",
     "eslint-config-airbnb-base": ">= 13",
+    "eslint-config-airbnb": ">= 18",
     "eslint-config-prettier": ">= 4",
     "typescript": "^3.9.5",
     "vue-eslint-parser": "^7.1.0"
