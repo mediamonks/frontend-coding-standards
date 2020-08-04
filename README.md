@@ -112,10 +112,10 @@ JavaScript only
 #### .ts
 TypeScript only
 
-####. jsx
+#### .jsx
 JavaScript with React JSX syntax. If a file has the .jsx extension, it must contain React code.
 
-####. tsx
+#### .tsx
 TypeScript with React JSX syntax. If a file has the .tsx extension, it must contain React code.
 
 ## Coding
