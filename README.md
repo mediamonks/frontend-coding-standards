@@ -83,7 +83,9 @@ Should start with `is`, `has`, `will` or `should`. Like `isValid` or `hasValues`
 Avoid negations. _“Don’t ever not avoid negative logic”_. Prefer `isShown` over `isHidden` or `isEnabled` over `isDisabled`. Do not use names like `notEditable`.
 
 #### TypeScript Generics
-If the code uses only one generic and the usages of the generic is obvious, then naming that generic `T` is sufficient. If a Class or Interface has more generics or when the usage is not obvious, you should use a more descriptive name. The same naming rules as for classes will apply then. 
+If the usages of the generic is obvious, then naming that generic `T` is sufficient. As long as the usage is clear you can use `U`, `V` etc. for any following generic.
+
+If the usage is not obvious, you should use a more descriptive name. The same naming rules as for classes will apply then. 
 
 ### Casing
 
