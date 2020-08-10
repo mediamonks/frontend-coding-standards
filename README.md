@@ -45,7 +45,7 @@
 - [x] Check the site again while trottling the internet connection. Does it still work? Do you have loaders in place?
 - [x] What happens if you press the `back` button in the browser? And then the `forward` button?
 - [x] What happens if you refresh the page halfway the flow?
-- [x] What happens if I directly enter a page at the end of the flow?
+- [x] What happens if you directly enter a page at the end of the flow?
 - [x] What happens if you navigate away during an async process?
 - [x] What happens if you manually change a value in the URL?
 - [x] Is there a `404`?
