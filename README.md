@@ -4,7 +4,7 @@
 
 #### Before Starting feature
 - [x] Read the ticket. If no ticket is present please ask the PM for one.
-- [x] Make sure the ticket is clear and actionable. If not, reassign the ticket to your project manager until the ticket is 100% clear.
+- [x] Make sure the ticket is clear and actionable. If not, reassign the ticket to the person responsible for the creation of the tickets (the project manager or project lead) until the ticket is 100% clear.
 - [x] Create a feature branch (`feature/ticket-number-feature-name` or for Jira use the default branch name when creating a branch from a ticket)
 
 #### General Tasks
