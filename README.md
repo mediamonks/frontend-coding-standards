@@ -20,7 +20,7 @@
 - [x] Read your code again. Do you think it can be done better or optimized? Do it. Start process again.
 - [x] Read the description of the ticket / email again. Did you really do what is asked for? Does your change solve the issue?
 - [x] Run build tasks and see if they actually works
-- [x] Do you project have code that isn't used anymore? Throw it away!
+- [x] Does your project have code that isn't used anymore? Throw it away!
 
 #### UI Task
 - [x] Check if HTML5 Semantic Elements are used appropriately (`header`, `section`, `footer`, `main`...).
