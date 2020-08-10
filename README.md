@@ -21,6 +21,7 @@
 - [x] Read the description of the ticket / email again. Did you really do what is asked for? Does your change solve the issue?
 - [x] Run build tasks and see if they actually works
 - [x] Does your project have code that isn't used anymore? Throw it away!
+- [X] Make sure all linting is passing
 
 #### UI Task
 - [x] Check if HTML5 Semantic Elements are used appropriately (`header`, `section`, `footer`, `main`...).
