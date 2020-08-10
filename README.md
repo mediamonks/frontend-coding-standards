@@ -8,7 +8,7 @@
 - [x] Create a feature branch (`feature/ticket-number-feature-name` or for Jira use the default branch name when creating a branch from a ticket)
 
 #### General Tasks
-- [x] Double check if feature is properly working on all browsers 
+- [x] Double check if feature is properly working on all browsers specified in the browser matrix.
 - [x] Double check if feature is properly working on all resolutions
 - [x] Review all commits and check if there is room for improvement 
 - [x] Could any of the functions you wrote be reused on other components/features ?. If so, rewrite it and restart the checklist process.
