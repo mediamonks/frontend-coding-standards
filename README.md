@@ -25,7 +25,7 @@
 #### UI Task
 - [x] Check if HTML5 Semantic Elements are used appropriately (`header`, `section`, `footer`, `main`...).
 - [x] All images have an `alt` property
-- [x] All `<href>` have `title` property
+- [x] All `<a>` have `title` property
 - [x] Check if all images are optimized (Saved for web and compressed, resized accordingly)
 - [x] Headings (`h1`, `h2`, `h3`...) are used in the correct order.
 - [x] All `input`'s have a `label`
