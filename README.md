@@ -43,7 +43,7 @@
 - [x] Check the site has a `title` tag.
 - [x] Check for Social sharing `meta` tags.
 - [x] Check the site `description`.
-- [x] Check the site again while trottling the internet connection. Does it still work? Do you have loaders in place?
+- [x] Check the site again while throttling the internet connection. Does it still work? Do you have loaders in place?
 - [x] What happens if you press the `back` button in the browser? And then the `forward` button?
 - [x] What happens if you refresh the page halfway the flow?
 - [x] What happens if you directly enter a page at the end of the flow?
