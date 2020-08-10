@@ -49,6 +49,9 @@
 - [x] What happens if you navigate away during an async process?
 - [x] What happens if you manually change a value in the URL?
 - [x] Is there a `404`?
+- [x] Check for a favicon.
+- [x] Check for JavaScript errors in the console.
+- [x] Remove all console.logs.
 
 #### Deployment process
 - [x] QA/Staging/UAT/Dev deploy before every Production release. No matter if it's a hotfix or if the PM is pushing. Unless everything is broken, please follow the rules.
