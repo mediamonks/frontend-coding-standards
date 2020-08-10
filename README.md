@@ -145,6 +145,10 @@ All code within a project should have the same formatting. To enforce that we us
 #### Documentation comments
 Reconsider if your code really needs comments. Code should be self explaining. Don't add comments that already tell what code does (by just repeating) or that are needed in order for the code to make any sense. Code that needs such comments is probably bad. Instead, it is recommended to write the intention of the code.
 
+If you're new to a project or piece of code, when going over it, and trying to understand it, add explanatory comments on things that took you some time to figure out.
+
+If someone else asks during a code review why something is done a certain way, see if you can answer it with a code comment instead of a reply in the review tool (when applicable).
+
 #### Regular Expressions
 Since regular expressions can be hard to read, they should have a comment that indicate what they do. Especially when they are complex.
 
