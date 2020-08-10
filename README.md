@@ -53,4 +53,4 @@
 #### Deployment process
 - [x] QA/Staging/UAT/Dev deploy before every Production release. No matter if it's a hotfix or if the PM is pushing. Unless everything is broken, please follow the rules.
 - [x] No Friday deploys. Remember the project manager not to rely on Friday deploys 😀 
-- [x] Run the website through page insights. (Run audits in chrome)
+- [x] Run the website through page insights / Lighthouse. (Run audits in chrome)
