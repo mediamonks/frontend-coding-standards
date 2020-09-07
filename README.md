@@ -12,12 +12,12 @@
 4. [Comments](#comments)
 5. [TypeScript](#typescript)
 6. [GIT](#git)
-  1. [Branches](#branches)
-  2. [Commit messages](#commit-messages)
+   1. [Branches](#branches)
+   2. [Commit messages](#commit-messages)
 7. [Recommended Frameworks](#recommended-frameworks)
-  1. [React](#react)
-  2. [Vue](#vue)
-  3. [Muban](#muban)
+   1. [React](#react)
+   2. [Vue](#vue)
+   3. [Muban](#muban)
 8. [Definition of Done Checklist](#definition-of-done-checklist)
 
 ## Naming
