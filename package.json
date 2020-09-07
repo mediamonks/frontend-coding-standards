@@ -5,5 +5,8 @@
   "repository": "git@github.com:mediamonks/frontend-coding-standards.git",
   "author": "Thijs <thijs@mediamonks.com>",
   "license": "MIT",
-  "private": false
+  "private": false,
+  "scripts": {
+    "generate-table-of-contents": "node ./tools/generate-table-of-contents.js"
+  }
 }
