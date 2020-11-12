@@ -1,0 +1,12 @@
+{
+  "name": "frontend-coding-standards",
+  "version": "1.0.0",
+  "description": "MediaMonks - Frontend Coding Standards",
+  "repository": "git@github.com:mediamonks/frontend-coding-standards.git",
+  "author": "Thijs <thijs@mediamonks.com>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "generate-table-of-contents": "node ./tools/generate-table-of-contents.js"
+  }
+}

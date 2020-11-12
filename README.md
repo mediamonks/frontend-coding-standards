@@ -2,6 +2,24 @@
 
 [Based on Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript/)
 
+## Table of Contents
+
+1. [Naming](#naming)
+   1. [Casing](#casing)
+   2. [File names](#file-names)
+2. [Coding](#coding)
+3. [Formatting](#formatting)
+4. [Comments](#comments)
+5. [TypeScript](#typescript)
+6. [GIT](#git)
+   1. [Branches](#branches)
+   2. [Commit messages](#commit-messages)
+7. [Recommended Frameworks](#recommended-frameworks)
+   1. [React](#react)
+   2. [Vue](#vue)
+   3. [Muban](#muban)
+8. [Definition of Done Checklist](#definition-of-done-checklist)
+
 ## Naming
 Choosing good names is critical to creating code that is easy to use and easy to understand. You should always take the time to think about whether you have chosen the right name for something, especially if it is part of the public API.
 
