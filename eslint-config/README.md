@@ -1,8 +1,6 @@
-# MediaMonks - Frontend Coding Standards
+# MediaMonks - Eslint Configuration
 
-## Eslint Configuration
-
-To make sure your project is following the MediaMonks Frontend Coding Standards you should install `@mediamonks/eslint-config` and its peer dependencies as an [eslint extension](https://eslint.org/docs/user-guide/configuring#extending-configuration-files):
+To make sure your project is following the [MediaMonks - Frontend Coding Standards](https://github.com/mediamonks/frontend-coding-standards) you should install `@mediamonks/eslint-config` and its peer dependencies as an [eslint extension](https://eslint.org/docs/user-guide/configuring#extending-configuration-files):
 
 ```
 npx install-peerdeps --dev @mediamonks/eslint-config
