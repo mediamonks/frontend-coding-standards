@@ -251,6 +251,7 @@ We recommend using [Muban](https://github.com/mediamonks/muban) for Server Rende
 
 #### TypeScript
  * [ts-essentials](https://www.npmjs.com/package/ts-essentials) - TypeScript utilities
+ * [isntnt](https://www.npmjs.com/package/isntnt) - Composable TypeScript predicate
 
 #### React
  * [Formik](https://jaredpalmer.com/formik/) - Forms
