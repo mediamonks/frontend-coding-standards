@@ -20,7 +20,6 @@
  * [date-fns](https://www.npmjs.com/package/date-fns) - provides the most comprehensive, yet simple and consistent toolset for manipulating JavaScript dates
  * [i18next](https://www.npmjs.com/package/i18next) - Internationalization library
  * [lodash](https://lodash.com/) - A modern JavaScript utility library delivering modularity, performance & extras.
- * [Moment](https://www.npmjs.com/package/moment) - A lightweight JavaScript date library for parsing, validating, manipulating, and formatting dates.
  * [seng-disposable-event-listener](https://www.npmjs.com/package/seng-disposable-event-listener) - event listening management
  * [seng-disposable-manager](https://www.npmjs.com/package/seng-disposable-manager) - event management
  * [seng-event](https://www.npmjs.com/package/seng-event) - Provides Classes and utilities for dispatching and listening to events.
