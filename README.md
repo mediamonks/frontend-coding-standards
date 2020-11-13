@@ -18,7 +18,8 @@
    1. [React](#react)
    2. [Vue](#vue)
    3. [Muban](#muban)
-8. [Definition of Done Checklist](#definition-of-done-checklist)
+8. [Recommended Libraries](#recommended-libraries)
+9. [Definition of Done Checklist](#definition-of-done-checklist)
 
 ## Naming
 Choosing good names is critical to creating code that is easy to use and easy to understand. You should always take the time to think about whether you have chosen the right name for something, especially if it is part of the public API.
