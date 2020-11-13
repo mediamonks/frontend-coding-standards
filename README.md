@@ -4,22 +4,23 @@
 
 ## Table of Contents
 
-1. [Naming](#naming)
+1. [Eslint](#eslint)
+2. [Naming](#naming)
    1. [Casing](#casing)
    2. [File names](#file-names)
-2. [Coding](#coding)
-3. [Formatting](#formatting)
-4. [Comments](#comments)
-5. [TypeScript](#typescript)
-6. [GIT](#git)
+3. [Coding](#coding)
+4. [Formatting](#formatting)
+5. [Comments](#comments)
+6. [TypeScript](#typescript)
+7. [GIT](#git)
    1. [Branches](#branches)
    2. [Commit messages](#commit-messages)
-7. [Recommended Frameworks](#recommended-frameworks)
+8. [Recommended Frameworks](#recommended-frameworks)
    1. [React](#react)
    2. [Vue](#vue)
    3. [Muban](#muban)
-8. [Recommended Libraries](#recommended-libraries)
-9. [Definition of Done Checklist](#definition-of-done-checklist)
+9. [Recommended Libraries](#recommended-libraries)
+10. [Definition of Done Checklist](#definition-of-done-checklist)
 
 ## Eslint
 Please install our [ESLint Configuration](https://www.npmjs.com/package/@mediamonks/eslint-config) to enforce the *MediaMonks - Frontend Coding Standards* in your project.
