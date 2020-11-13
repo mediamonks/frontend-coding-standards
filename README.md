@@ -21,6 +21,9 @@
 8. [Recommended Libraries](#recommended-libraries)
 9. [Definition of Done Checklist](#definition-of-done-checklist)
 
+## Eslint
+Please install our [ESLint Configuration](https://www.npmjs.com/package/@mediamonks/eslint-config) to enforce the *MediaMonks - Frontend Coding Standards* in your project.
+
 ## Naming
 Choosing good names is critical to creating code that is easy to use and easy to understand. You should always take the time to think about whether you have chosen the right name for something, especially if it is part of the public API.
 
