@@ -206,6 +206,9 @@ Please read: https://chris.beams.io/posts/git-commit/
 * Only commit one feature at the time.
 * Always check your commit in details to avoid committing wrong code.
 
+### Code Reviews
+Always let someone else review your code in the Pull/Merge Request. Make sure all code review comments are resolved, before you merge it!
+
 ## Recommended Frameworks
 
 ### React
