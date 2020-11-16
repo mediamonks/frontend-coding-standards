@@ -4,22 +4,26 @@
 
 ## Table of Contents
 
-1. [Naming](#naming)
+1. [Eslint](#eslint)
+2. [Naming](#naming)
    1. [Casing](#casing)
    2. [File names](#file-names)
-2. [Coding](#coding)
-3. [Formatting](#formatting)
-4. [Comments](#comments)
-5. [TypeScript](#typescript)
-6. [GIT](#git)
+3. [Coding](#coding)
+4. [Formatting](#formatting)
+5. [Comments](#comments)
+6. [TypeScript](#typescript)
+7. [GIT](#git)
    1. [Branches](#branches)
    2. [Commit messages](#commit-messages)
-   3. [Code Reviews](#code-reviews)
-7. [Recommended Frameworks](#recommended-frameworks)
+8. [Recommended Frameworks](#recommended-frameworks)
    1. [React](#react)
    2. [Vue](#vue)
    3. [Muban](#muban)
-8. [Definition of Done Checklist](#definition-of-done-checklist)
+9. [Recommended Libraries](#recommended-libraries)
+10. [Definition of Done Checklist](#definition-of-done-checklist)
+
+## Eslint
+Please install our [ESLint Configuration](https://www.npmjs.com/package/@mediamonks/eslint-config) to enforce the *MediaMonks - Frontend Coding Standards* in your project.
 
 ## Naming
 Choosing good names is critical to creating code that is easy to use and easy to understand. You should always take the time to think about whether you have chosen the right name for something, especially if it is part of the public API.
@@ -227,6 +231,61 @@ Start a new Vue project with [Vue Skeleton](https://github.com/hjeti/vue-skeleto
 ### Muban
 We recommend using [Muban](https://github.com/mediamonks/muban) for Server Rendered Websites. Muban makes integration into CMS systems, like [AEM](https://www.adobe.com/marketing/experience-manager.html), [Drupal](https://www.drupal.org/), [Liferay](https://www.liferay.com/) and [Umbraco](https://umbraco.com/) easier.
 
+## Recommended Libraries
+
+#### Animation & UI
+ * [classnames](https://www.npmjs.com/package/classnames) - A simple JavaScript utility for conditionally joining classNames together.
+ * [Draggable](https://greensock.com/draggable/) - Green Sock library for dragging elements
+ * [grid-checker](https://www.npmjs.com/package/grid-checker) - provides developers a customizable, responsive grid-overlay to compare with the layout provided by design to compare layouts
+ * [GSAP](https://greensock.com/gsap/) - Green Sock Animation Platform -Animation library
+ * [Litepicker](https://github.com/ThijsTyZ/Litepicker) - Date range picker - lightweight, no dependencies
+ * [Lottie](http://airbnb.io/lottie/) - parses Adobe After Effects animations exported as json with Bodymovin and renders them natively on mobile and on the web
+ * [scroll-tracker-component-manager](https://www.npmjs.com/package/scroll-tracker-component-manager) - The ScrollTrackerComponentManager is a Class that tracks whether a component is within your viewport based on your scroll position.
+ * [seng-scss](https://www.npmjs.com/package/seng-scss) - A SCSS library of mixins and functions
+ * [seng-device-state-tracker](https://github.com/mediamonks/seng-device-state-tracker) - DeviceStateTracker is a utility class that tracks which media query is currently active using the matchMedia API.
+ * [storybook](https://github.com/storybookjs/storybook) - UI component dev & test
+
+#### Coding
+ * [axios](https://github.com/axios/axios) - Promise based HTTP client
+ * [bowser](https://www.npmjs.com/package/bowser) - A small, fast and rich-API browser/platform/engine detector
+ * [date-fns](https://www.npmjs.com/package/date-fns) - provides the most comprehensive, yet simple and consistent toolset for manipulating JavaScript dates
+ * [i18next](https://www.npmjs.com/package/i18next) - Internationalization library
+ * [lodash](https://lodash.com/) - A modern JavaScript utility library delivering modularity, performance & extras.
+ * [seng-disposable-event-listener](https://www.npmjs.com/package/seng-disposable-event-listener) - event listening management
+ * [seng-disposable-manager](https://www.npmjs.com/package/seng-disposable-manager) - event management
+ * [seng-event](https://www.npmjs.com/package/seng-event) - Provides Classes and utilities for dispatching and listening to events.
+ * [Yup](https://github.com/jquense/yup) - Form validation
+
+#### TypeScript
+ * [ts-essentials](https://www.npmjs.com/package/ts-essentials) - TypeScript utilities
+
+#### React
+ * [Formik](https://jaredpalmer.com/formik/) - Forms
+ * [MobX](https://mobx.js.org/README.html) - Simple, scalable state management
+ * [React Router](https://reacttraining.com/react-router/) - Router library for React
+ * [react-i18next](https://react.i18next.com/) - Internationalization library for React
+ * [react-intl](https://www.npmjs.com/package/react-intl) - Internationalization library for React
+ * [router-path](https://www.npmjs.com/package/router-path) - Dynamic route path creator
+##### Redux
+ * [Redux](https://redux.js.org/) - A Predictable State Container for JS Apps
+ * [redux-actions](https://www.npmjs.com/package/redux-actions) - Flux Standard Action utilities for Redux.
+ * [redux-thunk](https://github.com/reduxjs/redux-thunk) - Thunk middleware for Redux.
+ * [reselect](https://github.com/reduxjs/reselect) - Selector library for Redux
+ * [typesafe-actions](https://www.npmjs.com/package/typesafe-actions) - Typesafe utilities designed to reduce types verbosity and complexity in Redux Architecture.
+ 
+#### Vue
+ * [vue-transition-component](https://www.npmjs.com/package/vue-transition-component) - Provides GreenSock transition functionality to vue.js components.
+ * [vuex-persistedstate](https://www.npmjs.com/package/vuex-persistedstate) - Persist Vuex state with localStorage.
+ * [vuex](https://vuex.vuejs.org/) - State management pattern + library for Vue.js applications
+ 
+#### Muban
+ * [controller-controller](https://www.npmjs.com/package/controller-controller) - Manage different controllers based on viewport.
+
+ 
+#### Development
+ * [patch-package](https://www.npmjs.com/package/patch-package) - Lets app authors instantly make and keep fixes to npm dependencies.
+ * [connect-api-mocker](https://www.npmjs.com/package/connect-api-mocker) - Middleware that fakes REST API server with filesystem.
+ 
 ##### Getting Started
 Start a new Muban project with the [Quick Start guide](https://github.com/mediamonks/muban#-quick-start).
 
