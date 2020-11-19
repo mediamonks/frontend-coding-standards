@@ -23,7 +23,8 @@
 10. [Definition of Done Checklist](#definition-of-done-checklist)
 
 ## Eslint
-Please install our [ESLint Configuration](https://www.npmjs.com/package/@mediamonks/eslint-config) to enforce the *MediaMonks - Frontend Coding Standards* in your project.
+Please install our [ESLint Configuration](https://www.npmjs.com/package/@mediamonks/eslint-config)
+to enforce the *MediaMonks - Frontend Coding Standards* in your project.
 
 ## Naming
 
@@ -59,6 +60,13 @@ For example: a button must always end with `Button`.
 
 There is no limit for the length of a name, so prefer a long name which is clear and descriptive
 than a short name which is not clear.
+
+#### Context
+A name should make sense within it's context and should not have unnecessary information for that
+context. For example a variable that holds the name of a user can be named `name` within a `User`
+context. However if you need to hold the name of a user in another place, `userName` might be a
+better name. Adding `user` within a `User` context (`user.userName`) is redundant and should be
+avoided.
 
 #### Abbreviations
 
