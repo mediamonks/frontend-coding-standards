@@ -15,6 +15,7 @@
 7. [GIT](#git)
    1. [Branches](#branches)
    2. [Commit messages](#commit-messages)
+   3. [Code Reviews](#code-reviews)
 8. [Recommended Frameworks](#recommended-frameworks)
    1. [React](#react)
    2. [Vue](#vue)
@@ -301,6 +302,9 @@ Please read: https://chris.beams.io/posts/git-commit/
   always clear why a change was made.
 - Only commit one feature at the time.
 - Always check your commit in details to avoid committing wrong code.
+
+### Code Reviews
+Always let someone else review your code in the Pull/Merge Request. Make sure all code review comments are resolved, before you merge it!
 
 ## Recommended Frameworks
 
