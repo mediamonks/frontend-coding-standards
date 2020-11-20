@@ -62,7 +62,7 @@ There is no limit for the length of a name, so prefer a long name which is clear
 than a short name which is not clear.
 
 #### Context
-A name should make sense within it's context and should not have unnecessary information for that
+A name should make sense within its context and should not have unnecessary information for that
 context. For example a variable that holds the name of a user can be named `name` within a `User`
 context. However if you need to hold the name of a user in another place, `userName` might be a
 better name. Adding `user` within a `User` context (`user.userName`) is redundant and should be
