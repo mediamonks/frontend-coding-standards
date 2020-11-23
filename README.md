@@ -376,8 +376,8 @@ makes integration into CMS systems, like
 - [Yup](https://github.com/jquense/yup) - Form validation
 
 #### TypeScript
-
-- [ts-essentials](https://www.npmjs.com/package/ts-essentials) - TypeScript utilities
+ - [isntnt](https://www.npmjs.com/package/isntnt) - Composable TypeScript predicate
+ - [ts-essentials](https://www.npmjs.com/package/ts-essentials) - TypeScript utilities
 
 #### React
 
