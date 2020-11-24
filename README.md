@@ -221,6 +221,49 @@ Write code that is reusable, scalable and testable.
 
 See https://en.wikipedia.org/wiki/Magic_number_(programming)
 
+
+#### Default in a switch
+
+Every `switch` must have a `default`. If there is no need to handle the `default`, either throw an
+Error or add a comment that the default is explicit ignored.
+
+```
+switch (state) {
+  case 1: {
+    // ....
+    break;
+  }
+  case 2: {
+    // ....
+    break;
+  }
+  default: {
+    throw new Error(`Unhandle value for state '${state}'`);
+  }
+}
+``` 
+*throw an error for things that should not occur*
+
+```
+switch (state) {
+  case 1: {
+    // ....
+    break;
+  }
+  case 2: {
+    // ....
+    break;
+  }
+  default: {
+    // do nothing
+    break;
+  }
+}
+``` 
+*add a comment that the default is explicit ignored*
+
+Adding the comment makes it clear the developer did not forget to implement the default.
+
 ## Formatting
 
 All code within a project should have the same formatting. To enforce that we use
