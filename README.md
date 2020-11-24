@@ -69,10 +69,10 @@ developers won't have to remember whether you shortened a word like _qualified_ 
 
 Abbreviations that are part of the HTML, CSS and/or JavaScript API are allowed, like:
 
-- `URL` for Uniform Resource Locator
-- `URI` for Uniform Resource Identifier
+- `url` for Uniform Resource Locator
+- `uri` for Uniform Resource Identifier
 - `src` for source
-- `DOM` for Document Object Model
+- `dom` for Document Object Model
 - `img` for image
 
 You should only use these abbreviations within the same context. So only use `img` if you refer to
@@ -165,6 +165,13 @@ underscore.
 #### CSS Class names
 
 **kabab-case** Only use lower case characters, individual words must be separated with a dash.
+
+#### Abbreviations
+
+Abbreviations should be treated as words, which means only the first character will be capitalized for camelCase and PascalCase.
+```
+const jsonApiSdkUrl = new JsonApiSdkUrl();
+``` 
 
 ### File names
 
