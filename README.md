@@ -310,14 +310,13 @@ Always let someone else review your code in the Pull/Merge Request. Make sure al
 
 ### React
 
-We recommend using [React](https://reactjs.org/) for 'big build like' Single Page Applications
+We recommend using [React](https://reactjs.org/) for large Single Page Applications
 (SPA's). React is suited for long term projects that need stable and maintainable code. React works
 great together with [TypeScript](https://www.typescriptlang.org/).
 
 ##### Getting started
 
-Start a new React project with [Create React App](https://github.com/facebook/create-react-app).
-
+Start a new React project with one of our [custom templates](https://github.com/mediamonks/cra-template).
 ### Vue
 
 We recommend using [Vue](https://vuejs.org/) for 'campaign like' Single Page Applications (SPA's).
