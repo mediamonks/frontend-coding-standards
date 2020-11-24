@@ -166,7 +166,7 @@ underscore.
 
 **kabab-case** Only use lower case characters, individual words must be separated with a dash.
 
-#### Abbreviations
+#### Abbreviations and Acronyms
 
 Abbreviations should be treated as words, which means only the first character will be capitalized
 for camelCase and PascalCase.
