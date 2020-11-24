@@ -168,7 +168,8 @@ underscore.
 
 #### Abbreviations
 
-Abbreviations should be treated as words, which means only the first character will be capitalized for camelCase and PascalCase.
+Abbreviations should be treated as words, which means only the first character will be capitalized
+for camelCase and PascalCase.
 ```
 const jsonApiSdkUrl = new JsonApiSdkUrl();
 ``` 
