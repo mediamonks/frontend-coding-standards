@@ -123,11 +123,18 @@ For example, the folder `page` contains a single page, with maybe some helper fi
 
 #### Functions
 
-Prefer using a verb as a name to indicate it will do something. Like `render` or `open`.
+Prefer using a verb as a name to indicate it will do something. Like `render`, `open` or `getData`.
 
 #### Classes, variables, properties, etc.
 
 All non-functions should have a noun as a name, not a verb.
+
+#### Getters and setters
+
+Although getters and setters are technically functions, they are used as if they are properties.
+Therefore, their name should be a noun.
+ > Some frameworks support `computed` properties. They work like getters, so their name should be a
+ > noun as well.
 
 #### Booleans
 
