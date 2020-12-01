@@ -2,7 +2,7 @@
 
 This page goes over the steps for creating a Pull Request (PR), including some dos and don’ts.
 
-Note: the terms _Pull Request_ and _Merge Request_ can be used interchangeably. The same is true for the terms _issue_, _ticket_, and _stories_.
+> Note: the terms _Pull Request_ and _Merge Request_ can be used interchangeably. The same is true for the terms _issue_, _ticket_, and _stories_.
 
 ## Before you start working
 
