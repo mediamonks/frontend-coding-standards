@@ -14,7 +14,7 @@ The two main reasons to create a pull request are when your work is complete, or
 
 ### When your work is complete
 
-You finished the work on an issue in a dedicated feature branch, and you’re ready to have your code merged into develop. Before doing that, others will review it according to the Frontend Pull Request Reviewer Checklist. This process is also useful for others to learn about the changes you have made. The pull request can be merged after the work is reviewed and all of the feedback has been addressed.
+You finished the work on an issue in a dedicated feature branch, and you’re ready to have your code merged into `develop`. Before doing that, others will review it according to the Frontend Pull Request Reviewer Checklist. This process is also useful for others to learn about the changes you have made. The pull request can be merged after the work is reviewed and all of the feedback has been addressed.
 
 ### When you want early feedback on your work
 
