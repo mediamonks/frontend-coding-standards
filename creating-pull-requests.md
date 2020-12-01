@@ -34,7 +34,7 @@ There are a couple of things to pay attention to when creating a PR, such as hav
 
 Here are some guidelines for a correct title:
 
-- Should contain issue identification, such as Jira issue key or Assembla ticket number (when related to a single issue).
+- Should contain issue identification, such as issue key or ticket number (when related to a single issue).
 - Should be descriptive enough. A good rule of thumb is to make it the same as the issue summary.
 - No emoticons. They add noise and don’t render properly in the PR list on some platforms.
 
