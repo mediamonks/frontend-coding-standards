@@ -20,7 +20,7 @@ You finished the work on an issue in a dedicated feature branch, and you’re re
 
 If you have been assigned a task, but are not 100% sure about the approach you are taking and want some feedback before you continue down that road, please make sure that:
 
-- You have added WIP to the title to make it clear that it is still a work in progress
+- You have added `WIP` to the title to make it clear that it is still a work in progress
 - It is clear which specific code or features you’d like to have feedback on
 - You indicated which people you want to review your code
 
