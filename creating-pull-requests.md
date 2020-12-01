@@ -20,11 +20,11 @@ You finished the work on an issue in a dedicated feature branch, and you’re re
 
 If you have been assigned a task, but are not 100% sure about the approach you are taking and want some feedback before you continue down that road, please make sure that:
 
-- You have added WIP to the title to make it clear that it is still a work in progress
+- You have added `WIP` to the title to make it clear that it is still a work in progress
 - It is clear which specific code or features you’d like to have feedback on
 - You indicated which people you want to review your code
 
-After the feedback, you can either decline the PR and start over or continue with the work in the same PR. You can keep committing in the same branch with updates, so the reviewers can keep track of your work. Just make sure you let them know when it’s ready to review again by changing the PR description and mentioning them. Remove WIP from the title when it’s ready and make sure the reviewers are notified.
+After the feedback, you can either decline the PR and start over or continue with the work in the same PR. You can keep committing in the same branch with updates, so the reviewers can keep track of your work. Just make sure you let them know when it’s ready to review again by changing the PR description and mentioning them. Remove `WIP` from the title when it’s ready and make sure the reviewers are notified.
 
 ## How to create a PR?
 
@@ -34,7 +34,7 @@ There are a couple of things to pay attention to when creating a PR, such as hav
 
 Here are some guidelines for a correct title:
 
-- Should contain issue identification, such as Jira issue key or Assembla ticket number (when related to a single issue).
+- Should contain issue identification, such as issue key or ticket number (when related to a single issue).
 - Should be descriptive enough. A good rule of thumb is to make it the same as the issue summary.
 - No emoticons. They add noise and don’t render properly in the PR list on some platforms.
 
