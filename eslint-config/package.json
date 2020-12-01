@@ -1,0 +1,62 @@
+{
+  "name": "@mediamonks/eslint-config",
+  "version": "1.1.3",
+  "description": "MediaMonks Frontend Coding Standards Eslint Config",
+  "main": "index.js",
+  "scripts": {
+    "prettify": "prettier --write \"index.js\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mediamonks/frontend-coding-standards.git"
+  },
+  "keywords": [
+    "MediaMonks",
+    "Coding",
+    "Standards",
+    "eslint",
+    "eslintconfig",
+    "Frontend",
+    "JavaScript",
+    "TypeScript",
+    "React",
+    "Vue",
+    "Muban"
+  ],
+  "author": "MediaMonks",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mediamonks/frontend-coding-standards/issues"
+  },
+  "homepage": "https://github.com/mediamonks/frontend-coding-standards#readme",
+  "peerDependencies": {
+    "@typescript-eslint/eslint-plugin": ">= 3",
+    "eslint": ">= 6",
+    "eslint-friendly-formatter": ">= 4",
+    "eslint-import-resolver-webpack": ">= 0.11.0",
+    "eslint-plugin-babel": ">= 5",
+    "eslint-plugin-html": ">= 5",
+    "eslint-plugin-import": ">= 2",
+    "eslint-plugin-jsx-a11y": ">= 6",
+    "eslint-plugin-prettier": ">= 3",
+    "eslint-plugin-react": ">= 7",
+    "eslint-plugin-react-hooks": ">= 4",
+    "eslint-plugin-unicorn": ">= 18",
+    "prettier": "> 2",
+    "typescript": ">= 3.3"
+  },
+  "dependencies": {
+    "@typescript-eslint/parser": ">= 3.2",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.1.0",
+    "eslint-config-airbnb-base": ">= 13",
+    "eslint-config-airbnb": ">= 18",
+    "eslint-config-prettier": ">= 4",
+    "typescript": "^3.9.5",
+    "vue-eslint-parser": "^7.1.0"
+  },
+  "devDependencies": {
+    "prettier": "^2.0.5"
+  }
+}
