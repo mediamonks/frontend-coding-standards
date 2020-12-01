@@ -124,7 +124,7 @@ Please read when your PR is ready to be merged below.
 
 Some common sense should be applied when following the above rules. Below is a list of additions and exceptions you should consider.
 
-- When a PR has a big impact, it’s good to have approval from a lot of devs (or everyone), so we know everyone is aware of the changes
+- When a PR has a big impact or breaking changes, it’s good to have approval from a lot of devs (or everyone), so we know everyone is aware of the changes
 - When a PR involves both advanced architecture and complex templating, approval from both a senior UI dev and a senior Architecture dev would be advised.
 - When a PR is open for a long time, or has received a lot of updates, it’s good practice to merge in your develop branch once in a while (and ideally before merging it). You can only be sure your PR doesn’t break develop after merging, if the latest develop also exists in your branch (in other words, if your merge will result in a fast-forward on develop).
 - When a PR is fairly small, or should be merged ASAP, the merge responsibility can be handed over to someone else, for example the last person to approve it, or someone in another timezone. Please add this as a general comment in the PR, and/or let them know on Slack.
