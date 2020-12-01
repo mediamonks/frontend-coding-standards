@@ -103,7 +103,7 @@ As the author of the PR, you should maintain the following:
   - answering the question
   - making changes to the code
   - creating new issues for things that should be picked up outside of this PR. When it applies to a specific piece of code, add a TODO comment with a link to that issue in the code.
-- When a comment is resolved, especially when doing so through code changes, add a [✅](https://emojis.wiki/check-mark-button/#:~:text=White%20Heavy%20Check%20Mark%20emoji,emoji%20that%20provides%20positive%20reinforcement.) (:white_check_mark:) reply to let everyone know it has been addressed.
+- When a comment is resolved, especially when doing so through code changes, add a [✅](https://emojis.wiki/check-mark-button/#:~:text=White%20Heavy%20Check%20Mark%20emoji,emoji%20that%20provides%20positive%20reinforcement.) (:white_check_mark:) reply to let everyone know it has been addressed. Some platforms have the ability to 'resolve' a comment that can be used instead.
 
 ####
 
