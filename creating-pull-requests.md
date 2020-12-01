@@ -24,7 +24,7 @@ If you have been assigned a task, but are not 100% sure about the approach you a
 - It is clear which specific code or features you’d like to have feedback on
 - You indicated which people you want to review your code
 
-After the feedback, you can either decline the PR and start over or continue with the work in the same PR. You can keep committing in the same branch with updates, so the reviewers can keep track of your work. Just make sure you let them know when it’s ready to review again by changing the PR description and mentioning them. Remove WIP from the title when it’s ready and make sure the reviewers are notified.
+After the feedback, you can either decline the PR and start over or continue with the work in the same PR. You can keep committing in the same branch with updates, so the reviewers can keep track of your work. Just make sure you let them know when it’s ready to review again by changing the PR description and mentioning them. Remove `WIP` from the title when it’s ready and make sure the reviewers are notified.
 
 ## How to create a PR?
 
