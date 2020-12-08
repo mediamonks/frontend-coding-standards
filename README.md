@@ -225,7 +225,7 @@ See https://en.wikipedia.org/wiki/Magic_number_(programming)
 #### Default in a switch
 
 Every `switch` must have a `default`. If there is no need to handle the `default`, either throw an
-Error or add a comment that the default is explicit ignored.
+`Error` or add a comment that the default is explicitly ignored.
 
 ```
 switch (state) {
@@ -238,7 +238,7 @@ switch (state) {
     break;
   }
   default: {
-    throw new Error(`Unhandle value for state '${state}'`);
+    throw new Error(`Unhandled value for state '${state}'`);
   }
 }
 ``` 
