@@ -161,7 +161,8 @@ Generaly the person that created the PR should also merge it. This is because so
 actions are required after the merge, like updating ticket statuses or notifying people. Please read
 when your PR is ready to be merged below.
 
-- You have at least 2 approvals, one of which is from a senior developer.
+- You have at least 2 approvals, one of which is from a senior developer. In small projects, 1
+  approval is enough.
 - The CI pipeline build is successful.
 - All feedback from comments is resolved. This can be by resolving all issues raised in the comment,
   or if necessary by deferring work to a new issue.
