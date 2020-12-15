@@ -1,3 +1,18 @@
+## Table of Contents
+
+1. [Before you start working](#before-you-start-working)
+2. [When to create a Pull Request?](#when-to-create-a-pull-request?)
+   1. [When your work is complete](#when-your-work-is-complete)
+   2. [When you want early feedback on your work](#when-you-want-early-feedback-on-your-work)
+3. [How to create a PR?](#how-to-create-a-pr?)
+   1. [Have a correct title](#have-a-correct-title)
+   2. [Make sure the description is clear](#make-sure-the-description-is-clear)
+   3. [Assign the right people as reviewers](#assign-the-right-people-as-reviewers)
+   4. [Set the correct target branch](#set-the-correct-target-branch)
+   5. [What are your responsibilities in the PR review process?](#what-are-your-responsibilities-in-the-pr-review-process?)
+   6. [General rules for merging a PR](#general-rules-for-merging-a-pr)
+   7. [Exceptional cases](#exceptional-cases)
+
 # Creating a Pull Request
 
 This page goes over the steps for creating a Pull Request (PR), including some dos and don’ts.
