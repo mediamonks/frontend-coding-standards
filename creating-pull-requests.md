@@ -6,7 +6,7 @@ This page goes over the steps for creating a Pull Request (PR), including some d
 
 ## Before you start working
 
-Make sure that there is an issue created and assigned to you. Work on a feature branch that is named accordingly. It might also be a good idea to validate the approach you intend to take in case it is a big or complex issue.
+Make sure that there is an issue created and assigned to you. Work on a feature branch that is named accordingly (feature/, fix/, hotfix/). It might also be a good idea to validate the approach you intend to take in case it is a big or complex issue.
 
 ## When to create a Pull Request?
 
