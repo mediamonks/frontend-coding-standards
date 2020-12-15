@@ -157,7 +157,9 @@ with the changes from develop.
 
 ### General rules for merging a PR
 
-Please read when your PR is ready to be merged below.
+Generaly the person that created the PR should also merge it. This is because sometimes extra
+actions are required after the merge, like updating ticket statuses or notifying people. Please read
+when your PR is ready to be merged below.
 
 - You have at least 2 approvals, one of which is from a senior developer.
 - The CI pipeline build is successful.
