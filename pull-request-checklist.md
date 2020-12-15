@@ -7,7 +7,7 @@
 - [x] Does the PR correctly solve the issue or implement the feature?
 - [x] Is there a clear description of what this PR adds/changes/fixes?
 - [x] Has a linked issue
-- [x] Pipeline doesn't fail
+- [x] Pipeline or build doesn't fail
 - [x] Are the files in the right directory?
 - [x] Is there any commented code that should be removed?
 - [x] Are all comments resolved by either a check or a closing statement?
