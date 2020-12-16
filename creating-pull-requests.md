@@ -39,6 +39,12 @@ merged into `develop`. Before doing that, others will review it according to the
 This process is also useful for others to learn about the changes you have made. The pull request
 can be merged after the work is reviewed and all of the feedback has been addressed.
 
+The branch should be deleted after merge, since the work is done and available in develop. Keeping
+the branch open is the same thing as making a new branch from develop (maybe even with the same name
+as before). The only reason to keep it open is convenience - not having to re-create the branch if
+you plan to do make part of the ticket already available on develop but continue working on it, but
+that's an edge case.
+
 ### When you want early feedback on your work
 
 If you have been assigned a task, but are not 100% sure about the approach you are taking and want
