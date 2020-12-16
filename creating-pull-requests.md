@@ -159,8 +159,8 @@ As the author of the PR, you should maintain the following:
     specific piece of code, add a TODO comment with a link to that issue in the code.
 - When a comment is resolved, especially when doing so through code changes, add a
   [✅](https://emojis.wiki/check-mark-button/#:~:text=White%20Heavy%20Check%20Mark%20emoji,emoji%20that%20provides%20positive%20reinforcement.)
-  (:white_check_mark:) reply to let everyone know it has been addressed. Some platforms have the
-  ability to 'resolve' a comment that can be used instead.
+  reply to let everyone know it has been addressed. Some platforms have the ability to 'resolve' a
+  comment that can be used instead.
 
 ####
 
@@ -172,7 +172,7 @@ with the changes from develop.
 
 ### General rules for merging a PR
 
-Generaly the person that created the PR should also merge it. This is because sometimes extra
+Generally the person that created the PR should also merge it. This is because sometimes extra
 actions are required after the merge, like updating ticket statuses or notifying people. Please read
 when your PR is ready to be merged below.
 
@@ -198,7 +198,7 @@ exceptions you should consider.
   words, if your merge will result in a fast-forward on develop).
 - When a PR is fairly small, or should be merged ASAP, the merge responsibility can be handed over
   to someone else, for example the last person to approve it, or someone in another timezone. Please
-  add this as a general comment in the PR, and/or let them know on Slack.
+  add this as a general comment in the PR, and/or let them know via instant messaging.
 - Some PRs are created to make work from a feature branch available in develop, before the feature
   itself is complete. However, the work in the branch is isolated enough, or a finished sub-set, and
   can be safely merged. In these cases, the branch should continue to live, because a future PR will
