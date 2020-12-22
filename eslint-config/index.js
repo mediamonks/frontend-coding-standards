@@ -19,21 +19,21 @@ const typeScriptSettings = {
       'error',
       {
         selector: 'default',
-        format: ['camelCase'],
+        format: ['strictCamelCase'],
         leadingUnderscore: 'forbid',
         trailingUnderscore: 'forbid',
       },
       {
         selector: 'typeLike',
-        format: ['PascalCase'],
+        format: ['StrictPascalCase'],
       },
       {
         selector: 'variable',
-        format: ['camelCase', 'UPPER_CASE'],
+        format: ['strictCamelCase', 'UPPER_CASE'],
       },
       {
         selector: 'enumMember',
-        format: ['PascalCase'],
+        format: ['StrictPascalCase'],
       },
     ],
     '@typescript-eslint/no-empty-function': 'error',
@@ -191,27 +191,27 @@ module.exports = {
           'error',
           {
             selector: 'default',
-            format: ['camelCase'],
+            format: ['strictCamelCase'],
             leadingUnderscore: 'forbid',
             trailingUnderscore: 'forbid',
           },
           {
             selector: 'typeLike',
-            format: ['PascalCase'],
+            format: ['StrictPascalCase'],
           },
           {
             selector: 'variable',
             // Exception for FunctionComponents
-            format: ['camelCase', 'PascalCase', 'UPPER_CASE'],
+            format: ['strictCamelCase', 'StrictPascalCase', 'UPPER_CASE'],
           },
           {
             selector: 'function',
             // Exception for FunctionComponents
-            format: ['camelCase', 'PascalCase'],
+            format: ['strictCamelCase', 'StrictPascalCase'],
           },
           {
             selector: 'enumMember',
-            format: ['PascalCase'],
+            format: ['StrictPascalCase'],
           },
         ],
       },
