@@ -157,6 +157,19 @@ classes will apply then.
 **camelCase** Starts with a lower case character, every following individual word start with a upper
 case character, no underscores, no dashes.
 
+##### Properties with a getter and/or setter
+
+When a private property has a public getter and/or setter, it's recommended to prefix the private
+property with an underscore (`_`) to prevent naming conflicts.
+
+```
+private _isActive: boolean = false;
+
+public get isActive(): boolean {
+  return this._isActive;
+}
+```
+
 #### Globally used constants
 
 **UPPER_CASE** Only use upper case characters, individual words must be separated with an
