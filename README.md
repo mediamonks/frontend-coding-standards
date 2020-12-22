@@ -189,7 +189,7 @@ TypeScript only
 
 #### .jsx
 
-JavaScript with React JSX syntax. If a file has the .jsx extension, it must contain JSX code.
+JavaScript with JSX syntax. If a file has the `.jsx` extension, it must contain JSX code.
 
 #### .tsx
 
