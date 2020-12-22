@@ -159,7 +159,7 @@ case character, no underscores, no dashes.
 
 #### Globally used constants
 
-**UPPER_CASE** Only use upper case characters, individual words must be separated with an
+**SNAKE_UPPER_CASE** Only use upper case characters, individual words must be separated with an
 underscore.
 
 #### CSS Class names
