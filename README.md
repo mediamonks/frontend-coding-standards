@@ -4,7 +4,7 @@
 
 ## Table of Contents
 
-1. [Eslint](#eslint)
+1. [ESLint](#eslint)
 2. [Naming](#naming)
    1. [Casing](#casing)
    2. [File names](#file-names)
@@ -23,7 +23,7 @@
 9. [Recommended Libraries](#recommended-libraries)
 10. [Definition of Done Checklist](#definition-of-done-checklist)
 
-## Eslint
+## ESLint
 Please install our [ESLint Configuration](https://www.npmjs.com/package/@mediamonks/eslint-config) to enforce the *MediaMonks - Frontend Coding Standards* in your project.
 
 ## Naming
