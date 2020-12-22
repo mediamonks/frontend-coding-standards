@@ -317,7 +317,7 @@ have to be `protected` or `public`.
 
 #### Readonly
 
-In order to be as strict as possible, every property should be set to readonly unless it should
+In order to be as strict as possible, every property should be set to readonly unless it should be
 writable.
 
 #### Arrays
