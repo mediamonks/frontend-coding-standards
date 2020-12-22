@@ -24,7 +24,9 @@
 10. [Definition of Done Checklist](#definition-of-done-checklist)
 
 ## Eslint
-Please install our [ESLint Configuration](https://www.npmjs.com/package/@mediamonks/eslint-config) to enforce the *MediaMonks - Frontend Coding Standards* in your project.
+
+Please install our [ESLint Configuration](https://www.npmjs.com/package/@mediamonks/eslint-config)
+to enforce the _MediaMonks - Frontend Coding Standards_ in your project.
 
 ## Naming
 
@@ -221,7 +223,6 @@ Write code that is reusable, scalable and testable.
 
 See https://en.wikipedia.org/wiki/Magic_number_(programming)
 
-
 #### Default in a switch
 
 Every `switch` must have a `default`. If there is no need to handle the `default`, either throw an
@@ -241,8 +242,9 @@ switch (state) {
     throw new Error(`Unhandled value for state '${state}'`);
   }
 }
-``` 
-*throw an error for things that should not occur*
+```
+
+_throw an error for things that should not occur_
 
 ```
 switch (state) {
@@ -259,8 +261,9 @@ switch (state) {
     break;
   }
 }
-``` 
-*add a comment that the default is explicit ignored*
+```
+
+_add a comment that the default is explicit ignored_
 
 Adding the comment makes it clear the developer did not forget to implement the default.
 
@@ -347,19 +350,23 @@ Please read: https://chris.beams.io/posts/git-commit/
 - Always check your commit in details to avoid committing wrong code.
 
 ### Code Reviews
-Always let someone else review your code in the Pull/Merge Request. Make sure all code review comments are resolved, before you merge it!
+
+Always let someone else review your code in the Pull/Merge Request. Make sure all code review
+comments are resolved, before you merge it!
 
 ## Recommended Frameworks
 
 ### React
 
-We recommend using [React](https://reactjs.org/) for large Single Page Applications
-(SPA's). React is suited for long term projects that need stable and maintainable code. React works
-great together with [TypeScript](https://www.typescriptlang.org/).
+We recommend using [React](https://reactjs.org/) for large Single Page Applications (SPA's). React
+is suited for long term projects that need stable and maintainable code. React works great together
+with [TypeScript](https://www.typescriptlang.org/).
 
 ##### Getting started
 
-Start a new React project with one of our [custom templates](https://github.com/mediamonks/cra-template).
+Start a new React project with one of our
+[custom templates](https://github.com/mediamonks/cra-template).
+
 ### Vue
 
 We recommend using [Vue](https://vuejs.org/) for 'campaign like' Single Page Applications (SPA's).
@@ -418,8 +425,9 @@ makes integration into CMS systems, like
 - [Yup](https://github.com/jquense/yup) - Form validation
 
 #### TypeScript
- - [isntnt](https://www.npmjs.com/package/isntnt) - Composable TypeScript predicate
- - [ts-essentials](https://www.npmjs.com/package/ts-essentials) - TypeScript utilities
+
+- [isntnt](https://www.npmjs.com/package/isntnt) - Composable TypeScript predicate
+- [ts-essentials](https://www.npmjs.com/package/ts-essentials) - TypeScript utilities
 
 #### React
 
