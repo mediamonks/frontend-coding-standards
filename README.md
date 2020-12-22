@@ -164,7 +164,7 @@ underscore.
 
 #### CSS Class names
 
-**kabab-case** Only use lower case characters, individual words must be separated with a dash.
+**kebab-case** Only use lower case characters, individual words must be separated with a dash.
 
 ### File names
 
@@ -241,7 +241,7 @@ switch (state) {
     throw new Error(`Unhandled value for state '${state}'`);
   }
 }
-``` 
+```
 *throw an error for things that should not occur*
 
 ```
@@ -259,7 +259,7 @@ switch (state) {
     break;
   }
 }
-``` 
+```
 *add a comment that the default is explicit ignored*
 
 Adding the comment makes it clear the developer did not forget to implement the default.
