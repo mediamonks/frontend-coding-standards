@@ -167,6 +167,11 @@ module.exports = {
     {
       files: ['*.vue'],
       parser: 'vue-eslint-parser',
+      extends: [
+        'plugin:vue/vue3-recommended',
+        '@vue/airbnb',
+        '@vue/typescript/recommended',
+      ],
       rules: {
         'prettier/prettier': ['off'],
       },
