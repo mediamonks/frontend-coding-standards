@@ -174,6 +174,7 @@ module.exports = {
       ],
       rules: {
         'prettier/prettier': ['off'],
+        'max-len': ['off'],
       },
     },
     {
