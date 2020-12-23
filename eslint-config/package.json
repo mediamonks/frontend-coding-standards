@@ -1,6 +1,6 @@
 {
   "name": "@mediamonks/eslint-config",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "MediaMonks Frontend Coding Standards Eslint Config",
   "main": "index.js",
   "scripts": {
