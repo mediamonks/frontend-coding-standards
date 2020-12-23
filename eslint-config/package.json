@@ -58,8 +58,7 @@
   "dependencies": {
     "@typescript-eslint/parser": "4.4.0",
     "babel-eslint": "^10.1.0",
-    "confusing-browser-globals": "^1.0.10",
-    "eslint": "7.0.0",
+    "eslint": "^7.1.0",
     "eslint-config-airbnb": ">= 18",
     "eslint-config-airbnb-base": ">= 13",
     "eslint-config-prettier": ">= 4",
