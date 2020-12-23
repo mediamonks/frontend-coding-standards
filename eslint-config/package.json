@@ -40,8 +40,6 @@
     "babel-eslint": "^10.1.0",
     "confusing-browser-globals": "^1.0.10",
     "eslint": ">= 7",
-    "eslint-config-airbnb": ">= 18",
-    "eslint-config-airbnb-base": ">= 13",
     "eslint-config-prettier": ">= 7",
     "eslint-friendly-formatter": ">= 4",
     "eslint-import-resolver-webpack": ">= 0.11.0",
