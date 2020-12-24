@@ -162,7 +162,10 @@ case character, no underscores, no dashes.
 When a private property has a public getter and/or setter, it's recommended to prefix the private
 property with an underscore (`_`) to prevent naming conflicts.
 
+> Note that prefixing a property name with an underscore is not allowed by the ESLint configuration.
+> So in order to do this you need to disable this linting rule for this line.
 ```
+// eslint-disable-next-line @typescript-eslint/naming-convention
 private _isActive: boolean = false;
 
 public get isActive(): boolean {
