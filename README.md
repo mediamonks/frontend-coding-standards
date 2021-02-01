@@ -39,6 +39,7 @@ especially if it is part of the public API.
 All code, names, comments, etc. must be in English.
 
 > Tip: install a spell checker in your IDE to avoid typos.
+> [VSCode](#recommended-extensions-for-vscode) or [WebStorm](#recommended-settings-for-webstorm)
 
 #### Use one name for one thing
 
@@ -583,3 +584,48 @@ Start a new Muban project with the
       the PM is pushing. Unless everything is broken, please follow the rules.
 - [x] No Friday deploys. Remember the project manager not to rely on Friday deploys 😀
 - [x] Run the website through page insights / Lighthouse. (Run audits in chrome)
+
+## Development environment
+
+### [VSCode](https://code.visualstudio.com/)
+
+Free code editor made by Microsoft.
+
+#### Recommended extensions for VSCode
+
+Code linting / formatting:
+
+- [prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+- [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
+- [eslint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+- [stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint)
+- [vscode-styled-components](https://marketplace.visualstudio.com/items?itemName=jpoissonnier.vscode-styled-components)
+
+Collaborating:
+
+- [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
+- [Live Share](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare)
+
+#### Recommended settings for VSCode
+
+| Setting                              | Value                    |
+| ------------------------------------ | ------------------------ |
+| Render whitespace                    | All                      |
+| Format on save                       | On                       |
+| HTML > Format indent handlebars      | Checked                  |
+| HTML > Format wrap attributes        | `force-expand-multiline` |
+| TypeScript > Import module specifier | Relative                 |
+
+### [WebStorm](https://www.jetbrains.com/webstorm/)
+
+Integrated development environment focussed on web development made by JetBrains.
+
+#### Recommended plugins for WebStorm
+
+// TODO can someone who's using WebStorm help me here
+
+#### Recommended settings for WebStorm
+
+- [Spellchecking](https://www.jetbrains.com/help/webstorm/spellchecking.html)
+
+// TODO can someone who's using WebStorm help me here
