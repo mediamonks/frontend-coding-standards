@@ -599,12 +599,21 @@ Code linting / formatting:
 - [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
 - [eslint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 - [stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint)
+
+Languages:
+
 - [vscode-styled-components](https://marketplace.visualstudio.com/items?itemName=jpoissonnier.vscode-styled-components)
+- [Vetur (.vue)](https://marketplace.visualstudio.com/items?itemName=octref.vetur)
 
 Collaborating:
 
 - [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
 - [Live Share](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare)
+- [Jira and Bitbucket (Official)](https://marketplace.visualstudio.com/items?itemName=Atlassian.atlascode)
+
+Miscellaneous:
+
+- [Visual Studio IntelliCode](https://marketplace.visualstudio.com/items?itemName=VisualStudioExptTeam.vscodeintellicode)
 
 #### Recommended settings for VSCode
 
@@ -627,5 +636,5 @@ Integrated development environment focussed on web development made by JetBrains
 #### Recommended settings for WebStorm
 
 - [Spellchecking](https://www.jetbrains.com/help/webstorm/spellchecking.html)
-
-// TODO can someone who's using WebStorm help me here
+- [String Manipulation](https://plugins.jetbrains.com/plugin/2162-string-manipulation)
+- [CamelCase](https://plugins.jetbrains.com/plugin/7160-camelcase)
