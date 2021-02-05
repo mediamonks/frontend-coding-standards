@@ -600,10 +600,9 @@ Code linting / formatting:
 - [eslint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 - [stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint)
 
-Languages:
+Styling Framework:
 
 - [vscode-styled-components](https://marketplace.visualstudio.com/items?itemName=jpoissonnier.vscode-styled-components)
-- [Vetur (.vue)](https://marketplace.visualstudio.com/items?itemName=octref.vetur)
 
 Collaborating:
 
@@ -611,9 +610,17 @@ Collaborating:
 - [Live Share](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare)
 - [Jira and Bitbucket (Official)](https://marketplace.visualstudio.com/items?itemName=Atlassian.atlascode)
 
+JS/TS Framework:
+
+- [Vetur (.vue)](https://marketplace.visualstudio.com/items?itemName=octref.vetur)
+- [Angular Schematics](https://marketplace.visualstudio.com/items?itemName=cyrilletuzi.angular-schematics)
+- [Angular Language Service](https://marketplace.visualstudio.com/items?itemName=Angular.ng-template)
+- [React Snippets](https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets)
+
 Miscellaneous:
 
 - [Visual Studio IntelliCode](https://marketplace.visualstudio.com/items?itemName=VisualStudioExptTeam.vscodeintellicode)
+- [REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client)
 
 #### Recommended settings for VSCode
 
