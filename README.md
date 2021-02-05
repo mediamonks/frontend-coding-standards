@@ -153,6 +153,13 @@ usage is clear you can use `U`, `V` etc. for any following generic.
 If the usage is not obvious, you should use a more descriptive name. The same naming rules as for
 classes will apply then.
 
+### Prefixing
+
+#### Types and Interfaces
+
+Do not prefix types with a `T` or interfaces with an `I`. Make sure to name them with a descriptive
+name.
+
 ### Casing
 
 #### Classes, Interfaces, Types and Generics
@@ -161,7 +168,7 @@ classes will apply then.
 
 #### Functions, properties, arguments and variables
 
-**camelCase** Starts with a lower case character, every following individual word start with a upper
+**camelCase** Starts with a lower case character, every following individual word start with an upper
 case character, no underscores, no dashes.
 
 ##### Properties with a getter and/or setter
