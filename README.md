@@ -42,7 +42,7 @@ especially if it is part of the public API.
 All code, names, comments, etc. must be in English.
 
 > Tip: install a spell checker in your IDE to avoid typos.
-> [VSCode](#recommended-extensions-for-vscode) or [WebStorm](#recommended-settings-for-webstorm)
+> [VSCode](#recommended-extensions-for-vscode) or [WebStorm](#recommended-plugins-for-webstorm)
 
 #### Use one name for one thing
 
