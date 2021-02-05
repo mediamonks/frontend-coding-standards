@@ -153,26 +153,47 @@ usage is clear you can use `U`, `V` etc. for any following generic.
 If the usage is not obvious, you should use a more descriptive name. The same naming rules as for
 classes will apply then.
 
-### Prefixing
+**Do**
+```
+// use common abbreviations like T(ype), K(ey), V(alue), P(roperty) etc.
+type Partial<T> = { [P in keyof T]?: T[P]; };
+```
 
-#### Types and Interfaces
+```
+// add more semantic context by extending the type
+type ResponseData = Record<string, unknown>;
 
+class Response<T extends ResponseData> {
+  public data: T;
+}
+```
+
+**Don't**
+```
+// prefix generics with T
+class Response<TResponseData> {
+  public data: TResponseData;
+}
+```
+
+### Interfaces and type aliases
+Depending on the use case there is a choice to implement an [interface or type alias](https://github.com/typescript-cheatsheets/react#useful-table-for-types-vs-interfaces), but be aware
+using types impacts [compilation performance](https://ncjamieson.com/prefer-interfaces/).
+
+#### Prefixing
 Do not prefix types with a `T` or interfaces with an `I`.
 
-Do
-```ts
-class Response<Data> {
-  public data: Data;
-}
+**Do**
+```
+interface Response { ... };
+type Response = { ... };
 ```
 
-Don't
-```ts
-class Response<TData> {
-  public data: TData;
-}
+**Don't**
 ```
-
+interface IResponse { ... };
+type TResponse = { ... };
+```
 
 ### Casing
 
