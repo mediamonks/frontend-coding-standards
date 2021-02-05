@@ -157,9 +157,22 @@ classes will apply then.
 
 #### Types and Interfaces
 
-Do not prefix types with a `T` or interfaces with an `I`. For example `new Array<TData>();` there
-is no need to prefix them with a `T`. It's even better to give the type a descriptive name like
-`new Array<Person>();`.
+Do not prefix types with a `T` or interfaces with an `I`.
+
+Do
+```ts
+class Response<Data> {
+  public data: Data;
+}
+```
+
+Don't
+```ts
+class Response<TData> {
+  public data: TData;
+}
+```
+
 
 ### Casing
 
