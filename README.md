@@ -22,6 +22,9 @@
    3. [Muban](#muban)
 9. [Recommended Libraries](#recommended-libraries)
 10. [Definition of Done Checklist](#definition-of-done-checklist)
+11. [Development environment](#development-environment)
+12. [VSCode](#vscode)
+13. [WebStorm](#webstorm)
 
 ## ESLint
 
@@ -587,9 +590,9 @@ Start a new Muban project with the
 
 ## Development environment
 
-### [VSCode](https://code.visualstudio.com/)
+### VSCode
 
-Free code editor made by Microsoft.
+Free code editor made by Microsoft. https://code.visualstudio.com/
 
 #### Recommended extensions for VSCode
 
@@ -624,23 +627,28 @@ Miscellaneous:
 
 #### Recommended settings for VSCode
 
-| Setting                              | Value                    |
-| ------------------------------------ | ------------------------ |
-| Render whitespace                    | All                      |
-| Format on save                       | On                       |
-| HTML > Format indent handlebars      | Checked                  |
-| HTML > Format wrap attributes        | `force-expand-multiline` |
-| TypeScript > Import module specifier | Relative                 |
+User settings.json:
 
-### [WebStorm](https://www.jetbrains.com/webstorm/)
+```json
+{
+  "editor.formatOnSave": true,
+  "editor.renderWhitespace": "all",
+  "editor.rulers": [100],
+  "files.eol": "\n",
+  "files.trimTrailingWhitespace": true,
+  "html.format.indentHandlebars": true,
+  "html.format.wrapAttributes": "force-expand-multiline",
+  "javascript.preferences.importModuleSpecifier": "relative",
+  "typescript.preferences.importModuleSpecifier": "relative"
+}
+```
+
+### WebStorm
 
 Integrated development environment focussed on web development made by JetBrains.
+https://www.jetbrains.com/webstorm/
 
 #### Recommended plugins for WebStorm
-
-// TODO can someone who's using WebStorm help me here
-
-#### Recommended settings for WebStorm
 
 - [Spellchecking](https://www.jetbrains.com/help/webstorm/spellchecking.html)
 - [String Manipulation](https://plugins.jetbrains.com/plugin/2162-string-manipulation)
