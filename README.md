@@ -22,6 +22,9 @@
    3. [Muban](#muban)
 9. [Recommended Libraries](#recommended-libraries)
 10. [Definition of Done Checklist](#definition-of-done-checklist)
+11. [Development environment](#development-environment)
+    1. [VSCode](#vscode)
+    2. [WebStorm](#webstorm)
 
 ## ESLint
 
@@ -39,6 +42,7 @@ especially if it is part of the public API.
 All code, names, comments, etc. must be in English.
 
 > Tip: install a spell checker in your IDE to avoid typos.
+> [VSCode](#recommended-extensions-for-vscode) or [WebStorm](#recommended-plugins-for-webstorm)
 
 #### Use one name for one thing
 
@@ -585,3 +589,69 @@ Start a new Muban project with the
 - [x] Run the website through page insights /
       [Google Lighthouse](https://developers.google.com/web/tools/lighthouse/). (Run audits in
       chrome)
+
+## Development environment
+
+### VSCode
+
+Free code editor made by Microsoft. https://code.visualstudio.com/
+
+#### Recommended extensions for VSCode
+
+Code linting / formatting:
+
+- [prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+- [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
+- [eslint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+- [stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint)
+
+Styling Framework:
+
+- [vscode-styled-components](https://marketplace.visualstudio.com/items?itemName=jpoissonnier.vscode-styled-components)
+
+Collaborating:
+
+- [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
+- [Live Share](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare)
+- [Jira and Bitbucket (Official)](https://marketplace.visualstudio.com/items?itemName=Atlassian.atlascode)
+
+JS/TS Framework:
+
+- [Vetur (.vue)](https://marketplace.visualstudio.com/items?itemName=octref.vetur)
+- [Angular Schematics](https://marketplace.visualstudio.com/items?itemName=cyrilletuzi.angular-schematics)
+- [Angular Language Service](https://marketplace.visualstudio.com/items?itemName=Angular.ng-template)
+- [React Snippets](https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets)
+
+Miscellaneous:
+
+- [Visual Studio IntelliCode](https://marketplace.visualstudio.com/items?itemName=VisualStudioExptTeam.vscodeintellicode)
+- [REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client)
+
+#### Recommended settings for VSCode
+
+User settings.json:
+
+```json
+{
+  "editor.formatOnSave": true,
+  "editor.renderWhitespace": "all",
+  "editor.rulers": [100],
+  "files.eol": "\n",
+  "files.trimTrailingWhitespace": true,
+  "html.format.indentHandlebars": true,
+  "html.format.wrapAttributes": "force-expand-multiline",
+  "javascript.preferences.importModuleSpecifier": "relative",
+  "typescript.preferences.importModuleSpecifier": "relative"
+}
+```
+
+### WebStorm
+
+Integrated development environment focussed on web development made by JetBrains.
+https://www.jetbrains.com/webstorm/
+
+#### Recommended plugins for WebStorm
+
+- [Spellchecking](https://www.jetbrains.com/help/webstorm/spellchecking.html)
+- [String Manipulation](https://plugins.jetbrains.com/plugin/2162-string-manipulation)
+- [CamelCase](https://plugins.jetbrains.com/plugin/7160-camelcase)
