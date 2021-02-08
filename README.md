@@ -389,7 +389,8 @@ Please read: https://chris.beams.io/posts/git-commit/
 ### Code Reviews
 
 Always let someone else review your code in the Pull/Merge Request. Make sure all code review
-comments are resolved, before you merge it!
+comments are resolved, before you merge it! Please read our
+[Pull Request Guidelines](https://github.com/mediamonks/frontend-coding-standards/blob/main/creating-pull-requests.md).
 
 ## Recommended Frameworks
 
