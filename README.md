@@ -92,15 +92,14 @@ We have standardized on a few abbreviations that are allowed to use:
 - `bin` for binary
 - `fps` for frames per second
 - `id` for identifier. Please note that 'd' should be written in lowercase when used in combination
-  with an other word, like `userId`.
+  with another word, like `userId`.
 - `info` for information, as in `GridRowInfo`
 - `init` for initialize
 - `lib` for library
 - `max` for maximum, as in `maxHeight`
 - `min` for minimum, as in `minWidth`
-- `param` for parameter
-- `params` for parameters
-- `prop` or `props` for property or properties
+- `param` or `params` for parameter or parameters respectively
+- `prop` or `props` for property or properties respectively
 - `ref` for reference
 - `temp` for temporary
 - `ui` for user interface
@@ -179,7 +178,7 @@ property with an underscore (`_`) to prevent naming conflicts.
 > Note that prefixing a property name with an underscore is not allowed by the ESLint configuration.
 > So in order to do this you need to disable this linting rule for this line.
 
-```
+```ts
 // eslint-disable-next-line @typescript-eslint/naming-convention
 private _isActive: boolean = false;
 
@@ -202,7 +201,7 @@ underscore.
 Abbreviations and acronyms should be treated as words, which means only the first character will be
 capitalized for camelCase and PascalCase.
 
-```
+```ts
 const jsonApiSdkUrl = new JsonApiSdkUrl();
 ```
 
@@ -255,7 +254,7 @@ Write code that is reusable, scalable and testable.
 - Do not copy code to another place.
 - Avoid using the same string twice in a project.
 - Move shared logic to a shared place.
-- Make sure you do not have to adapt changes on multiple places.
+- Make sure you do not have to adapt changes in multiple places.
 
 #### Do not use Magic Numbers
 
@@ -266,7 +265,7 @@ See https://en.wikipedia.org/wiki/Magic_number_(programming)
 Every `switch` must have a `default`. If there is no need to handle the `default`, either throw an
 `Error` or add a comment that the default is explicitly ignored.
 
-```
+```js
 switch (state) {
   case 1: {
     // ....
@@ -284,7 +283,7 @@ switch (state) {
 
 _throw an error for things that should not occur_
 
-```
+```js
 switch (state) {
   case 1: {
     // ....
@@ -521,34 +520,35 @@ Start a new Muban project with the
       responsible for the creation of the tickets (the project manager or project lead) until the
       ticket is 100% clear.
 - [x] Create a feature branch (`feature/ticket-number-feature-name` or for Jira use the default
-      branch name when creating a branch from a ticket)
+      branch name when creating a branch from a ticket).
 
 #### General Tasks
 
 - [x] Double check if feature is properly working on all browsers specified in the browser matrix.
-- [x] Double check if feature is properly working on all resolutions
-- [x] Review all commits and check if there is room for improvement
-- [x] Could any of the functions you wrote be reused on other components/features ?. If so, rewrite
-      it and restart the checklist process.
+- [x] Double check if feature is properly working on all resolutions.
+- [x] Review all commits and check if there is room for improvement.
+- [x] Could any of the functions you wrote be reused in other components/features? If so, rewrite it
+      and restart the checklist process.
 - [x] Ask yourself in which scenarios could this fail?
-- [x] Check if you are handling possible error states. Catch them.
+- [x] Make sure to check that you are handling possible error cases.
 - [x] Merge latest develop into branch and see if there are no conflicts. If there are conflicts
       please ask for help if you don't know which part of the code should stay.
 - [x] Remove unnecessary comments.
-- [x] Check the name and semantics of all functions, properties, consts etc. Do they still make
+- [x] Check the name and semantics of all functions, properties, variables etc. Do they still make
       sense? Could someone that doesn't know the code understand what it is doing?
 - [x] Read your code again. Do you think it can be done better or optimized? Do it. Start process
       again.
 - [x] Read the description of the ticket / email again. Did you really do what is asked for? Does
       your change solve the issue?
-- [x] Run build tasks and see if they actually works
+- [x] Run build tasks and see if they work.
 - [x] Does your project have code that isn't used anymore? Throw it away!
-- [x] Make sure all linting is passing
+- [x] Make sure all linting is passing.
 
 #### UI Task
 
-- [x] Check if HTML5 Semantic Elements are used appropriately (`header`, `section`, `footer`,
-      `main`...).
+- [x] Check that
+      [HTML5 Semantic Elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element#content_sectioning)
+      are used appropriately (`header`, `section`, `footer`, `main`...).
 - [x] All images have an `alt` property
 - [x] All `<a>` have `title` property
 - [x] Check if all images are optimized (Saved for web and compressed, resized accordingly)
