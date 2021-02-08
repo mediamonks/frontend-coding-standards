@@ -6,20 +6,20 @@
 
 1. [ESLint](#eslint)
 2. [Naming](#naming)
-    1. [Casing](#casing)
-    2. [File names](#file-names)
+   1. [Casing](#casing)
+   2. [File names](#file-names)
 3. [Coding](#coding)
 4. [Formatting](#formatting)
 5. [Comments](#comments)
 6. [TypeScript](#typescript)
 7. [GIT](#git)
-    1. [Branches](#branches)
-    2. [Commit messages](#commit-messages)
-    3. [Code Reviews](#code-reviews)
+   1. [Branches](#branches)
+   2. [Commit messages](#commit-messages)
+   3. [Code Reviews](#code-reviews)
 8. [Recommended Frameworks](#recommended-frameworks)
-    1. [React](#react)
-    2. [Vue](#vue)
-    3. [Muban](#muban)
+   1. [React](#react)
+   2. [Vue](#vue)
+   3. [Muban](#muban)
 9. [Recommended Libraries](#recommended-libraries)
 10. [Definition of Done Checklist](#definition-of-done-checklist)
 11. [Development environment](#development-environment)
@@ -583,10 +583,12 @@ Start a new Muban project with the
 
 #### Deployment process
 
-- [x] QA/Staging/UAT/Dev deploy before every Production release. No matter if it's a hotfix or if
-      the PM is pushing. Unless everything is broken, please follow the rules.
-- [x] No Friday deploys. Remember the project manager not to rely on Friday deploys 😀
-- [x] Run the website through page insights / Lighthouse. (Run audits in chrome)
+- [x] QA/Staging/UAT/Dev deployments before every Production release are a **must**. No matter if
+      it's a hotfix or if the PM is pushing. Unless everything is broken, please follow the rules.
+- [x] No Friday deploys. Inform your project manager not to rely on Friday deployments 😀
+- [x] Run the website through page insights /
+      [Google Lighthouse](https://developers.google.com/web/tools/lighthouse/). (Run audits in
+      chrome)
 
 ## Development environment
 
