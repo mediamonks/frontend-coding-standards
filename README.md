@@ -16,13 +16,14 @@
    1. [Branches](#branches)
    2. [Commit messages](#commit-messages)
    3. [Code Reviews](#code-reviews)
-8. [Recommended Frameworks](#recommended-frameworks)
+8. [Node.js](#node.js)
+9. [Recommended Frameworks](#recommended-frameworks)
    1. [React](#react)
    2. [Vue](#vue)
    3. [Muban](#muban)
-9. [Recommended Libraries](#recommended-libraries)
-10. [Definition of Done Checklist](#definition-of-done-checklist)
-11. [Development environment](#development-environment)
+10. [Recommended Libraries](#recommended-libraries)
+11. [Definition of Done Checklist](#definition-of-done-checklist)
+12. [Development environment](#development-environment)
     1. [VSCode](#vscode)
     2. [WebStorm](#webstorm)
 
@@ -399,6 +400,15 @@ Always let someone else review your code in the Pull/Merge Request. Make sure al
 comments are resolved, before you merge it! Please read our
 [Pull Request Guidelines](https://github.com/mediamonks/frontend-coding-standards/blob/main/creating-pull-requests.md).
 
+## Node.js
+
+### nvm
+
+When setting up Node.js on a new machine, it is strongly recommended to use a versioning tool such as [nvm](https://github.com/nvm-sh/nvm). There are often times when we must switch between versions for testing or for certain features. Tools such as [nvm](https://github.com/nvm-sh/nvm) make this easy and simple.
+
+### Long-term support
+
+You **must** always use the **LTS** (Long-term support) version of Node.js as it is considered stable and will ensure that you don't encounter any unexpected issues. Furthermore, when creating a new project or tool, it **must** always target the **LTS** version, unless there is a good reason not to e.g. an experimental tool or long-term project. To find out the current LTS version, you can use a tool such as [nvm](https://github.com/nvm-sh/nvm) or simply check the Node.js [website](https://nodejs.org/en/download).
 ## Recommended Frameworks
 
 ### React
