@@ -23,9 +23,14 @@
    3. [Muban](#muban)
 10. [Recommended Libraries](#recommended-libraries)
 11. [Definition of Done Checklist](#definition-of-done-checklist)
+12. [Development environment](#development-environment)
+    1. [VSCode](#vscode)
+    2. [WebStorm](#webstorm)
 
 ## ESLint
-Please install our [ESLint Configuration](https://www.npmjs.com/package/@mediamonks/eslint-config) to enforce the *MediaMonks - Frontend Coding Standards* in your project.
+
+Please install our [ESLint Configuration](https://www.npmjs.com/package/@mediamonks/eslint-config)
+to enforce the _MediaMonks - Frontend Coding Standards_ in your project.
 
 ## Naming
 
@@ -38,6 +43,7 @@ especially if it is part of the public API.
 All code, names, comments, etc. must be in English.
 
 > Tip: install a spell checker in your IDE to avoid typos.
+> [VSCode](#recommended-extensions-for-vscode) or [WebStorm](#recommended-plugins-for-webstorm)
 
 #### Use one name for one thing
 
@@ -61,6 +67,13 @@ For example: a button must always end with `Button`.
 
 There is no limit for the length of a name, so prefer a long name which is clear and descriptive
 than a short name which is not clear.
+
+#### Context
+A name should make sense within its context and should not have unnecessary information for that
+context. For example a variable that holds the name of a user can be named `name` within a `User`
+context. However if you need to hold the name of a user in another place, `userName` might be a
+better name. Adding `user` within a `User` context (`user.userName`) is redundant and should be
+avoided.
 
 #### Abbreviations
 
@@ -87,15 +100,14 @@ We have standardized on a few abbreviations that are allowed to use:
 - `bin` for binary
 - `fps` for frames per second
 - `id` for identifier. Please note that 'd' should be written in lowercase when used in combination
-  with an other word, like `userId`.
+  with another word, like `userId`.
 - `info` for information, as in `GridRowInfo`
 - `init` for initialize
 - `lib` for library
 - `max` for maximum, as in `maxHeight`
 - `min` for minimum, as in `minWidth`
-- `param` for parameter
-- `params` for parameters
-- `prop` or `props` for property or properties
+- `param` or `params` for parameter or parameters respectively
+- `prop` or `props` for property or properties respectively
 - `ref` for reference
 - `temp` for temporary
 - `ui` for user interface
@@ -134,8 +146,9 @@ All non-functions should have a noun as a name, not a verb.
 
 Although getters and setters are technically functions, they are used as if they are properties.
 Therefore, their name should be a noun.
- > Some frameworks support `computed` properties. They work like getters, so their name should be a
- > noun as well.
+
+> Some frameworks support `computed` properties. They work like getters, so their name should be a
+> noun as well.
 
 #### Booleans
 
@@ -172,7 +185,8 @@ property with an underscore (`_`) to prevent naming conflicts.
 
 > Note that prefixing a property name with an underscore is not allowed by the ESLint configuration.
 > So in order to do this you need to disable this linting rule for this line.
-```
+
+```ts
 // eslint-disable-next-line @typescript-eslint/naming-convention
 private _isActive: boolean = false;
 
@@ -192,11 +206,12 @@ underscore.
 
 #### Abbreviations and Acronyms
 
-Abbreviations and acronyms should be treated as words, which means only the first character will be capitalized
-for camelCase and PascalCase.
-```
+Abbreviations and acronyms should be treated as words, which means only the first character will be
+capitalized for camelCase and PascalCase.
+
+```ts
 const jsonApiSdkUrl = new JsonApiSdkUrl();
-``` 
+```
 
 ### File names
 
@@ -247,19 +262,18 @@ Write code that is reusable, scalable and testable.
 - Do not copy code to another place.
 - Avoid using the same string twice in a project.
 - Move shared logic to a shared place.
-- Make sure you do not have to adapt changes on multiple places.
+- Make sure you do not have to adapt changes in multiple places.
 
 #### Do not use Magic Numbers
 
 See https://en.wikipedia.org/wiki/Magic_number_(programming)
-
 
 #### Default in a switch
 
 Every `switch` must have a `default`. If there is no need to handle the `default`, either throw an
 `Error` or add a comment that the default is explicitly ignored.
 
-```
+```js
 switch (state) {
   case 1: {
     // ....
@@ -274,9 +288,10 @@ switch (state) {
   }
 }
 ```
-*throw an error for things that should not occur*
 
-```
+_throw an error for things that should not occur_
+
+```js
 switch (state) {
   case 1: {
     // ....
@@ -292,7 +307,8 @@ switch (state) {
   }
 }
 ```
-*add a comment that the default is explicit ignored*
+
+_add a comment that the default is explicit ignored_
 
 Adding the comment makes it clear the developer did not forget to implement the default.
 
@@ -379,7 +395,10 @@ Please read: https://chris.beams.io/posts/git-commit/
 - Always check your commit in details to avoid committing wrong code.
 
 ### Code Reviews
-Always let someone else review your code in the Pull/Merge Request. Make sure all code review comments are resolved, before you merge it!
+
+Always let someone else review your code in the Pull/Merge Request. Make sure all code review
+comments are resolved, before you merge it! Please read our
+[Pull Request Guidelines](https://github.com/mediamonks/frontend-coding-standards/blob/main/creating-pull-requests.md).
 
 ## Node.js
 
@@ -394,13 +413,15 @@ You **must** always use the **LTS** (Long-term support) version of Node.js as it
 
 ### React
 
-We recommend using [React](https://reactjs.org/) for large Single Page Applications
-(SPA's). React is suited for long term projects that need stable and maintainable code. React works
-great together with [TypeScript](https://www.typescriptlang.org/).
+We recommend using [React](https://reactjs.org/) for large Single Page Applications (SPA's). React
+is suited for long term projects that need stable and maintainable code. React works great together
+with [TypeScript](https://www.typescriptlang.org/).
 
 ##### Getting started
 
-Start a new React project with one of our [custom templates](https://github.com/mediamonks/cra-template).
+Start a new React project with one of our
+[custom templates](https://github.com/mediamonks/cra-template).
+
 ### Vue
 
 We recommend using [Vue](https://vuejs.org/) for 'campaign like' Single Page Applications (SPA's).
@@ -459,8 +480,9 @@ makes integration into CMS systems, like
 - [Yup](https://github.com/jquense/yup) - Form validation
 
 #### TypeScript
- - [isntnt](https://www.npmjs.com/package/isntnt) - Composable TypeScript predicate
- - [ts-essentials](https://www.npmjs.com/package/ts-essentials) - TypeScript utilities
+
+- [isntnt](https://www.npmjs.com/package/isntnt) - Composable TypeScript predicate
+- [ts-essentials](https://www.npmjs.com/package/ts-essentials) - TypeScript utilities
 
 #### React
 
@@ -516,34 +538,35 @@ Start a new Muban project with the
       responsible for the creation of the tickets (the project manager or project lead) until the
       ticket is 100% clear.
 - [x] Create a feature branch (`feature/ticket-number-feature-name` or for Jira use the default
-      branch name when creating a branch from a ticket)
+      branch name when creating a branch from a ticket).
 
 #### General Tasks
 
 - [x] Double check if feature is properly working on all browsers specified in the browser matrix.
-- [x] Double check if feature is properly working on all resolutions
-- [x] Review all commits and check if there is room for improvement
-- [x] Could any of the functions you wrote be reused on other components/features ?. If so, rewrite
-      it and restart the checklist process.
+- [x] Double check if feature is properly working on all resolutions.
+- [x] Review all commits and check if there is room for improvement.
+- [x] Could any of the functions you wrote be reused in other components/features? If so, rewrite it
+      and restart the checklist process.
 - [x] Ask yourself in which scenarios could this fail?
-- [x] Check if you are handling possible error states. Catch them.
+- [x] Make sure to check that you are handling possible error cases.
 - [x] Merge latest develop into branch and see if there are no conflicts. If there are conflicts
       please ask for help if you don't know which part of the code should stay.
 - [x] Remove unnecessary comments.
-- [x] Check the name and semantics of all functions, properties, consts etc. Do they still make
+- [x] Check the name and semantics of all functions, properties, variables etc. Do they still make
       sense? Could someone that doesn't know the code understand what it is doing?
 - [x] Read your code again. Do you think it can be done better or optimized? Do it. Start process
       again.
 - [x] Read the description of the ticket / email again. Did you really do what is asked for? Does
       your change solve the issue?
-- [x] Run build tasks and see if they actually works
+- [x] Run build tasks and see if they work.
 - [x] Does your project have code that isn't used anymore? Throw it away!
-- [x] Make sure all linting is passing
+- [x] Make sure all linting is passing.
 
 #### UI Task
 
-- [x] Check if HTML5 Semantic Elements are used appropriately (`header`, `section`, `footer`,
-      `main`...).
+- [x] Check that
+      [HTML5 Semantic Elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element#content_sectioning)
+      are used appropriately (`header`, `section`, `footer`, `main`...).
 - [x] All images have an `alt` property
 - [x] All `<a>` have `title` property
 - [x] Check if all images are optimized (Saved for web and compressed, resized accordingly)
@@ -578,7 +601,75 @@ Start a new Muban project with the
 
 #### Deployment process
 
-- [x] QA/Staging/UAT/Dev deploy before every Production release. No matter if it's a hotfix or if
-      the PM is pushing. Unless everything is broken, please follow the rules.
-- [x] No Friday deploys. Remember the project manager not to rely on Friday deploys 😀
-- [x] Run the website through page insights / Lighthouse. (Run audits in chrome)
+- [x] QA/Staging/UAT/Dev deployments before every Production release are a **must**. No matter if
+      it's a hotfix or if the PM is pushing. Unless everything is broken, please follow the rules.
+- [x] No Friday deploys. Inform your project manager not to rely on Friday deployments 😀
+- [x] Run the website through page insights /
+      [Google Lighthouse](https://developers.google.com/web/tools/lighthouse/). (Run audits in
+      chrome)
+
+## Development environment
+
+### VSCode
+
+Free code editor made by Microsoft. https://code.visualstudio.com/
+
+#### Recommended extensions for VSCode
+
+Code linting / formatting:
+
+- [prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+- [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
+- [eslint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+- [stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint)
+
+Styling Framework:
+
+- [vscode-styled-components](https://marketplace.visualstudio.com/items?itemName=jpoissonnier.vscode-styled-components)
+
+Collaborating:
+
+- [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
+- [Live Share](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare)
+- [Jira and Bitbucket (Official)](https://marketplace.visualstudio.com/items?itemName=Atlassian.atlascode)
+
+JS/TS Framework:
+
+- [Vetur (.vue)](https://marketplace.visualstudio.com/items?itemName=octref.vetur)
+- [Angular Schematics](https://marketplace.visualstudio.com/items?itemName=cyrilletuzi.angular-schematics)
+- [Angular Language Service](https://marketplace.visualstudio.com/items?itemName=Angular.ng-template)
+- [React Snippets](https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets)
+
+Miscellaneous:
+
+- [Visual Studio IntelliCode](https://marketplace.visualstudio.com/items?itemName=VisualStudioExptTeam.vscodeintellicode)
+- [REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client)
+
+#### Recommended settings for VSCode
+
+User settings.json:
+
+```json
+{
+  "editor.formatOnSave": true,
+  "editor.renderWhitespace": "all",
+  "editor.rulers": [100],
+  "files.eol": "\n",
+  "files.trimTrailingWhitespace": true,
+  "html.format.indentHandlebars": true,
+  "html.format.wrapAttributes": "force-expand-multiline",
+  "javascript.preferences.importModuleSpecifier": "relative",
+  "typescript.preferences.importModuleSpecifier": "relative"
+}
+```
+
+### WebStorm
+
+Integrated development environment focussed on web development made by JetBrains.
+https://www.jetbrains.com/webstorm/
+
+#### Recommended plugins for WebStorm
+
+- [Spellchecking](https://www.jetbrains.com/help/webstorm/spellchecking.html)
+- [String Manipulation](https://plugins.jetbrains.com/plugin/2162-string-manipulation)
+- [CamelCase](https://plugins.jetbrains.com/plugin/7160-camelcase)
