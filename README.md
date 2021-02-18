@@ -113,6 +113,30 @@ We have standardized on a few abbreviations that are allowed to use:
 - `ui` for user interface
 - `util` or `utils` for utility or utilities, as in `StringUtils`
 
+```js
+// bad
+onPrevClick();
+
+// good
+onPreviousClick();
+```
+```js
+// bad
+ctas.forEach(elm => {
+  //...
+});
+
+// better
+ctas.forEach((element) => { // prettier should add brackets by default
+  //...
+});
+
+// best
+ctas.forEach((videoButton) => {
+  //...
+});
+```
+
 #### Plural or singular?
 
 ##### Classes, Interfaces, Types and Enums
@@ -363,6 +387,20 @@ typed. It’s not needed to type something when TypeScript can resolve the type.
 Keep your code as strict as possible, so keep all functions and properties `private` unless they
 have to be `protected` or `public`.
 
+Explicitly define whether your `constructor` functions are for internal or external interfaces.
+
+```ts
+// bad
+constructor(...args: Array<any>) {
+  super(...args);
+}
+
+// good
+public constructor(...args: Array<any>) {
+  super(...args);
+}
+```
+
 #### Readonly
 
 In order to be as strict as possible, every property should be set to readonly unless it should be
@@ -371,6 +409,8 @@ writable.
 #### Arrays
 
 Always prefer `ReadonlyArray` over a regular `Array` unless it must be possible to modify the Array.
+
+Arrays should be typed as `Array<any>` rather than `any[]` for consistency.
 
 ## GIT
 
