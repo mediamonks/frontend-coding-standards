@@ -115,10 +115,10 @@ We have standardized on a few abbreviations that are allowed to use:
 
 ```js
 // bad
-onPrevClick();
+prevButton.addEventListener('click', onPrevClick);
 
 // good
-onPreviousClick();
+previousButton.addEventListener('click', onPreviousClick);
 ```
 ```js
 // bad
