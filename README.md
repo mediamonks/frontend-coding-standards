@@ -410,7 +410,7 @@ writable.
 
 Always prefer `ReadonlyArray` over a regular `Array` unless it must be possible to modify the Array.
 
-Arrays should be typed as `Array<any>` rather than `any[]` for consistency.
+Arrays should be typed as `Array<T>` rather than `T[]` for consistency.
 
 ## GIT
 
