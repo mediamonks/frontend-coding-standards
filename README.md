@@ -154,6 +154,39 @@ Therefore, their name should be a noun.
 
 Should start with `is`, `has`, `will` or `should`. Like `isValid` or `hasValues`.
 
+#### Handlers and callbacks
+
+To indicate that a function or property is used as a callback or handler you can start the name with
+`on`, like: `onClick`, `onLoadComplete`, `onResize`.
+Do not postfix the name with `handler` since this is redundant when there is already an `on`. 
+
+```js
+// bad
+function complete() {
+  //...
+}
+
+// bad
+function handleComplete() {
+  //...
+}
+
+// bad
+function completeHander() {
+  //...
+}
+
+// bad
+function onCompleteHander() {
+  //...
+}
+
+// good
+function onComplete() {
+  //...
+}
+```
+
 #### Always Affirmative
 
 Avoid negations. _“Don’t ever not avoid negative logic”_. Prefer `isShown` over `isHidden` or
