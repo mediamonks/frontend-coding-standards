@@ -391,13 +391,13 @@ Explicitly define whether your `constructor` functions are for internal or exter
 
 ```ts
 // bad
-constructor(...args: Array<any>) {
-  super(...args);
+constructor() {
+  //...
 }
 
 // good
-public constructor(...args: Array<any>) {
-  super(...args);
+public constructor() {
+  //...
 }
 ```
 
