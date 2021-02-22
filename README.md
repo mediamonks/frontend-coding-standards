@@ -122,17 +122,17 @@ previousButton.addEventListener('click', onPreviousClick);
 ```
 ```js
 // bad
-ctas.forEach(elm => {
+buttons.forEach(elm => {
   //...
 });
 
 // better
-ctas.forEach((element) => { // prettier should add brackets by default
+buttons.forEach((element) => { // prettier should add brackets by default
   //...
 });
 
 // best
-ctas.forEach((videoButton) => {
+buttons.forEach((button) => {
   //...
 });
 ```
