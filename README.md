@@ -167,6 +167,11 @@ usage is clear you can use `U`, `V` etc. for any following generic.
 If the usage is not obvious, you should use a more descriptive name. The same naming rules as for
 classes will apply then.
 
+#### Prefixes
+
+We are not using prefixes for any name. Interfaces should follow the exact naming rules as classes,
+and should not use the `I` or any other pre- or postfix. 
+
 ### Casing
 
 #### Classes, Interfaces, Types and Generics
