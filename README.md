@@ -185,6 +185,11 @@ function onCompleteHander() {
 function onComplete() {
   //...
 }
+
+// better
+function onImageLoadComplete() {
+  //...
+}
 ```
 
 #### Always Affirmative
