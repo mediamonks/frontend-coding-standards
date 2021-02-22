@@ -24,7 +24,7 @@ We use [Sass](https://sass-lang.com/) as css preprocessor.
 
 
 #### z-index
-Never use a `z-index` value higher then `4`. If you need more, use the [zindex](https://github.com/mediamonks/seng-scss/blob/master/utils/function/_zindex.scss) function of [seng-scss](https://www.npmjs.com/package/seng-scss).
+Never manage z-indices that relate to items outside of a component with a hardcoded index. Overlays, Sticky Navigations are examples of items that need a z-index in relation to other components on the page. Use a central managed list of variables in combination with the [zindex](https://github.com/mediamonks/seng-scss/blob/master/utils/function/_zindex.scss) function instead.
 
 #### Vendor prefixes
 Never add vendor prefixes in the scss, use [autoprefixer](https://github.com/postcss/autoprefixer) to add them automatically.
