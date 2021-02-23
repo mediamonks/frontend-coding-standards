@@ -159,6 +159,11 @@ Should start with `is`, `has`, `will` or `should`. Like `isValid` or `hasValues`
 Avoid negations. _“Don’t ever not avoid negative logic”_. Prefer `isShown` over `isHidden` or
 `isEnabled` over `isDisabled`. Do not use names like `notEditable`.
 
+#### Prefixes
+
+We are not using prefixes for any name. Interfaces should follow the exact naming rules as classes,
+and should not use the `I` or any other pre- or postfix.
+
 #### TypeScript Generics
 
 If the usages of the generic is obvious, then naming that generic `T` is sufficient. As long as the
@@ -167,14 +172,16 @@ usage is clear you can use `U`, `V` etc. for any following generic.
 If the usage is not obvious, you should use a more descriptive name. The same naming rules as for
 classes will apply then.
 
-**Do**
-```
-// use common abbreviations like T(ype), K(ey), V(alue), P(roperty) etc.
-type Partial<T> = { [P in keyof T]?: T[P]; };
-```
+```ts
+// bad, prefix generics with T
+class Response<TResponseData> {
+  public data: TResponseData;
+}
 
-```
-// add more semantic context by extending the type
+// good, use common abbreviations like T(ype), K(ey), V(alue), P(roperty) etc.
+type Partial<T> = { [P in keyof T]?: T[P]; };
+
+// better, add more semantic context by extending the type
 type ResponseData = Record<string, unknown>;
 
 class Response<T extends ResponseData> {
@@ -182,33 +189,33 @@ class Response<T extends ResponseData> {
 }
 ```
 
-**Don't**
-```
-// prefix generics with T
-class Response<TResponseData> {
-  public data: TResponseData;
-}
-```
+#### Interfaces and type aliases
+Depending on the use case there is a choice to implement an
+[interface or type alias](https://github.com/typescript-cheatsheets/react#useful-table-for-types-vs-interfaces),
+but be aware using types impacts [compilation performance](https://ncjamieson.com/prefer-interfaces/).
 
-### Interfaces and type aliases
-Depending on the use case there is a choice to implement an [interface or type alias](https://github.com/typescript-cheatsheets/react#useful-table-for-types-vs-interfaces), but be aware
-using types impacts [compilation performance](https://ncjamieson.com/prefer-interfaces/).
 
-#### Prefixes
+```ts
+// bad, prefix interfaces with I
+interface IResponse {
+  //...
+};
 
-We are not using prefixes for any name. Interfaces should follow the exact naming rules as classes,
-and should not use the `I` or any other pre- or postfix.
+// bad, prefix types with T
+type TResponse = {
+  //...
+};
 
-**Do**
-```
-interface Response { ... };
-type Response = { ... };
-```
 
-**Don't**
-```
-interface IResponse { ... };
-type TResponse = { ... };
+// good, no prefix
+interface Response {
+  //...
+};
+
+// good, no prefix
+type Response = {
+  //...
+};
 ```
 
 ### Casing
