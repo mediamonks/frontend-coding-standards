@@ -98,7 +98,8 @@ We have standardized on a few abbreviations that are allowed to use:
 - `args` for arguments
 - `auto` for automatic, as in `autoLayout`
 - `bin` for binary
-- `cta` for "Call to action" [*](#cta)
+- `cta` for "Call to action". It's the part of the application that the user needs to click in order
+  to take the action you want them to take.
 - `fps` for frames per second
 - `id` for identifier. Please note that 'd' should be written in lowercase when used in combination
   with another word, like `userId`.
@@ -113,10 +114,6 @@ We have standardized on a few abbreviations that are allowed to use:
 - `temp` for temporary
 - `ui` for user interface
 - `util` or `utils` for utility or utilities, as in `StringUtils`
-
-> <p id="cta"> Call-to-action (CTA) buttons are the buttons you use in your website and on your
-> landing pages to guide users towards your goal conversion. It's the part of the landing page that
-> the user needs to click in order to take the action you want them to take.</p>
 
 #### Plural or singular?
 
