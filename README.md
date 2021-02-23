@@ -158,7 +158,10 @@ Should start with `is`, `has`, `will` or `should`. Like `isValid` or `hasValues`
 
 To indicate that a function or property is used as a callback or handler you can start the name with
 `on`, like: `onClick`, `onLoadComplete`, `onResize`.
-Do not postfix the name with `handler` since this is redundant when there is already an `on`. 
+Do not postfix the name with `handler` since this is redundant when there is already an `on`.
+
+Also note that a name of only `on` + `event name` might not be descriptive enough, depending on the 
+context. Using a more descriptive name is recommended.
 
 ```js
 // bad
