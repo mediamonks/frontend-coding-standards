@@ -98,6 +98,8 @@ We have standardized on a few abbreviations that are allowed to use:
 - `args` for arguments
 - `auto` for automatic, as in `autoLayout`
 - `bin` for binary
+- `cta` for "Call to action". It's the part of the application that the user needs to click in order
+  to take the action you want them to take.
 - `fps` for frames per second
 - `id` for identifier. Please note that 'd' should be written in lowercase when used in combination
   with another word, like `userId`.
