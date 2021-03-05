@@ -69,6 +69,7 @@ There is no limit for the length of a name, so prefer a long name which is clear
 than a short name which is not clear.
 
 #### Context
+
 A name should make sense within its context and should not have unnecessary information for that
 context. For example a variable that holds the name of a user can be named `name` within a `User`
 context. However if you need to hold the name of a user in another place, `userName` might be a
@@ -379,6 +380,11 @@ Always prefer `ReadonlyArray` over a regular `Array` unless it must be possible 
 We use [GitFlow](https://datasift.github.io/gitflow/IntroducingGitFlow.html) for our branching
 strategy.
 
+Branch names should adhere to the following structure:
+
+- `bugfix` or `feature` + `/` + `{TICKET_KEY}-{TICKET_TITLE}` e.g.
+  `bugfix/AB-1234-accessibility-homepage-contrast`
+
 #### Automatic deployment of branches
 
 Some projects will automatically deploy to an environment when pushing commits into a specific
@@ -389,8 +395,8 @@ project.
 
 Please read: https://chris.beams.io/posts/git-commit/
 
-- If possible add a reference to the corresponding ticket in the commit message. Make sure it is
-  always clear why a change was made.
+- If possible, add the key of the corresponding ticket in the commit message.
+- Make sure it is always clear why a change was made.
 - Only commit one feature at the time.
 - Always check your commit in details to avoid committing wrong code.
 
@@ -404,11 +410,20 @@ comments are resolved, before you merge it! Please read our
 
 ### nvm
 
-When setting up Node.js on a new machine, it is strongly recommended to use a versioning tool such as [nvm](https://github.com/nvm-sh/nvm). There are often times when we must switch between versions for testing or for certain features. Tools such as [nvm](https://github.com/nvm-sh/nvm) make this easy and simple.
+When setting up Node.js on a new machine, it is strongly recommended to use a versioning tool such
+as [nvm](https://github.com/nvm-sh/nvm). There are often times when we must switch between versions
+for testing or for certain features. Tools such as [nvm](https://github.com/nvm-sh/nvm) make this
+easy and simple.
 
 ### Long-term support
 
-You **must** always use the **LTS** (Long-term support) version of Node.js as it is considered stable and will ensure that you don't encounter any unexpected issues. Furthermore, when creating a new project or tool, it **must** always target the **LTS** version, unless there is a good reason not to e.g. an experimental tool or long-term project. To find out the current LTS version, you can use a tool such as [nvm](https://github.com/nvm-sh/nvm) or simply check the Node.js [website](https://nodejs.org/en/download).
+You **must** always use the **LTS** (Long-term support) version of Node.js as it is considered
+stable and will ensure that you don't encounter any unexpected issues. Furthermore, when creating a
+new project or tool, it **must** always target the **LTS** version, unless there is a good reason
+not to e.g. an experimental tool or long-term project. To find out the current LTS version, you can
+use a tool such as [nvm](https://github.com/nvm-sh/nvm) or simply check the Node.js
+[website](https://nodejs.org/en/download).
+
 ## Recommended Frameworks
 
 ### React
