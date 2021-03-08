@@ -361,7 +361,7 @@ Always prefer `ReadonlyArray` over a regular `Array` unless it must be possible 
 `interface` is preferred over `type` when defining the component props. Are a little more powerful
 than the corresponding type declaration, but for a set of react props, it likely doesn't matter.
 
-Also is not necessary to type the `returnType` because is inferred from what you actually return, so
+Also it is not necessary to type the `returnType` because it is inferred from what you actually return, so
 can be omitted most of the time.
 
 So the best approach and example would be something like this:
