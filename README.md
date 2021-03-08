@@ -12,6 +12,7 @@
 4. [Formatting](#formatting)
 5. [Comments](#comments)
 6. [TypeScript](#typescript)
+   1. [React props & TypeScript](#react-props-typescript)
 7. [GIT](#git)
    1. [Branches](#branches)
    2. [Commit messages](#commit-messages)
@@ -354,6 +355,38 @@ writable.
 #### Arrays
 
 Always prefer `ReadonlyArray` over a regular `Array` unless it must be possible to modify the Array.
+
+### React props & TypeScript
+
+`interface` is preferred over `type` when defining the component props. Are a little more powerful
+than the corresponding type declaration, but for a set of react props, it likely doesn't matter.
+
+Also is not necessary to type the `returnType` because is inferred from what you actually return, so
+can be omitted most of the time.
+
+So the best approach and example would be something like this:
+
+```
+interface FancyButtonProps {
+  color: string
+}
+
+const FancyButton = (props: FancyButtonProps) => {
+  ...
+}
+```
+
+or if you're using props destructuring:
+
+```
+interface FancyButtonProps {
+  color: string
+}
+
+const FancyButton = ({ color }: FancyButtonProps) => {
+  ...
+}
+```
 
 ## GIT
 
