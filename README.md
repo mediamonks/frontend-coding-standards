@@ -358,34 +358,71 @@ Always prefer `ReadonlyArray` over a regular `Array` unless it must be possible 
 
 ### React props & TypeScript
 
-`interface` is preferred over `type` when defining the component props. Are a little more powerful
-than the corresponding type declaration, but for a set of react props, it likely doesn't matter.
+#### Why use Interface instead of Type for typing props?
 
-Also it is not necessary to type the `returnType` because it is inferred from what you actually return, so
-can be omitted most of the time.
+`interface` are a little more powerful than the corresponding `type` declaration.
 
-So the best approach and example would be something like this:
+One of the reasons to use `interface` is when you need to compose two or more types, you have the
+option of extending those types with an interface, or intersecting them in a type alias. TS team
+says:
 
+> Interfaces create a single flat object type that detects property conflicts, which are usually
+> important to resolve! Intersections on the other hand just recursively merge properties, and in
+> some cases produce never. Interfaces also display consistently better, whereas type aliases to
+> intersections can't be displayed in part of other intersections. Type relationships between
+> interfaces are also cached, as opposed to intersection types as a whole. A final noteworthy
+> difference is that when checking against a target intersection type, every constituent is checked
+> before checking against the "effective"/"flattened" type. For this reason, extending types with
+> interfaces/extends is suggested over creating intersection types.
+
+This is preferred:
+
+```ts
+interface Foo extends Bar, Baz {
+  someProp: string;
+}
 ```
+
+Instead of this:
+
+```ts
+type Foo = Bar &
+  Baz & {
+    someProp: string;
+  };
+```
+
+#### Why not use React.FC or FunctionComponent type?
+
+- Provides an implicit definition of `children`
+- Doesn't support generics.
+- Doesn't work correctly with `defaultProps`
+
+#### Implicit or explicit `returnType`?
+
+It depends. If we know we want to return a JSX element, it is not necessary to type the `returnType`
+because it is inferred from what you actually return, so can be omitted most of the time.
+
+#### Preferred approach
+
+The best approach and example would be something like this:
+
+```ts
 interface FancyButtonProps {
-  color: string
+  color: string;
 }
 
-const FancyButton = (props: FancyButtonProps) => {
-  ...
-}
+export default function FancyButton({ color }: FancyButtonProps) => {
+  //...
+};
 ```
 
-or if you're using props destructuring:
+or if we want to explicity type the `returnType`:
 
-```
-interface FancyButtonProps {
-  color: string
-}
-
-const FancyButton = ({ color }: FancyButtonProps) => {
-  ...
-}
+```ts
+export default function FancyButton({ color }: FancyButtonProps): JSX.Element => {
+  //...
+};
 ```
 
 ## GIT
