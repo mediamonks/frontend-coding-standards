@@ -356,41 +356,26 @@ writable.
 
 Always prefer `ReadonlyArray` over a regular `Array` unless it must be possible to modify the Array.
 
-### React props & TypeScript
-
-#### Why use Interface instead of Type for typing props?
+#### Preferring Interfaces Over Intersections
 
 `interface` are a little more powerful than the corresponding `type` declaration.
 
 One of the reasons to use `interface` is when you need to compose two or more types, you have the
 option of extending those types with an interface, or intersecting them in a type alias. TS team
-says:
+[says](https://github.com/microsoft/TypeScript/wiki/Performance#preferring-interfaces-over-intersections)
 
-> Interfaces create a single flat object type that detects property conflicts, which are usually
-> important to resolve! Intersections on the other hand just recursively merge properties, and in
-> some cases produce never. Interfaces also display consistently better, whereas type aliases to
-> intersections can't be displayed in part of other intersections. Type relationships between
-> interfaces are also cached, as opposed to intersection types as a whole. A final noteworthy
-> difference is that when checking against a target intersection type, every constituent is checked
-> before checking against the "effective"/"flattened" type. For this reason, extending types with
-> interfaces/extends is suggested over creating intersection types.
+Extending types with `interface`s/`extends` is suggested over creating intersection types.
 
-This is preferred:
-
-```ts
-interface Foo extends Bar, Baz {
-  someProp: string;
-}
+```diff
+- type Foo = Bar & Baz & {
+-     someProp: string;
+- }
++ interface Foo extends Bar, Baz {
++     someProp: string;
++ }
 ```
 
-Instead of this:
-
-```ts
-type Foo = Bar &
-  Baz & {
-    someProp: string;
-  };
-```
+### TypeScript & React
 
 #### Why not use React.FC or FunctionComponent type?
 
@@ -403,7 +388,9 @@ type Foo = Bar &
 It depends. If we know we want to return a JSX element, it is not necessary to type the `returnType`
 because it is inferred from what you actually return, so can be omitted most of the time.
 
-#### Preferred approach
+But if you might return something other than JSX, then define the `returnType`.
+
+#### Preferred approach for typing React props
 
 The best approach and example would be something like this:
 
