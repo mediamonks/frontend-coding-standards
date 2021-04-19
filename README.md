@@ -399,7 +399,7 @@ interface FancyButtonProps {
   color: string;
 }
 
-export default function FancyButton({ color }: FancyButtonProps) => {
+export default function FancyButton({ color }: FancyButtonProps) {
   //...
 };
 ```
@@ -407,7 +407,7 @@ export default function FancyButton({ color }: FancyButtonProps) => {
 or if we want to explicity type the `returnType`:
 
 ```ts
-export default function FancyButton({ color }: FancyButtonProps): JSX.Element => {
+export default function FancyButton({ color }: FancyButtonProps): JSX.Element {
   //...
 };
 ```
