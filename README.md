@@ -361,8 +361,8 @@ Always prefer `ReadonlyArray` over a regular `Array` unless it must be possible 
 `interface` are a little more powerful than the corresponding `type` declaration.
 
 One of the reasons to use `interface` is when you need to compose two or more types, you have the
-option of extending those types with an interface, or intersecting them in a type alias. TS team
-[says](https://github.com/microsoft/TypeScript/wiki/Performance#preferring-interfaces-over-intersections)
+option of extending those types with an interface, or intersecting them in a type alias. For more information see what TS team said 
+[here](https://github.com/microsoft/TypeScript/wiki/Performance#preferring-interfaces-over-intersections)
 
 Extending types with `interface`s/`extends` is suggested over creating intersection types.
 
