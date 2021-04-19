@@ -388,7 +388,7 @@ Extending types with `interface`s/`extends` is suggested over creating intersect
 It depends. If we know we want to return a JSX element, it is not necessary to type the `returnType`
 because it is inferred from what you actually return, so can be omitted most of the time.
 
-But if you might return something other than JSX, then define the `returnType`.
+But if you may going to return something other than JSX, then define the `returnType`.
 
 #### Preferred approach for typing React props
 
