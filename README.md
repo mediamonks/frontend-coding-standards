@@ -237,6 +237,37 @@ a single line.
 Prefer writing pure functions, which means they do not manipulate the input arguments or
 reference/manipulate global state. This makes your code better scalable and testable.
 
+#### Arrow functions
+
+Prefer to use arrow functions when `this` should be bound to the outside context, and not to the function itself.
+Arrow functions do not have their own context, so it will lexically go up a scope, and use the value of `this` in the scope in which it was defined.
+
+```
+var human = {
+  message: 'Hello, World!',
+  say() {
+    setTimeout(() => {
+      console.log(this.message);
+    }, 1000);
+  }
+};
+```
+
+Also arrow functions are good in case of inline callbacks, which are most often found in `map`, `filter`, `reduce` methods in order 
+to improve code readability.
+
+```
+[1, 2, 3]
+  .map((x) => x * 5)
+  .filter((x) => x < 10)
+```
+
+Prefer to use keyword `function` to create functions in cases:
+
+- Function is at top level
+- Function contains complex logic
+- If there are no advantages to using the arrow function
+
 #### Separate Logic From Configuration
 
 Write code that is reusable, scalable and testable.
