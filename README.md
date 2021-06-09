@@ -243,7 +243,7 @@ Prefer to use arrow functions when `this` should be bound to the outside context
 Arrow functions do not have their own context, so it will lexically go up a scope, and use the value of `this` in the scope in which it was defined.
 
 ```
-var human = {
+const human = {
   message: 'Hello, World!',
   say() {
     setTimeout(() => {
