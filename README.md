@@ -380,6 +380,16 @@ writable.
 
 Always prefer `ReadonlyArray` over a regular `Array` unless it must be possible to modify the Array.
 
+#### Return types
+
+Although return types are optional for TypeScript (TypeScript is very good at figuring out what the 
+return type of a function is) it is absolutely recommended to explicitly add a return type for 
+public (API) functions.
+
+Adding a return type improves readability and can also help to prevent bugs. Accidentally returning 
+the wrong type would not cause an error in the function declaration if there is no explicit return 
+type set.
+
 ## GIT
 
 ### Branches
