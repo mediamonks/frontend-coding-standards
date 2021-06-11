@@ -569,7 +569,7 @@ makes integration into CMS systems, like
 - [classnames](https://www.npmjs.com/package/classnames) - A simple JavaScript utility for
   conditionally joining classNames together.
 - [Draggable](https://greensock.com/draggable/) - Green Sock library for dragging elements
-- [grid-checker](https://www.npmjs.com/package/grid-checker) - provides developers a customizable,
+- [grid-overlay](https://www.npmjs.com/package/qa-tools) - provides developers a customizable,
   responsive grid-overlay to compare with the layout provided by design to compare layouts
 - [GSAP](https://greensock.com/gsap/) - Green Sock Animation Platform -Animation library
 - [Litepicker](https://github.com/ThijsTyZ/Litepicker) - Date range picker - lightweight, no
