@@ -256,27 +256,79 @@ Every function or class should do **one thing** (and do it good). If it needs to
 thing, split it up. Keep your files, classes and functions small. It’s okay to have a file with just
 a single line.
 
+### Functions 
+
 #### Pure functions
 
 Prefer writing pure functions, which means they do not manipulate the input arguments or
 reference/manipulate global state. This makes your code better scalable and testable.
 
-#### Separate Logic From Configuration
+#### Arrow functions
+
+Prefer to use arrow functions when `this` should be bound to the outside context, and not to the function itself.
+Arrow functions do not have their own context, so it will lexically go up a scope, and use the value of `this` in the scope in which it was defined.
+
+```
+const human = {
+  message: 'Hello, World!',
+  say() {
+    setTimeout(() => {
+      console.log(this.message);
+    }, 1000);
+  }
+};
+```
+
+Also arrow functions are good in case of inline callbacks, which are most often found in `map`, `filter`, `reduce` methods in order 
+to improve code readability.
+
+```
+[1, 2, 3]
+  .map((x) => x * 5)
+  .filter((x) => x < 10)
+```
+
+Prefer to use keyword `function` to create functions in cases:
+
+- Function is at top level
+- Function contains complex logic
+- If there are no advantages to using the arrow function
+
+Benefits of using the keyword `function` instead of arrow function:
+
+- Function is not anonymous and has a name, so you get a better stack trace in case of an error
+- [Hoisting](https://ui.dev/ultimate-guide-to-execution-contexts-hoisting-scopes-and-closures-in-javascript/) allows a function to be used before it is declared, so the order is not important
+
+Example of creating a function using the `function` keyword:
+
+```
+function secondsToDurationFormat(value: number): string {
+  const days = Math.floor((value / 86400) % 365);
+  const hours = Math.floor((value / 3600) % 24);
+  const minutes = Math.floor((value / 60) % 60);
+  const seconds = Math.floor(value % 60);
+
+  return `P${days}DT${hours}H${minutes}M${seconds}S`;
+};
+```
+
+### Separate Logic From Configuration
 
 Write code that is reusable, scalable and testable.
 
-#### Do not repeat yourself (DRY)
+### Do not repeat yourself (DRY)
 
 - Do not copy code to another place.
 - Avoid using the same string twice in a project.
 - Move shared logic to a shared place.
 - Make sure you do not have to adapt changes in multiple places.
 
-#### Do not use Magic Numbers
+### Do not use Magic Numbers
 
 See https://en.wikipedia.org/wiki/Magic_number_(programming)
 
-#### Default in a switch
+
+### Default in a switch
 
 Every `switch` must have a `default`. If there is no need to handle the `default`, either throw an
 `Error` or add a comment that the default is explicitly ignored.
