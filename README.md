@@ -69,6 +69,7 @@ There is no limit for the length of a name, so prefer a long name which is clear
 than a short name which is not clear.
 
 #### Context
+
 A name should make sense within its context and should not have unnecessary information for that
 context. For example a variable that holds the name of a user can be named `name` within a `User`
 context. However if you need to hold the name of a user in another place, `userName` might be a
@@ -98,6 +99,8 @@ We have standardized on a few abbreviations that are allowed to use:
 - `args` for arguments
 - `auto` for automatic, as in `autoLayout`
 - `bin` for binary
+- `cta` for "Call to action". It's the part of the application that the user needs to click in order
+  to take the action you want them to take.
 - `fps` for frames per second
 - `id` for identifier. Please note that 'd' should be written in lowercase when used in combination
   with another word, like `userId`.
@@ -191,6 +194,11 @@ usage is clear you can use `U`, `V` etc. for any following generic.
 If the usage is not obvious, you should use a more descriptive name. The same naming rules as for
 classes will apply then.
 
+#### Prefixes
+
+We are not using prefixes for any name. Interfaces should follow the exact naming rules as classes,
+and should not use the `I` or any other pre- or postfix. 
+
 ### Casing
 
 #### Classes, Interfaces, Types and Generics
@@ -272,27 +280,79 @@ Every function or class should do **one thing** (and do it good). If it needs to
 thing, split it up. Keep your files, classes and functions small. It’s okay to have a file with just
 a single line.
 
+### Functions 
+
 #### Pure functions
 
 Prefer writing pure functions, which means they do not manipulate the input arguments or
 reference/manipulate global state. This makes your code better scalable and testable.
 
-#### Separate Logic From Configuration
+#### Arrow functions
+
+Prefer to use arrow functions when `this` should be bound to the outside context, and not to the function itself.
+Arrow functions do not have their own context, so it will lexically go up a scope, and use the value of `this` in the scope in which it was defined.
+
+```
+const human = {
+  message: 'Hello, World!',
+  say() {
+    setTimeout(() => {
+      console.log(this.message);
+    }, 1000);
+  }
+};
+```
+
+Also arrow functions are good in case of inline callbacks, which are most often found in `map`, `filter`, `reduce` methods in order 
+to improve code readability.
+
+```
+[1, 2, 3]
+  .map((x) => x * 5)
+  .filter((x) => x < 10)
+```
+
+Prefer to use keyword `function` to create functions in cases:
+
+- Function is at top level
+- Function contains complex logic
+- If there are no advantages to using the arrow function
+
+Benefits of using the keyword `function` instead of arrow function:
+
+- Function is not anonymous and has a name, so you get a better stack trace in case of an error
+- [Hoisting](https://ui.dev/ultimate-guide-to-execution-contexts-hoisting-scopes-and-closures-in-javascript/) allows a function to be used before it is declared, so the order is not important
+
+Example of creating a function using the `function` keyword:
+
+```
+function secondsToDurationFormat(value: number): string {
+  const days = Math.floor((value / 86400) % 365);
+  const hours = Math.floor((value / 3600) % 24);
+  const minutes = Math.floor((value / 60) % 60);
+  const seconds = Math.floor(value % 60);
+
+  return `P${days}DT${hours}H${minutes}M${seconds}S`;
+};
+```
+
+### Separate Logic From Configuration
 
 Write code that is reusable, scalable and testable.
 
-#### Do not repeat yourself (DRY)
+### Do not repeat yourself (DRY)
 
 - Do not copy code to another place.
 - Avoid using the same string twice in a project.
 - Move shared logic to a shared place.
 - Make sure you do not have to adapt changes in multiple places.
 
-#### Do not use Magic Numbers
+### Do not use Magic Numbers
 
 See https://en.wikipedia.org/wiki/Magic_number_(programming)
 
-#### Default in a switch
+
+### Default in a switch
 
 Every `switch` must have a `default`. If there is no need to handle the `default`, either throw an
 `Error` or add a comment that the default is explicitly ignored.
@@ -412,12 +472,27 @@ Always prefer `ReadonlyArray` over a regular `Array` unless it must be possible 
 
 Arrays should be typed as `Array<T>` rather than `T[]` for consistency.
 
+#### Return types
+
+Although return types are optional for TypeScript (TypeScript is very good at figuring out what the 
+return type of a function is) it is absolutely recommended to explicitly add a return type for 
+public (API) functions.
+
+Adding a return type improves readability and can also help to prevent bugs. Accidentally returning 
+the wrong type would not cause an error in the function declaration if there is no explicit return 
+type set.
+
 ## GIT
 
 ### Branches
 
 We use [GitFlow](https://datasift.github.io/gitflow/IntroducingGitFlow.html) for our branching
 strategy.
+
+Branch names should adhere to the following structure:
+
+- `bugfix` or `feature` + `/` + `{TICKET_KEY}-{TICKET_TITLE}` e.g.
+  `bugfix/AB-1234-accessibility-homepage-contrast`
 
 #### Automatic deployment of branches
 
@@ -429,8 +504,8 @@ project.
 
 Please read: https://chris.beams.io/posts/git-commit/
 
-- If possible add a reference to the corresponding ticket in the commit message. Make sure it is
-  always clear why a change was made.
+- If possible, add the key of the corresponding ticket in the commit message.
+- Make sure it is always clear why a change was made.
 - Only commit one feature at the time.
 - Always check your commit in details to avoid committing wrong code.
 
@@ -444,11 +519,20 @@ comments are resolved, before you merge it! Please read our
 
 ### nvm
 
-When setting up Node.js on a new machine, it is strongly recommended to use a versioning tool such as [nvm](https://github.com/nvm-sh/nvm). There are often times when we must switch between versions for testing or for certain features. Tools such as [nvm](https://github.com/nvm-sh/nvm) make this easy and simple.
+When setting up Node.js on a new machine, it is strongly recommended to use a versioning tool such
+as [nvm](https://github.com/nvm-sh/nvm). There are often times when we must switch between versions
+for testing or for certain features. Tools such as [nvm](https://github.com/nvm-sh/nvm) make this
+easy and simple.
 
 ### Long-term support
 
-You **must** always use the **LTS** (Long-term support) version of Node.js as it is considered stable and will ensure that you don't encounter any unexpected issues. Furthermore, when creating a new project or tool, it **must** always target the **LTS** version, unless there is a good reason not to e.g. an experimental tool or long-term project. To find out the current LTS version, you can use a tool such as [nvm](https://github.com/nvm-sh/nvm) or simply check the Node.js [website](https://nodejs.org/en/download).
+You **must** always use the **LTS** (Long-term support) version of Node.js as it is considered
+stable and will ensure that you don't encounter any unexpected issues. Furthermore, when creating a
+new project or tool, it **must** always target the **LTS** version, unless there is a good reason
+not to e.g. an experimental tool or long-term project. To find out the current LTS version, you can
+use a tool such as [nvm](https://github.com/nvm-sh/nvm) or simply check the Node.js
+[website](https://nodejs.org/en/download).
+
 ## Recommended Frameworks
 
 ### React
