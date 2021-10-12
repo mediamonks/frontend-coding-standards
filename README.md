@@ -196,7 +196,7 @@ but be aware using types impacts [compilation performance](https://ncjamieson.co
 
 
 ```ts
-// bad, prefix interfaces with I
+// bad, you should not prefix interfaces with I
 interface IResponse {
   //...
 };
