@@ -227,6 +227,11 @@ function onImageLoadComplete() {
 Avoid negations. _“Don’t ever not avoid negative logic”_. Prefer `isShown` over `isHidden` or
 `isEnabled` over `isDisabled`. Do not use names like `notEditable`.
 
+#### Prefixes
+
+We are not using prefixes for any name. Interfaces should follow the exact naming rules as classes,
+and should not use the `I` or any other pre- or postfix.
+
 #### TypeScript Generics
 
 If the usages of the generic is obvious, then naming that generic `T` is sufficient. As long as the
@@ -235,10 +240,51 @@ usage is clear you can use `U`, `V` etc. for any following generic.
 If the usage is not obvious, you should use a more descriptive name. The same naming rules as for
 classes will apply then.
 
-#### Prefixes
+```ts
+// bad, prefix generics with T
+class Response<TResponseData> {
+  public data: TResponseData;
+}
 
-We are not using prefixes for any name. Interfaces should follow the exact naming rules as classes,
-and should not use the `I` or any other pre- or postfix. 
+// good, use common abbreviations like T(ype), K(ey), V(alue), P(roperty) etc.
+type Partial<T> = { [P in keyof T]?: T[P]; };
+
+// better, add more semantic context by extending the type
+type ResponseData = Record<string, unknown>;
+
+class Response<T extends ResponseData> {
+  public data: T;
+}
+```
+
+#### Interfaces and type aliases
+Depending on the use case there is a choice to implement an
+[interface or type alias](https://github.com/typescript-cheatsheets/react#useful-table-for-types-vs-interfaces),
+but be aware using types impacts [compilation performance](https://ncjamieson.com/prefer-interfaces/).
+
+
+```ts
+// bad, you should not prefix interfaces with I
+interface IResponse {
+  //...
+};
+
+// bad, prefix types with T
+type TResponse = {
+  //...
+};
+
+
+// good, no prefix
+interface Response {
+  //...
+};
+
+// good, no prefix
+type Response = {
+  //...
+};
+```
 
 ### Casing
 
@@ -248,7 +294,7 @@ and should not use the `I` or any other pre- or postfix.
 
 #### Functions, properties, arguments and variables
 
-**camelCase** Starts with a lower case character, every following individual word start with a upper
+**camelCase** Starts with a lower case character, every following individual word start with an upper
 case character, no underscores, no dashes.
 
 ##### Properties with a getter and/or setter
