@@ -12,18 +12,21 @@
 4. [Formatting](#formatting)
 5. [Comments](#comments)
 6. [TypeScript](#typescript)
-7. [GIT](#git)
+7. [CSS](#css)
+   1. [Introduction](#introduction) 
+   2. [Disclaimer](#disclaimer)
+8. [GIT](#git)
    1. [Branches](#branches)
    2. [Commit messages](#commit-messages)
    3. [Code Reviews](#code-reviews)
-8. [Node.js](#node.js)
-9. [Recommended Frameworks](#recommended-frameworks)
-   1. [React](#react)
-   2. [Vue](#vue)
-   3. [Muban](#muban)
-10. [Recommended Libraries](#recommended-libraries)
-11. [Definition of Done Checklist](#definition-of-done-checklist)
-12. [Development environment](#development-environment)
+9. [Node.js](#node.js)
+10. [Recommended Frameworks](#recommended-frameworks)
+    1. [React](#react)
+    2. [Vue](#vue)
+    3. [Muban](#muban)
+11. [Recommended Libraries](#recommended-libraries)
+12. [Definition of Done Checklist](#definition-of-done-checklist)
+13. [Development environment](#development-environment)
     1. [VSCode](#vscode)
     2. [WebStorm](#webstorm)
 
@@ -568,6 +571,14 @@ public (API) functions.
 Adding a return type improves readability and can also help to prevent bugs. Accidentally returning 
 the wrong type would not cause an error in the function declaration if there is no explicit return 
 type set.
+
+## CSS
+
+### Introduction
+This document is written to capture the conventions of writing styles for our projects. Many of the rules will be or are part of our linter and prettier settings. Due to variety of our projects and methods there might be a need for a more detailed approach per situation. This might also impact how code is being organized, structured on an architectonic level. Therefore, this part of the conventions will focus on the rules that are applicable to the majority of our implementation methods.
+
+### Disclaimer
+It's important to note that client and project requirements always undo choices made in these guidelines
 
 ## GIT
 
