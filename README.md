@@ -15,6 +15,7 @@
 7. [CSS](#css)
    1. [Introduction](#introduction) 
    2. [Disclaimer](#disclaimer)
+   3. [Fonts](#fonts)
 8. [GIT](#git)
    1. [Branches](#branches)
    2. [Commit messages](#commit-messages)
@@ -579,6 +580,12 @@ This document is written to capture the conventions of writing styles for our pr
 
 ### Disclaimer
 It's important to note that client and project requirements always undo choices made in these guidelines
+
+### Fonts
+First a few dos and don'ts:  
+- **DON'T** use fonts downloaded from a non-reliable source
+- **DON'T** use fonts converted by tools like Font Squirrel
+- **DO** double check if we have the **correct** licenses for use on the web.
 
 ## GIT
 
