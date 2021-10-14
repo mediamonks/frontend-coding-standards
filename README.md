@@ -614,13 +614,24 @@ h1, h2, h3 {
 
 Don't use ids as a selector (unless there is no other option)
 
-Don't combine element types with classes and ids
-```css
+Don't combine element types with classes and ids. Preferably don't style on elements at all. Reasonable exceptions are in a base reset or when styling elements that can not be targeted in another way (e.g. elements that are generated from a wysiwyg editor or coming from external sources).
+```scss
 /* Recommended */
 .overview {}
 
+/* Encouraged exceptions */
+.wysiwyg {
+  h1,
+  h2,
+  h3 {
+    text-transform: uppercase;
+  }
+}
+
 /* Not recommended */
 ul.overview {}
+
+.overview li {}
 ```
 
 Selectors are separated by empty lines
