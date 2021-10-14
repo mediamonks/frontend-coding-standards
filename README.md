@@ -612,7 +612,7 @@ h1, h2, h3 {
 }
 ```
 
-Limit the usage of ids
+Don't use ids as a selector (unless there is no other option)
 
 Don't combine element types with classes and ids
 ```css
