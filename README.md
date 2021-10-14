@@ -582,7 +582,7 @@ This document is written to capture the conventions of writing styles for our pr
 It's important to note that client and project requirements always undo choices made in these guidelines
 
 ### Z-index
-The use of z-index can cause unwanted side effects that can be tricky to debug and manage. To avoid relying on `z-index: 99999;` we use a [scss function](https://github.com/mediamonks/seng-scss/blob/master/utils/function/_zindex.scss) in most of our frameworks, which is part of seng-scss. The indices of the list items will update when new items are added. This will help increase the maintainability.
+The use of z-index can cause unwanted side effects that can be tricky to debug and manage. To avoid relying on `z-index: 99999;` we use an [scss function](https://github.com/mediamonks/seng-scss/blob/master/utils/function/_zindex.scss) in most of our frameworks, which is part of seng-scss. The indices of the list items will update when new items are added. This will help increase the maintainability.
 ```scss
 // Maintained in variables.scss
 $zLayout: default header overlay;
@@ -594,6 +594,28 @@ $zLayout: default header overlay;
 }
 ```
 It's recommended to use this `$zLayout` in situations where its z-index needs to be compared to other components. For z-axis hierarchies within components a numerical approach is allowed (and perhaps recommended) or create a local variable.
+
+For environments that use a css-in-js solution it's recommended to use a similar approach. In the following example a numeric enum is used:
+
+```ts
+// Using a numeric enum to create a z-index map
+enum ZIndex {
+  Navigation = 1,
+
+  // Value for 'Dialog' will automatically be set to 2 by the Typescript compiler
+  Dialog
+}
+
+export const Navigation = styled.nav`
+  ...
+  z-index: ${ZIndex.Navigation}
+`
+
+export const Dialog = styled.dialog`
+  ...
+  z-index: ${ZIndex.Dialog}
+`
+```
 
 ## GIT
 
@@ -692,7 +714,7 @@ makes integration into CMS systems, like
 - [scroll-tracker-component-manager](https://www.npmjs.com/package/scroll-tracker-component-manager) -
   The ScrollTrackerComponentManager is a Class that tracks whether a component is within your
   viewport based on your scroll position.
-- [seng-scss](https://www.npmjs.com/package/seng-scss) - A SCSS library of mixins and functions
+- [seng-scss](https://www.npmjs.com/package/seng-scss) - An SCSS library of mixins and functions
 - [seng-device-state-tracker](https://github.com/mediamonks/seng-device-state-tracker) -
   DeviceStateTracker is a utility class that tracks which media query is currently active using the
   matchMedia API.
