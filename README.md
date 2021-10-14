@@ -576,6 +576,101 @@ This document is written to capture the conventions of writing styles for our pr
 ### Disclaimer
 It's important to note that client and project requirements always undo choices made in these guidelines
 
+# CSS Coding Conventions
+
+## Introduction
+This document is written to capture the conventions of writing styles for our projects. Many of the rules will be or are part of our linter and prettier settings. Due to variety of our projects and methods there might be a need for a more detailed approach per situation. This might also impact how code is being organized, structured on an architectonic level. Therefore, this part of the conventions will focus on the rules that are applicable to the majority of our implementation methods.
+
+## Disclaimer
+It's important to note that client and project requirements always undo choices made in these guidelines
+
+Names should be meaningful and not presentational:
+```css
+/* Bad examples */
+
+/* presentational with color and position reference */
+.button-orange {}
+.left-block {}
+
+/* meaningless */
+.yee-u88 {}
+```
+Some good examples would be:
+```css
+.video {}
+
+.gallery {}
+
+```
+
+Selectors are placed on separate lines:
+```css
+/* Recommended */
+h1,
+h2,
+h3 {
+  text-transform: uppercase;
+}
+
+/* Not recommended */
+h1, h2, h3 {
+  text-transform: uppercase;
+}
+```
+
+Limit the usage of ids
+
+Don't combine element types with classes and ids
+```css
+/* Recommended */
+.overview {}
+
+/* Not recommended */
+ul.overview {}
+```
+
+Selectors are separated by empty lines
+```css
+/* Recommended */
+.foo {
+  color: #f00;
+}
+
+.bar {
+  color: #0f0;
+}
+
+.baz {
+  color: #00F;
+}
+
+/* Not recommended */
+.foo {
+  color: #f00;
+}
+.bar {
+  color: #0f0;
+}
+.baz {
+  color: #00F;
+}
+```
+
+Properties have their own unique line
+
+```css
+/* Recommended */
+.gallery {
+  background: #000;
+  color: #fff;
+}
+
+/* Not recommended */
+.gallery {
+  background: #000; color: #fff;
+}
+```
+
 ## GIT
 
 ### Branches
