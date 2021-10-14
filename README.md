@@ -580,6 +580,20 @@ This document is written to capture the conventions of writing styles for our pr
 ### Disclaimer
 It's important to note that client and project requirements always undo choices made in these guidelines
 
+### Managing Z-index
+The use of z-index can cause unwanted side effects that can be tricky to debug and manage. To avoid relying on `z-index: 99999;` we use a [scss function](https://github.com/mediamonks/seng-scss/blob/master/utils/function/_zindex.scss) in most of our frameworks, which is part of seng-scss. The indices of the list items will update when new items are added. This will help increase the maintainability. 
+```scss
+// Maintained in variables.scss
+$zLayout: default header overlay;
+
+.overlay {
+  inset: 0;
+  position: fixed;
+  z-index: zindex($zLayout, overlay);
+}
+```
+It's recommended to use this `$zLayout` for 'root components' like header and overlays. For z-axis hierarchies withing components a numerical approach is allowed (and perhaps recommended) or create a local variable.
+
 ## GIT
 
 ### Branches
