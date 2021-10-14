@@ -322,10 +322,6 @@ public get isActive(): boolean {
 **SNAKE_UPPER_CASE** Only use upper case characters, individual words must be separated with an
 underscore.
 
-#### CSS Class names
-
-**kebab-case** Only use lower case characters, individual words must be separated with a dash.
-
 #### Abbreviations and Acronyms
 
 Abbreviations and acronyms should be treated as words, which means only the first character will be
