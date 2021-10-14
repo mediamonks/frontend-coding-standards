@@ -593,7 +593,18 @@ $zLayout: default header overlay;
   z-index: zindex($zLayout, overlay);
 }
 ```
-It's recommended to use this `$zLayout` in situations where its z-index needs to be compared to other components. For z-axis hierarchies within components a numerical approach is allowed (and perhaps recommended) or create a local variable.
+It's recommended to use this `$zLayout` in situations where its z-index needs to be compared to other components. For z-axis hierarchies within components (with a new stacking context) a numerical approach is allowed (and perhaps recommended) or create a local variable:
+
+```scss
+.overlay {
+  $overlayZLayout: default top;
+  
+  .visual {
+    position: relative;
+    z-index: zindex($overlayZLayout, top);
+  }
+}
+```
 
 For environments that use a css-in-js solution it's recommended to use a similar approach. In the following example a numeric enum is used:
 
