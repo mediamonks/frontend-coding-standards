@@ -630,7 +630,7 @@ export const Dialog = styled.dialog`
 ```
 
 ### Fonts
-First a few dos and don'ts:  
+First a few do's and don'ts:  
 - **DON'T** use fonts downloaded from a non-reliable source
 - **DON'T** use fonts converted by tools like Font Squirrel
 - **DO** host font files on the same domain to improve initial page load time.
