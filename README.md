@@ -682,7 +682,7 @@ It is ok to use multiple lines for styles if it increases legibility. This is of
 
 ```scss
 .gallery {
-  background-color:white;
+  background-color: white;
   background-image:
     radial-gradient(midnightblue 9px, transparent 10px),
     repeating-radial-gradient(midnightblue 0, midnightblue 4px, transparent 5px, transparent 20px, midnightblue 21px, midnightblue 25px, transparent 26px, transparent 50px);
