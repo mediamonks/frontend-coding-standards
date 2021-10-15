@@ -636,7 +636,7 @@ ul.overview {}
 .overview li {}
 ```
 
-Selectors are separated by empty lines
+Rulesets are separated by empty lines
 ```css
 /* Good */
 .foo {
