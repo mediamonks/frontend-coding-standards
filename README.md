@@ -678,6 +678,19 @@ Properties have their own unique line
 }
 ```
 
+It is ok to use multiple lines for styles if it increases legibility. This is often the case when using complex background styles or named grid-areas.
+
+```scss
+.gallery {
+  background-color:white;
+  background-image:
+    radial-gradient(midnightblue 9px, transparent 10px),
+    repeating-radial-gradient(midnightblue 0, midnightblue 4px, transparent 5px, transparent 20px, midnightblue 21px, midnightblue 25px, transparent 26px, transparent 50px);
+  background-size: 30px 30px, 90px 90px;
+  background-position: 0 0;
+}
+```
+
 ### Z-index
 The use of z-index can cause unwanted side effects that can be tricky to debug and manage. To avoid relying on `z-index: 99999;` we use an [scss function](https://github.com/mediamonks/seng-scss/blob/master/utils/function/_zindex.scss) in most of our frameworks, which is part of seng-scss. The indices of the list items will update when new items are added. This will help increase the maintainability.
 ```scss
