@@ -15,7 +15,8 @@
 7. [CSS](#css)
    1. [Introduction](#introduction) 
    2. [Disclaimer](#disclaimer)
-   3. [z-index](#z-index)
+   3. [Formatting and Naming](#formatting-and-naming)
+   4. [z-index](#z-index)
 8. [GIT](#git)
    1. [Branches](#branches)
    2. [Commit messages](#commit-messages)
@@ -600,14 +601,14 @@ Some good examples would be:
 
 Selectors are placed on separate lines:
 ```css
-/* Recommended */
+/* Good */
 h1,
 h2,
 h3 {
   text-transform: uppercase;
 }
 
-/* Not recommended */
+/* Bad */
 h1, h2, h3 {
   text-transform: uppercase;
 }
@@ -629,7 +630,7 @@ Don't combine element types with classes and ids. Preferably don't style on elem
   }
 }
 
-/* Not recommended */
+/* Bad */
 ul.overview {}
 
 .overview li {}
@@ -637,7 +638,7 @@ ul.overview {}
 
 Selectors are separated by empty lines
 ```css
-/* Recommended */
+/* Good */
 .foo {
   color: #f00;
 }
@@ -650,7 +651,7 @@ Selectors are separated by empty lines
   color: #00F;
 }
 
-/* Not recommended */
+/* Bad */
 .foo {
   color: #f00;
 }
@@ -665,13 +666,13 @@ Selectors are separated by empty lines
 Properties have their own unique line
 
 ```css
-/* Recommended */
+/* Good */
 .gallery {
   background: #000;
   color: #fff;
 }
 
-/* Not recommended */
+/* Bad */
 .gallery {
   background: #000; color: #fff;
 }
