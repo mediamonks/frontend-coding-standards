@@ -17,8 +17,6 @@
    2. [Disclaimer](#disclaimer)
    3. [z-index](#z-index)
    3. [Fonts](#fonts)
-      1. [Font-families](#font-families)
-      2. [Font-size](#font-size)
 8. [GIT](#git)
    1. [Branches](#branches)
    2. [Commit messages](#commit-messages)
@@ -638,31 +636,6 @@ First a few dos and don'ts:
 - **DO** double check if we have the **correct** licenses for use on the web.
 
 For all of our projects we need to use licensed fonts. It's the responsibility of the Project Manager to provide the correct fonts (Woff, Woff2) to developers. This can be done on the Drive folder for your projects. It's recommended to double-check if this is the case with your Project managers, since there are several licenses for the usage of fonts (e.g. Desktop usage vs. Web usage). When in doubt check with Leads or Project managers.
-
-#### Font-families
-TODO: This chapter needs to be revisited after debates over fallback font implementation
-
-#### Font-size
-For accessibility reasons it's recommended to use font-sizes that are relative (`rem`) to a base font-size set in the root as a percentage . This will make sure that users can zoom and change font size as preferred. Don't forget to use relative units for text related properties, like `line-height`, `letter-spacing`.
-```scss
-/* Good */
-:root {
-  font-size: 100%;
-}
-
-.title {
-  font-size: 2rem;
-  line-height: 1.4;
-}
-
-/* Bad */
-.title {
-  font-size: 32px;
-  line-height: 44px;
-}
-```
-
-
 
 ## GIT
 
