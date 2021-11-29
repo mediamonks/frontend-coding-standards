@@ -654,6 +654,27 @@ export const Dialog = styled.dialog`
 `
 ```
 
+### Colors
+Store colours as variables and prefer human-readable names to ease communication between disciplines. Clients may provide additional naming conventions based on brand guidelines. Prefer these in all communication.
+
+When using custom properties in css it's still recommended using variables.
+```scss
+// centrally stored
+$gingerOrange: #FF6200;
+$chamois: #DAA06D;
+
+:root {
+  --card-background: #{$chamois};
+}
+```
+Sufficiently complex projects might need to discern between colours and other properties by prefixing a color palette with color.
+```scss
+$colorGingerOrange: #FF6200;
+$colorChamois: #DAA06D;
+```
+
+Note: [HSL](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/hsl()) or different [color spaces](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/color()) are allowed instead of Hex of RGB(A) when needed or suggested. 
+
 ## GIT
 
 ### Branches
