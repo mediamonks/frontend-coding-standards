@@ -587,7 +587,7 @@ It's important to note that client and project requirements always undo choices 
 ### Styleguide implementation
 
 #### Colors
-Store colors centrally as variables. Preferably use human-friendly names that make communication between departments easier. In many cases clients will provide brand guidelines with names for colors. Use these when possible in all documentation and communication.
+Store colours as variables and prefer human-readable names to ease communication between disciplines. Clients may provide additional naming conventions based on brand guidelines. Prefer these in all communication.
 
 When using custom properties in css it's still recommended using variables.
 ```scss
