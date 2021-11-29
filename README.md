@@ -593,6 +593,7 @@ Names should be meaningful and not presentational:
 ```
 Some good examples would be:
 ```css
+/* Good */
 .video {}
 
 .gallery {}
