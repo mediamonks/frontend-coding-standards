@@ -15,7 +15,8 @@
 7. [CSS](#css)
    1. [Introduction](#introduction) 
    2. [Disclaimer](#disclaimer)
-   3. [z-index](#z-index)
+   3. [Formatting and Naming](#formatting-and-naming)
+   4. [z-index](#z-index)
 8. [GIT](#git)
    1. [Branches](#branches)
    2. [Commit messages](#commit-messages)
@@ -323,10 +324,6 @@ public get isActive(): boolean {
 **SNAKE_UPPER_CASE** Only use upper case characters, individual words must be separated with an
 underscore.
 
-#### CSS Class names
-
-**kebab-case** Only use lower case characters, individual words must be separated with a dash.
-
 #### Abbreviations and Acronyms
 
 Abbreviations and acronyms should be treated as words, which means only the first character will be
@@ -580,6 +577,120 @@ This document is written to capture the conventions of writing styles for our pr
 
 ### Disclaimer
 It's important to note that client and project requirements always undo choices made in these guidelines
+
+### Formatting and Naming
+
+Names should be meaningful and not presentational:
+```css
+/* Bad */
+
+/* presentational with color and position reference */
+.button-orange {}
+.left-block {}
+
+/* meaningless */
+.yee-u88 {}
+```
+Some good examples would be:
+```css
+/* Good */
+.video {}
+
+.gallery {}
+
+```
+
+Selectors are placed on separate lines:
+```css
+/* Good */
+h1,
+h2,
+h3 {
+  text-transform: uppercase;
+}
+
+/* Bad */
+h1, h2, h3 {
+  text-transform: uppercase;
+}
+```
+
+Don't use ids as a selector (unless there is no other option)
+
+Don't combine element types with classes and ids. Preferably don't style on elements at all. Reasonable exceptions are in a base reset or when styling elements that can not be targeted in another way (e.g. elements that are generated from a wysiwyg editor or coming from external sources).
+```scss
+/* Recommended */
+.overview {}
+
+/* Encouraged exceptions */
+.wysiwyg {
+  h1,
+  h2,
+  h3 {
+    text-transform: uppercase;
+  }
+}
+
+/* Bad */
+ul.overview {}
+
+.overview li {}
+```
+
+Rulesets are separated by empty lines
+```css
+/* Good */
+.foo {
+  color: #f00;
+}
+
+.bar {
+  color: #0f0;
+}
+
+.baz {
+  color: #00F;
+}
+
+/* Bad */
+.foo {
+  color: #f00;
+}
+.bar {
+  color: #0f0;
+}
+.baz {
+  color: #00F;
+}
+```
+
+Properties have their own unique line
+
+```css
+/* Good */
+.gallery {
+  background: #000;
+  color: #fff;
+}
+
+/* Bad */
+.gallery {
+  background: #000; color: #fff;
+}
+```
+
+It is ok to use multiple lines for styles if it increases legibility. This is often the case when using complex background styles or named grid-areas.
+
+```scss
+.gallery {
+  background-color: white;
+  background-image:
+    radial-gradient(midnightblue 9px, transparent 10px),
+    repeating-radial-gradient(midnightblue 0, midnightblue 4px, transparent 5px, transparent 20px, midnightblue 21px, midnightblue 25px, transparent 26px, transparent 50px);
+  background-size: 30px 30px, 90px 90px;
+  background-position: 0 0;
+}
+```
 
 ### Z-index
 The use of z-index can cause unwanted side effects that can be tricky to debug and manage. To avoid relying on `z-index: 99999;` we use an [scss function](https://github.com/mediamonks/seng-scss/blob/master/utils/function/_zindex.scss) in most of our frameworks, which is part of seng-scss. The indices of the list items will update when new items are added. This will help increase the maintainability.
