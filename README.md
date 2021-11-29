@@ -742,14 +742,15 @@ export const Dialog = styled.dialog`
 `
 ```
 
-### Fonts
-First a few do's and don'ts:  
-- **DON'T** use fonts downloaded from a non-reliable source
+### Fonts 
+- **DON'T** use fonts (downloaded) from a non-reliable source
 - **DON'T** use fonts converted by tools like Font Squirrel
-- **DO** host font files on the same domain to improve initial page load time.
+- **DON'T** use unlicensed fonts as placeholders  
+BUT
+- **DO** host font files on the same domain to improve initial page load time (when possible).
 - **DO** double check if we have the **correct** licenses for use on the web.
 
-For all of our projects we need to use licensed fonts. It's the responsibility of the Project Manager to provide the correct fonts (Woff, Woff2) to developers. This can be done on the Drive folder for your projects. It's recommended to double-check if this is the case with your Project managers, since there are several licenses for the usage of fonts (e.g. Desktop usage vs. Web usage). When in doubt check with Leads or Project managers.
+⚠️ For all of our projects we need to use licensed fonts. It's the responsibility of the Project Manager to provide the correct fonts (Woff, Woff2) to developers. This can be done on the Drive folder for your projects. It's recommended to double-check if this is the case with your Project managers, since there are several licenses for the usage of fonts (e.g. Desktop usage vs. Web usage). When in doubt check with Leads or Project managers. 
 
 ## GIT
 
