@@ -582,7 +582,7 @@ It's important to note that client and project requirements always undo choices 
 
 Names should be meaningful and not presentational:
 ```css
-/* Bad examples */
+/* Bad */
 
 /* presentational with color and position reference */
 .button-orange {}
