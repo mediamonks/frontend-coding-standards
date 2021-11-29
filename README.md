@@ -14,9 +14,8 @@
 6. [TypeScript](#typescript)
 7. [CSS](#css)
    1. [Introduction](#introduction) 
-   2. [Styleguide implementation](#styleguide-implementation)
-      1. [Colors](#colors)
-   3. [Disclaimer](#disclaimer)
+   2. [Disclaimer](#disclaimer)
+   3. [Formatting and Naming](#formatting-and-naming)
    4. [z-index](#z-index)
 8. [GIT](#git)
    1. [Branches](#branches)
@@ -325,10 +324,6 @@ public get isActive(): boolean {
 **SNAKE_UPPER_CASE** Only use upper case characters, individual words must be separated with an
 underscore.
 
-#### CSS Class names
-
-**kebab-case** Only use lower case characters, individual words must be separated with a dash.
-
 #### Abbreviations and Acronyms
 
 Abbreviations and acronyms should be treated as words, which means only the first character will be
@@ -583,29 +578,119 @@ This document is written to capture the conventions of writing styles for our pr
 ### Disclaimer
 It's important to note that client and project requirements always undo choices made in these guidelines
 
+### Formatting and Naming
 
-### Styleguide implementation
+Names should be meaningful and not presentational:
+```css
+/* Bad */
 
-#### Colors
-Store colors centrally as variables. Preferably use human-friendly names that make communication between departments easier. In many cases clients will provide brand guidelines with names for colors. Use these when possible in all documentation and communication.
+/* presentational with color and position reference */
+.button-orange {}
+.left-block {}
 
-When using custom properties in css it's still recommended using variables.
-```scss
-// centrally stored
-$gingerOrange: #FF6200;
-$chamois: #DAA06D;
+/* meaningless */
+.yee-u88 {}
+```
+Some good examples would be:
+```css
+/* Good */
+.video {}
 
-:root {
-  --card-background: #{$chamois};
+.gallery {}
+
+```
+
+Selectors are placed on separate lines:
+```css
+/* Good */
+h1,
+h2,
+h3 {
+  text-transform: uppercase;
+}
+
+/* Bad */
+h1, h2, h3 {
+  text-transform: uppercase;
 }
 ```
-If needed it's fine to prefix colors with `color`, but the majority of developers didn't see the need to make it a hard required. The recommendation is to stay consistent in its use.
+
+Don't use ids as a selector (unless there is no other option)
+
+Don't combine element types with classes and ids. Preferably don't style on elements at all. Reasonable exceptions are in a base reset or when styling elements that can not be targeted in another way (e.g. elements that are generated from a wysiwyg editor or coming from external sources).
 ```scss
-$colorGingerOrange: #FF6200;
-$colorChamois: #DAA06D;
+/* Recommended */
+.overview {}
+
+/* Encouraged exceptions */
+.wysiwyg {
+  h1,
+  h2,
+  h3 {
+    text-transform: uppercase;
+  }
+}
+
+/* Bad */
+ul.overview {}
+
+.overview li {}
 ```
 
-Note: Colors don't have to be RGB(A) or Hex. If there is an option/need for HSL to make use of different shades of saturation and/or lightness, HSL can be a very useful option. Perhaps the lightness can be adjusted for a dark/light mode without having to configure more than the lightness. There are also more color spaces available for certain devices. It might be nice to explore these options to enrich experiences. These are things you can discuss with e.g. designers and project managers. Keep in mind providing decent fallback colors if you are using the color() functional notation e.g.
+Rulesets are separated by empty lines
+```css
+/* Good */
+.foo {
+  color: #f00;
+}
+
+.bar {
+  color: #0f0;
+}
+
+.baz {
+  color: #00F;
+}
+
+/* Bad */
+.foo {
+  color: #f00;
+}
+.bar {
+  color: #0f0;
+}
+.baz {
+  color: #00F;
+}
+```
+
+Properties have their own unique line
+
+```css
+/* Good */
+.gallery {
+  background: #000;
+  color: #fff;
+}
+
+/* Bad */
+.gallery {
+  background: #000; color: #fff;
+}
+```
+
+It is ok to use multiple lines for styles if it increases legibility. This is often the case when using complex background styles or named grid-areas.
+
+```scss
+.gallery {
+  background-color: white;
+  background-image:
+    radial-gradient(midnightblue 9px, transparent 10px),
+    repeating-radial-gradient(midnightblue 0, midnightblue 4px, transparent 5px, transparent 20px, midnightblue 21px, midnightblue 25px, transparent 26px, transparent 50px);
+  background-size: 30px 30px, 90px 90px;
+  background-position: 0 0;
+}
+```
 
 ### Z-index
 The use of z-index can cause unwanted side effects that can be tricky to debug and manage. To avoid relying on `z-index: 99999;` we use an [scss function](https://github.com/mediamonks/seng-scss/blob/master/utils/function/_zindex.scss) in most of our frameworks, which is part of seng-scss. The indices of the list items will update when new items are added. This will help increase the maintainability.
