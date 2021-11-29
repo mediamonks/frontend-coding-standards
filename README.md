@@ -667,7 +667,7 @@ $chamois: #DAA06D;
   --card-background: #{$chamois};
 }
 ```
-Sufficiently complex projects might need to discern between colours and other properties by prefixing a color palette with color.
+Sufficiently complex projects might need to discern between colors and other properties by prefixing a color palette with color.
 ```scss
 $colorGingerOrange: #FF6200;
 $colorChamois: #DAA06D;
