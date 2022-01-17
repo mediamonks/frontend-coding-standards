@@ -1,12 +1,16 @@
 {
   "name": "frontend-coding-standards",
   "version": "1.0.0",
+  "private": false,
   "description": "MediaMonks - Frontend Coding Standards",
   "repository": "git@github.com:mediamonks/frontend-coding-standards.git",
-  "author": "Thijs <thijs@mediamonks.com>",
   "license": "MIT",
-  "private": false,
+  "author": "Thijs <thijs@mediamonks.com>",
   "scripts": {
     "generate-table-of-contents": "node ./tools/generate-table-of-contents.js"
+  },
+  "prettier": "@mediamonks/prettier-config",
+  "devDependencies": {
+    "@mediamonks/prettier-config": "^1.0.0"
   }
 }

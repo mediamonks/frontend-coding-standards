@@ -3,7 +3,6 @@ const fs = require('fs');
 const TITLE = '## Table of Contents';
 
 fs.readFile('README.md', 'utf8', (error, contents) => {
-
   let chapter = 0;
   let paragraph = 0;
 
@@ -18,10 +17,10 @@ fs.readFile('README.md', 'utf8', (error, contents) => {
       if (depth === 2) {
         chapter++;
         paragraph = 0;
-        pre = `${chapter}.`
+        pre = `${chapter}.`;
       } else if (depth === 3) {
         paragraph++;
-        pre = `   ${paragraph}.`
+        pre = `   ${paragraph}.`;
       }
       return `${table}${pre} [${title}](#${title.toLowerCase().replace(/\s/g, '-')})\n`;
     }
