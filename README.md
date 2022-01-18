@@ -23,8 +23,13 @@
 9. [Recommended Libraries](#recommended-libraries)
 10. [Definition of Done Checklist](#definition-of-done-checklist)
 
-## ESLint
-Please install our [ESLint Configuration](https://www.npmjs.com/package/@mediamonks/eslint-config) to enforce the *MediaMonks - Frontend Coding Standards* in your project.
+## Enforcing these Standards
+
+In order to enforce these standards in your code, we **highly recommend** using
+[ESLint](https://github.com/eslint/eslint) and [Prettier](https://github.com/prettier/prettier),
+with our accompanying [@mediamonks/eslint-config](https://github.com/mediamonks/eslint-config) and
+[@mediamonks/prettier-config](https://github.com/mediamonks/prettier-config) configurations, created
+around these standards.
 
 ## Naming
 
