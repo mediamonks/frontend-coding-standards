@@ -790,6 +790,14 @@ not to e.g. an experimental tool or long-term project. To find out the current L
 use a tool such as [nvm](https://github.com/nvm-sh/nvm) or simply check the Node.js
 [website](https://nodejs.org/en/download).
 
+### Package Manager
+
+The Node.js ecosystem provides many choices for package managers, all with their own benefits and trade-offs.
+At Media.Monks, we decided to stick with what is included in Node.js - [npm](https://github.com/npm/cli).
+For most cases its feature-set is sufficient and its [performance has been gradually improving](https://github.com/npm/benchmarks).
+Being shipped together with Node.js also means that developers have to worry less about their package manager, as long
+as their Node.js version is up to date with out recommendations.
+
 ## Recommended Frameworks
 
 ### React
