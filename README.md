@@ -783,9 +783,9 @@ easy and simple.
 
 ### Long-term support
 
-You **must** always use the **LTS** (Long-term support) version of Node.js as it is considered
+You **must** always use the **Active LTS** (Long-term support) version of Node.js as it is considered
 stable and will ensure that you don't encounter any unexpected issues. Furthermore, when creating a
-new project or tool, it **must** always target the **LTS** version, unless there is a good reason
+new project or tool, it **must** always target the **Active LTS** version, unless there is a good reason
 not to e.g. an experimental tool or long-term project. To find out the current LTS version, you can
 use a tool such as [nvm](https://github.com/nvm-sh/nvm) or simply check the Node.js
 [website](https://nodejs.org/en/download).
