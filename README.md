@@ -356,25 +356,6 @@ writable.
 
 Always prefer `ReadonlyArray` over a regular `Array` unless it must be possible to modify the Array.
 
-#### Preferring Interfaces Over Intersections
-
-`interface` are a little more powerful than the corresponding `type` declaration.
-
-One of the reasons to use `interface` is when you need to compose two or more types, you have the
-option of extending those types with an interface, or intersecting them in a type alias. For more information see what TS team said 
-[here](https://github.com/microsoft/TypeScript/wiki/Performance#preferring-interfaces-over-intersections)
-
-Extending types with `interface`s/`extends` is suggested over creating intersection types.
-
-```diff
-- type Foo = Bar & Baz & {
--     someProp: string;
-- }
-+ interface Foo extends Bar, Baz {
-+     someProp: string;
-+ }
-```
-
 ### React
 
 #### Avoid using `React.FC` and `FunctionComponent` built-ins of `@types/react`
