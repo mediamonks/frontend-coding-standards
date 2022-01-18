@@ -7,10 +7,12 @@
   "license": "MIT",
   "author": "Thijs <thijs@mediamonks.com>",
   "scripts": {
-    "generate-table-of-contents": "node ./tools/generate-table-of-contents.js"
+    "generate-table-of-contents": "node ./tools/generate-table-of-contents.js",
+    "format": "prettier --write ."
   },
   "prettier": "@mediamonks/prettier-config",
   "devDependencies": {
-    "@mediamonks/prettier-config": "^1.0.0"
+    "@mediamonks/prettier-config": "^1.0.0",
+    "prettier": "^2.5.1"
   }
 }
