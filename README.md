@@ -12,7 +12,7 @@
 4. [Formatting](#formatting)
 5. [Comments](#comments)
 6. [TypeScript](#typescript)
-   1. [React props & TypeScript](#react-props-typescript)
+   1. [React](#typescript-react)
 7. [GIT](#git)
    1. [Branches](#branches)
    2. [Commit messages](#commit-messages)
@@ -375,41 +375,53 @@ Extending types with `interface`s/`extends` is suggested over creating intersect
 + }
 ```
 
-### TypeScript & React
+### React
 
-#### Why not use React.FC or FunctionComponent type?
+#### Avoid using `React.FC` and `FunctionComponent` built-ins of `@types/react`
 
-- Provides an implicit definition of `children`
-- Doesn't support generics.
-- Doesn't work correctly with `defaultProps`
-
-#### Implicit or explicit `returnType`?
-
-It depends. If we know we want to return a JSX element, it is not necessary to type the `returnType`
-because it is inferred from what you actually return, so can be omitted most of the time.
-
-But if you may going to return something other than JSX, then define the `returnType`.
-
-#### Preferred approach for typing React props
-
-The best approach and example would be something like this:
+They provide an implicit definition of `children`, which can be misleading to components which do
+not accept `children`. It is encouraged to instead either define `children?: ReactNode` on your prop
+type or wrap your prop type in the `PropsWithChildren` type util.
 
 ```ts
-interface FancyButtonProps {
-  color: string;
+type MonkComponentProps = {
+  // other properties
+  children?: ReactNode;
+};
+
+function MonkComponent({ children }: MonkComponentProps): ReactElement {
+  //...
 }
 
-export default function FancyButton({ color }: FancyButtonProps) {
-  //...
+// with `PropsWithChildren`
+
+type MonkComponentProps = {
+  // other properties
 };
+
+function MonkComponent({ children }: PropsWithChildren<MonkComponentProps>): ReactElement {
+  //...
+}
 ```
 
-or if we want to explicity type the `returnType`:
+As they are built-ins, they do not allow for custom generics and thus do not support
+[Generic Components](https://react-typescript-cheatsheet.netlify.app/docs/advanced/patterns_by_usecase/#generic-components).
+
+#### Always define a return type
+
+In addition to its own components, React allows returning
+[primitive](https://developer.mozilla.org/en-US/docs/Glossary/Primitive) values from components.
+While this is nice, it sometimes might be a mistake to return a primitive, instead of a valid
+component; this can most commonly happen when your component renders itself conditionally (e.g.
+using logical operators).
+
+TypeScript return type inference would inherently "hide" this potential bug from us, because of this
+we strongly encourage to type the return types of components:
 
 ```ts
-export default function FancyButton({ color }: FancyButtonProps): React.ReactElement {
+function MonkComponent(): ReactElement {
   //...
-};
+}
 ```
 
 ## GIT
