@@ -405,6 +405,8 @@ function MonkComponent(): ReactElement {
 }
 ```
 
+> We recommend checking out https://react-typescript-cheatsheet.netlify.app for more in-depth and advanced usages of TypeScript within React
+
 ## GIT
 
 ### Branches
