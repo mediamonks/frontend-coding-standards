@@ -25,7 +25,7 @@
 
 ## Enforcing these Standards
 
-In order to enforce these standards in your code, we **highly recommend** using
+In order to enforce these standards in your code, it is required to use
 [ESLint](https://github.com/eslint/eslint) and [Prettier](https://github.com/prettier/prettier),
 with our accompanying [@mediamonks/eslint-config](https://github.com/mediamonks/eslint-config) and
 [@mediamonks/prettier-config](https://github.com/mediamonks/prettier-config) configurations, created
