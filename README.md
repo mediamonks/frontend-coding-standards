@@ -796,7 +796,7 @@ The Node.js ecosystem provides many choices for package managers, all with their
 At Media.Monks, we decided to stick with what is included in Node.js - [npm](https://github.com/npm/cli).
 For most cases its feature-set is sufficient and its [performance has been gradually improving](https://github.com/npm/benchmarks).
 Being shipped together with Node.js also means that developers have to worry less about their package manager, as long
-as their Node.js version is up to date with out recommendations.
+as their Node.js version is up to date with our recommendations.
 
 ## Recommended Frameworks
 
