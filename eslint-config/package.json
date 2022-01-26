@@ -1,7 +1,7 @@
 {
   "name": "@mediamonks/eslint-config",
   "version": "1.2.3",
-  "description": "MediaMonks Frontend Coding Standards Eslint Config",
+  "description": "Media.Monks frontend coding standards eslint config",
   "main": "index.js",
   "scripts": {
     "prettify": "prettier --write \"index.js\"",
@@ -13,6 +13,7 @@
   },
   "keywords": [
     "MediaMonks",
+    "Media.Monks",
     "Coding",
     "Standards",
     "eslint",
