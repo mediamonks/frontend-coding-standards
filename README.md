@@ -26,7 +26,7 @@
 ## ESLint
 
 Please install our [ESLint Configuration](https://www.npmjs.com/package/@mediamonks/eslint-config)
-to enforce the _MediaMonks - Frontend Coding Standards_ in your project.
+to enforce the _Media.Monks - Frontend Coding Standards_ in your project.
 
 ## Naming
 
