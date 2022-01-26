@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "MediaMonks - Frontend Coding Standards",
   "repository": "git@github.com:mediamonks/frontend-coding-standards.git",
-  "author": "Thijs <thijs@mediamonks.com>",
+  "author": "frontend.monks",
   "license": "MIT",
   "private": false,
   "scripts": {
