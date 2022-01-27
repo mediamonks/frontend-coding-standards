@@ -4,7 +4,7 @@
 
 ## Table of Contents
 
-1. [ESLint](#eslint)
+1. [Enforcing these Standards](#enforcing-these-standards)
 2. [Naming](#naming)
    1. [Casing](#casing)
    2. [File names](#file-names)
@@ -32,10 +32,14 @@
     1. [VSCode](#vscode)
     2. [WebStorm](#webstorm)
 
-## ESLint
+## Enforcing these Standards
 
-Please install our [ESLint Configuration](https://www.npmjs.com/package/@mediamonks/eslint-config)
-to enforce the _Media.Monks - Frontend Coding Standards_ in your project.
+In order to enforce these standards in your code, it is required to use
+[ESLint](https://github.com/eslint/eslint) and [Prettier](https://github.com/prettier/prettier),
+with our accompanying [@mediamonks/eslint-config](https://github.com/mediamonks/eslint-config) and
+[@mediamonks/prettier-config](https://github.com/mediamonks/prettier-config) configurations, created
+around these standards.
+
 
 ## Naming
 
