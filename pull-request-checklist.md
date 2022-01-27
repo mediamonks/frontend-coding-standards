@@ -1,6 +1,6 @@
 # Frontend Pull Request reviewer checklist
 
-- [x] It follows the MediaMonks
+- [x] It follows the Media.Monks
       [frontend coding standards](https://github.com/mediamonks/frontend-coding-standards) (proper
       naming for variables, functions, properties, booleans, etc.)
 - [x] Does the title follow the correct structure?
