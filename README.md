@@ -12,6 +12,7 @@
 4. [Formatting](#formatting)
 5. [Comments](#comments)
 6. [TypeScript](#typescript)
+   1. [React](#typescript-react)
 7. [CSS](#css)
    1. [Introduction](#introduction) 
    2. [Disclaimer](#disclaimer)
@@ -561,6 +562,57 @@ writable.
 #### Arrays
 
 Always prefer `ReadonlyArray` over a regular `Array` unless it must be possible to modify the Array.
+
+### React
+
+#### Avoid using `React.FC` and `FunctionComponent` built-ins of `@types/react`
+
+They provide an implicit definition of `children`, which can be misleading to components which do
+not accept `children`. It is encouraged to instead either define `children?: ReactNode` on your prop
+type or wrap your prop type in the `PropsWithChildren` type util.
+
+```ts
+type MonkComponentProps = {
+  // other properties
+  children?: ReactNode;
+};
+
+function MonkComponent({ children }: MonkComponentProps): ReactElement {
+  //...
+}
+
+// with `PropsWithChildren`
+
+type MonkComponentProps = {
+  // other properties
+};
+
+function MonkComponent({ children }: PropsWithChildren<MonkComponentProps>): ReactElement {
+  //...
+}
+```
+
+As they are built-ins, they do not allow for custom generics and thus do not support
+[Generic Components](https://react-typescript-cheatsheet.netlify.app/docs/advanced/patterns_by_usecase/#generic-components).
+
+#### Always define a return type
+
+In addition to its own components, React allows returning
+[primitive](https://developer.mozilla.org/en-US/docs/Glossary/Primitive) values from components.
+While this is nice, it sometimes might be a mistake to return a primitive, instead of a valid
+component; this can most commonly happen when your component renders itself conditionally (e.g.
+using logical operators).
+
+TypeScript return type inference would inherently "hide" this potential bug from us, because of this
+we strongly encourage to type the return types of components:
+
+```ts
+function MonkComponent(): ReactElement {
+  //...
+}
+```
+
+> We recommend checking out https://react-typescript-cheatsheet.netlify.app for more in-depth and advanced usages of TypeScript within React
 
 Arrays should be typed as `Array<T>` rather than `T[]` for consistency.
 
