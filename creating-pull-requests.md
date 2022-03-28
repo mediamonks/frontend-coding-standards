@@ -167,8 +167,8 @@ As the author of the PR, you should maintain the following:
   [✅](https://emojis.wiki/check-mark-button/#:~:text=White%20Heavy%20Check%20Mark%20emoji,emoji%20that%20provides%20positive%20reinforcement.)
   reply to let everyone know it has been addressed. Some platforms have the ability to 'resolve' a
   comment that can be used instead.
-- When committing suggested changes make sure that the commit message contains a descriptive message about these changes.
-  Avoid writing messages like "Addressed PR feedback", "Fixed PR feedback"
+- When committing suggested changes make sure that the commit message contains a descriptive message
+  about these changes. Avoid writing messages like "Addressed PR feedback", "Fixed PR feedback"
 
 ####
 

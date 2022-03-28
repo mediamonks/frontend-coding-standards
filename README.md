@@ -14,7 +14,7 @@
 6. [TypeScript](#typescript)
    1. [React](#typescript-react)
 7. [CSS](#css)
-   1. [Introduction](#introduction) 
+   1. [Introduction](#introduction)
    2. [Disclaimer](#disclaimer)
    3. [Formatting and Naming](#formatting-and-naming)
    4. [z-index](#z-index)
@@ -40,7 +40,6 @@ In order to enforce these standards in your code, it is required to use
 with our accompanying [@mediamonks/eslint-config](https://github.com/mediamonks/eslint-config) and
 [@mediamonks/prettier-config](https://github.com/mediamonks/prettier-config) configurations, created
 around these standards.
-
 
 ## Naming
 
@@ -133,14 +132,16 @@ prevButton.addEventListener('click', onPrevClick);
 // good
 previousButton.addEventListener('click', onPreviousClick);
 ```
+
 ```js
 // bad
-buttons.forEach(elm => {
+buttons.forEach((elm) => {
   //...
 });
 
 // better
-buttons.forEach((element) => { // prettier should add brackets by default
+buttons.forEach((element) => {
+  // prettier should add brackets by default
   //...
 });
 
@@ -194,10 +195,10 @@ Should start with `is`, `has`, `will` or `should`. Like `isValid` or `hasValues`
 #### Handlers and callbacks
 
 To indicate that a function or property is used as a callback or handler you can start the name with
-`on`, like: `onClick`, `onLoadComplete`, `onResize`.
-Do not postfix the name with `handler` since this is redundant when there is already an `on`.
+`on`, like: `onClick`, `onLoadComplete`, `onResize`. Do not postfix the name with `handler` since
+this is redundant when there is already an `on`.
 
-Also note that a name of only `on` + `event name` might not be descriptive enough, depending on the 
+Also note that a name of only `on` + `event name` might not be descriptive enough, depending on the
 context. Using a more descriptive name is recommended.
 
 ```js
@@ -257,7 +258,7 @@ class Response<TResponseData> {
 }
 
 // good, use common abbreviations like T(ype), K(ey), V(alue), P(roperty) etc.
-type Partial<T> = { [P in keyof T]?: T[P]; };
+type Partial<T> = { [P in keyof T]?: T[P] };
 
 // better, add more semantic context by extending the type
 type ResponseData = Record<string, unknown>;
@@ -268,27 +269,27 @@ class Response<T extends ResponseData> {
 ```
 
 #### Interfaces and type aliases
+
 Depending on the use case there is a choice to implement an
 [interface or type alias](https://github.com/typescript-cheatsheets/react#useful-table-for-types-vs-interfaces),
-but be aware using types impacts [compilation performance](https://ncjamieson.com/prefer-interfaces/).
-
+but be aware using types impacts
+[compilation performance](https://ncjamieson.com/prefer-interfaces/).
 
 ```ts
 // bad, you should not prefix interfaces with I
 interface IResponse {
   //...
-};
+}
 
 // bad, prefix types with T
 type TResponse = {
   //...
 };
 
-
 // good, no prefix
 interface Response {
   //...
-};
+}
 
 // good, no prefix
 type Response = {
@@ -304,8 +305,8 @@ type Response = {
 
 #### Functions, properties, arguments and variables
 
-**camelCase** Starts with a lower case character, every following individual word start with an upper
-case character, no underscores, no dashes.
+**camelCase** Starts with a lower case character, every following individual word start with an
+upper case character, no underscores, no dashes.
 
 ##### Properties with a getter and/or setter
 
@@ -373,7 +374,7 @@ Every function or class should do **one thing** (and do it good). If it needs to
 thing, split it up. Keep your files, classes and functions small. It’s okay to have a file with just
 a single line.
 
-### Functions 
+### Functions
 
 #### Pure functions
 
@@ -382,8 +383,9 @@ reference/manipulate global state. This makes your code better scalable and test
 
 #### Arrow functions
 
-Prefer to use arrow functions when `this` should be bound to the outside context, and not to the function itself.
-Arrow functions do not have their own context, so it will lexically go up a scope, and use the value of `this` in the scope in which it was defined.
+Prefer to use arrow functions when `this` should be bound to the outside context, and not to the
+function itself. Arrow functions do not have their own context, so it will lexically go up a scope,
+and use the value of `this` in the scope in which it was defined.
 
 ```
 const human = {
@@ -396,8 +398,8 @@ const human = {
 };
 ```
 
-Also arrow functions are good in case of inline callbacks, which are most often found in `map`, `filter`, `reduce` methods in order 
-to improve code readability.
+Also arrow functions are good in case of inline callbacks, which are most often found in `map`,
+`filter`, `reduce` methods in order to improve code readability.
 
 ```
 [1, 2, 3]
@@ -414,7 +416,8 @@ Prefer to use keyword `function` to create functions in cases:
 Benefits of using the keyword `function` instead of arrow function:
 
 - Function is not anonymous and has a name, so you get a better stack trace in case of an error
-- [Hoisting](https://ui.dev/ultimate-guide-to-execution-contexts-hoisting-scopes-and-closures-in-javascript/) allows a function to be used before it is declared, so the order is not important
+- [Hoisting](https://ui.dev/ultimate-guide-to-execution-contexts-hoisting-scopes-and-closures-in-javascript/)
+  allows a function to be used before it is declared, so the order is not important
 
 Example of creating a function using the `function` keyword:
 
@@ -443,7 +446,6 @@ Write code that is reusable, scalable and testable.
 ### Do not use Magic Numbers
 
 See https://en.wikipedia.org/wiki/Magic_number_(programming)
-
 
 ### Default in a switch
 
@@ -618,45 +620,61 @@ Arrays should be typed as `Array<T>` rather than `T[]` for consistency.
 
 #### Return types
 
-Although return types are optional for TypeScript (TypeScript is very good at figuring out what the 
-return type of a function is) it is absolutely recommended to explicitly add a return type for 
+Although return types are optional for TypeScript (TypeScript is very good at figuring out what the
+return type of a function is) it is absolutely recommended to explicitly add a return type for
 public (API) functions.
 
-Adding a return type improves readability and can also help to prevent bugs. Accidentally returning 
-the wrong type would not cause an error in the function declaration if there is no explicit return 
+Adding a return type improves readability and can also help to prevent bugs. Accidentally returning
+the wrong type would not cause an error in the function declaration if there is no explicit return
 type set.
 
 ## CSS
 
 ### Introduction
-This document is written to capture the conventions of writing styles for our projects. Many of the rules will be or are part of our linter and prettier settings. Due to variety of our projects and methods there might be a need for a more detailed approach per situation. This might also impact how code is being organized, structured on an architectonic level. Therefore, this part of the conventions will focus on the rules that are applicable to the majority of our implementation methods.
+
+This document is written to capture the conventions of writing styles for our projects. Many of the
+rules will be or are part of our linter and prettier settings. Due to variety of our projects and
+methods there might be a need for a more detailed approach per situation. This might also impact how
+code is being organized, structured on an architectonic level. Therefore, this part of the
+conventions will focus on the rules that are applicable to the majority of our implementation
+methods.
 
 ### Disclaimer
-It's important to note that client and project requirements always undo choices made in these guidelines
+
+It's important to note that client and project requirements always undo choices made in these
+guidelines
 
 ### Formatting and Naming
 
 Names should be meaningful and not presentational:
+
 ```css
 /* Bad */
 
 /* presentational with color and position reference */
-.button-orange {}
-.left-block {}
+.button-orange {
+}
+.left-block {
+}
 
 /* meaningless */
-.yee-u88 {}
+.yee-u88 {
+}
 ```
+
 Some good examples would be:
+
 ```css
 /* Good */
-.video {}
+.video {
+}
 
-.gallery {}
-
+.gallery {
+}
 ```
 
 Selectors are placed on separate lines:
+
 ```css
 /* Good */
 h1,
@@ -666,17 +684,24 @@ h3 {
 }
 
 /* Bad */
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   text-transform: uppercase;
 }
 ```
 
 Don't use ids as a selector (unless there is no other option)
 
-Don't combine element types with classes and ids. Preferably don't style on elements at all. Reasonable exceptions are in a base reset or when styling elements that can not be targeted in another way (e.g. elements that are generated from a wysiwyg editor or coming from external sources).
+Don't combine element types with classes and ids. Preferably don't style on elements at all.
+Reasonable exceptions are in a base reset or when styling elements that can not be targeted in
+another way (e.g. elements that are generated from a wysiwyg editor or coming from external
+sources).
+
 ```scss
 /* Recommended */
-.overview {}
+.overview {
+}
 
 /* Encouraged exceptions */
 .wysiwyg {
@@ -688,12 +713,15 @@ Don't combine element types with classes and ids. Preferably don't style on elem
 }
 
 /* Bad */
-ul.overview {}
+ul.overview {
+}
 
-.overview li {}
+.overview li {
+}
 ```
 
 Rulesets are separated by empty lines
+
 ```css
 /* Good */
 .foo {
@@ -705,7 +733,7 @@ Rulesets are separated by empty lines
 }
 
 .baz {
-  color: #00F;
+  color: #00f;
 }
 
 /* Bad */
@@ -716,7 +744,7 @@ Rulesets are separated by empty lines
   color: #0f0;
 }
 .baz {
-  color: #00F;
+  color: #00f;
 }
 ```
 
@@ -731,25 +759,33 @@ Properties have their own unique line
 
 /* Bad */
 .gallery {
-  background: #000; color: #fff;
+  background: #000;
+  color: #fff;
 }
 ```
 
-It is ok to use multiple lines for styles if it increases legibility. This is often the case when using complex background styles or named grid-areas.
+It is ok to use multiple lines for styles if it increases legibility. This is often the case when
+using complex background styles or named grid-areas.
 
 ```scss
 .gallery {
   background-color: white;
-  background-image:
-    radial-gradient(midnightblue 9px, transparent 10px),
-    repeating-radial-gradient(midnightblue 0, midnightblue 4px, transparent 5px, transparent 20px, midnightblue 21px, midnightblue 25px, transparent 26px, transparent 50px);
+  background-image: radial-gradient(midnightblue 9px, transparent 10px), repeating-radial-gradient(midnightblue
+        0, midnightblue 4px, transparent 5px, transparent 20px, midnightblue 21px, midnightblue 25px, transparent
+        26px, transparent 50px);
   background-size: 30px 30px, 90px 90px;
   background-position: 0 0;
 }
 ```
 
 ### Z-index
-The use of z-index can cause unwanted side effects that can be tricky to debug and manage. To avoid relying on `z-index: 99999;` we use an [scss function](https://github.com/mediamonks/seng-scss/blob/master/utils/function/_zindex.scss) in most of our frameworks, which is part of seng-scss. The indices of the list items will update when new items are added. This will help increase the maintainability.
+
+The use of z-index can cause unwanted side effects that can be tricky to debug and manage. To avoid
+relying on `z-index: 99999;` we use an
+[scss function](https://github.com/mediamonks/seng-scss/blob/master/utils/function/_zindex.scss) in
+most of our frameworks, which is part of seng-scss. The indices of the list items will update when
+new items are added. This will help increase the maintainability.
+
 ```scss
 // Maintained in variables.scss
 $zLayout: default header overlay;
@@ -760,12 +796,15 @@ $zLayout: default header overlay;
   z-index: zindex($zLayout, overlay);
 }
 ```
-It's recommended to use this `$zLayout` in situations where its z-index needs to be compared to other components. For z-axis hierarchies within components (with a new stacking context) a numerical approach is allowed (and perhaps recommended) or create a local variable:
+
+It's recommended to use this `$zLayout` in situations where its z-index needs to be compared to
+other components. For z-axis hierarchies within components (with a new stacking context) a numerical
+approach is allowed (and perhaps recommended) or create a local variable:
 
 ```scss
 .overlay {
   $overlayZLayout: default top;
-  
+
   .visual {
     position: relative;
     z-index: zindex($overlayZLayout, top);
@@ -773,7 +812,8 @@ It's recommended to use this `$zLayout` in situations where its z-index needs to
 }
 ```
 
-For environments that use a css-in-js solution it's recommended to use a similar approach. In the following example a numeric enum is used:
+For environments that use a css-in-js solution it's recommended to use a similar approach. In the
+following example a numeric enum is used:
 
 ```ts
 // Using a numeric enum to create a z-index map
@@ -781,18 +821,18 @@ enum ZIndex {
   Navigation = 1,
 
   // Value for 'Dialog' will automatically be set to 2 by the Typescript compiler
-  Dialog
+  Dialog,
 }
 
 export const Navigation = styled.nav`
   ...
   z-index: ${ZIndex.Navigation}
-`
+`;
 
 export const Dialog = styled.dialog`
   ...
   z-index: ${ZIndex.Dialog}
-`
+`;
 ```
 
 ## GIT
