@@ -22,7 +22,7 @@
    1. [Branches](#branches)
    2. [Commit messages](#commit-messages)
    3. [Code Reviews](#code-reviews)
-9. [Node.js](#node.js)
+9. [Node.js](#nodejs)
 10. [Recommended Frameworks](#recommended-frameworks)
     1. [React](#react)
     2. [Vue](#vue)
