@@ -879,12 +879,20 @@ easy and simple.
 
 ### Long-term support
 
-You **must** always use the **LTS** (Long-term support) version of Node.js as it is considered
+You **must** always use the **Active LTS** (Long-term support) version of Node.js as it is considered
 stable and will ensure that you don't encounter any unexpected issues. Furthermore, when creating a
-new project or tool, it **must** always target the **LTS** version, unless there is a good reason
+new project or tool, it **must** always target the **Active LTS** version, unless there is a good reason
 not to e.g. an experimental tool or long-term project. To find out the current LTS version, you can
 use a tool such as [nvm](https://github.com/nvm-sh/nvm) or simply check the Node.js
 [website](https://nodejs.org/en/download).
+
+### Package Manager
+
+The Node.js ecosystem provides many choices for package managers, all with their own benefits and trade-offs.
+At Media.Monks, we decided to stick with what is included in Node.js - [npm](https://github.com/npm/cli).
+For most cases its feature-set is sufficient and its [performance has been gradually improving](https://github.com/npm/benchmarks).
+Being shipped together with Node.js also means that developers have to worry less about their package manager, as long
+as their Node.js version is up to date with our recommendations.
 
 ## Recommended Frameworks
 
