@@ -16,8 +16,7 @@
 7. [CSS](#css)
    1. [Introduction](#introduction)
    2. [Disclaimer](#disclaimer)
-   3. [Formatting and Naming](#formatting-and-naming)
-   4. [z-index](#z-index)
+   3. [z-index](#z-index)
 8. [GIT](#git)
    1. [Branches](#branches)
    2. [Commit messages](#commit-messages)
@@ -329,6 +328,10 @@ public get isActive(): boolean {
 
 **SNAKE_UPPER_CASE** Only use upper case characters, individual words must be separated with an
 underscore.
+
+#### CSS Class names
+
+**kebab-case** Only use lower case characters, individual words must be separated with a dash.
 
 #### Abbreviations and Acronyms
 
@@ -834,6 +837,15 @@ export const Dialog = styled.dialog`
   z-index: ${ZIndex.Dialog}
 `;
 ```
+
+### Fonts 
+- **DON'T** use fonts (downloaded) from a non-reliable source
+- **DON'T** use fonts converted by tools like Font Squirrel
+- **DON'T** use unlicensed fonts as placeholders  
+BUT
+- **DO** host font files on the same domain to improve initial page load time – when possible
+- **DO** double check if we have the **correct** licenses for use on the web.
+- **DO** use woff/woff2
 
 ## GIT
 
